@@ -5,22 +5,18 @@
 ## Funktionen
 
 * Login
-
 * Profil
   * Bild
   * Alter
   * Fitness-Level
-
 * Matching
   * Puls
   * Ort
   * Profil
   * Anzahl Apple Produkte
-
 * Pushnotifikation
   * Puls-Vibration vom Match
   * Bild vom Match
-  
 * Chatfunktion
 
 ## Technologien
