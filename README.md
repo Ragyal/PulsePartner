@@ -20,7 +20,7 @@
 - Chatfunktion
 
 
-## Technologien:
+## Technologien
 - Persistence (Datenbank/Firebase)
 - HealthKit/WatchKit
 - GPS (location-aware)
