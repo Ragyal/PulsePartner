@@ -22,6 +22,7 @@
 		BCECF16F2256241F00AFA163 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF16E2256241F00AFA163 /* ExtensionDelegate.swift */; };
 		BCECF1712256241F00AFA163 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1702256241F00AFA163 /* NotificationController.swift */; };
 		BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1722256241F00AFA163 /* Assets.xcassets */; };
+		BCECF18B22562AAA00AFA163 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BCECF18A22562AAA00AFA163 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BCECF1742256241F00AFA163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCECF1752256241F00AFA163 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		BCECF1892256265B00AFA163 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BCECF18A22562AAA00AFA163 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BCECF1892256265B00AFA163 /* README.md */,
+				BCECF18A22562AAA00AFA163 /* .gitignore */,
 				BCECF1322256241D00AFA163 /* PulsePartner */,
 				BCECF1472256241E00AFA163 /* PulsePartnerTests */,
 				BCECF1522256241E00AFA163 /* PulsePartnerUITests */,
@@ -367,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCECF18B22562AAA00AFA163 /* .gitignore in Resources */,
 				BCECF13E2256241E00AFA163 /* LaunchScreen.storyboard in Resources */,
 				BCECF13B2256241E00AFA163 /* Assets.xcassets in Resources */,
 				BCECF1392256241D00AFA163 /* Main.storyboard in Resources */,

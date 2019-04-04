@@ -11,6 +11,8 @@
   - Profil
   - Anzahl Apple Produkte
 - Pushnotifikation
+  - Puls-Vibration vom Match
+  - Bild vom Match
 - Chatfunktion
 
 
