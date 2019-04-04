@@ -4,26 +4,29 @@
 
 ## Funktionen
 
-- Login
-- Profil
+  - Login
+
+  - Profil
     - Bild
     - Alter
     - Fitness-Level
-- Matching
+
+  - Matching
     - Puls
     - Ort
     - Profil
     - Anzahl Apple Produkte
-- Pushnotifikation
+
+  - Pushnotifikation
     - Puls-Vibration vom Match
     - Bild vom Match
-- Chatfunktion
-
+  
+  - Chatfunktion
 
 ## Technologien
 
-- Persistence (Datenbank/Firebase)
-- HealthKit/WatchKit
-- GPS (location-aware)
-- Pushnotifikation
-- Cloud-Functions
+  - Persistence (Datenbank/Firebase)
+  - HealthKit/WatchKit
+  - GPS (location-aware)
+  - Pushnotifikation
+  - Cloud-Functions
