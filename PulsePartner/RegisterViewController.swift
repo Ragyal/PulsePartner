@@ -64,4 +64,11 @@ class RegisterViewController: UIViewController {
 //
 //        }
     }
+    
+    @IBAction func changePage(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterPage2") as? RegisterViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+//        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
