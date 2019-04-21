@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.63453286919999996" green="0.02299911038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.5" green="0.018122867621750416" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Ht4-11-n2m"/>
                     </view>
                     <navigationItem key="navigationItem" id="410-EB-CWo"/>
@@ -192,7 +192,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.63453286919999996" green="0.02299911038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.50030899047851562" green="0.091516964137554169" blue="0.054856635630130768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="1t2-gc-HG8"/>
                     </view>
                     <navigationItem key="navigationItem" id="5sZ-g2-ThV">
@@ -283,7 +283,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.63453286919999996" green="0.02299911038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.50030899047851562" green="0.091516964137554169" blue="0.054856635630130768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="hER-fE-S13"/>
                     </view>
                     <connections>
@@ -301,7 +301,7 @@
                     <view key="view" contentMode="scaleToFill" id="1wr-1T-HLl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.63453286919999996" green="0.02299911038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.50030899047851562" green="0.091516964137554169" blue="0.054856635630130768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="H8E-qO-3Oj"/>
                     </view>
                 </viewController>
