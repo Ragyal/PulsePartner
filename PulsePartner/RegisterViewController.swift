@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
     @IBOutlet weak var maleOneCheckbox: UIButton!
     @IBOutlet weak var femaleOneCheckbox: UIButton!
     @IBOutlet weak var maleSecondCheckbox: UIButton!
     @IBOutlet weak var femaleSecondCheckbox: UIButton!
     @IBOutlet weak var fitnessLevelLab: UILabel!
+    @IBOutlet weak var gpsCheckbox: UIButton!
+    @IBOutlet weak var pushCheckbox: UIButton!
     
 
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,21 @@ class RegisterViewController: UIViewController {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
             }
+        }else if(self.restorationIdentifier! == "RegisterPage3"){
+            let status = CLLocationManager.authorizationStatus()
+            gpsCheckbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+            gpsCheckbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
+            switch status {
+            case .notDetermined, .denied, .restricted:
+                gpsCheckbox.isSelected = false
+                break
+            case .authorizedAlways, .authorizedWhenInUse:
+                gpsCheckbox.isSelected = true
+                break
+            default:
+                break
+            }
+            
         }
         
         
@@ -67,6 +87,37 @@ class RegisterViewController: UIViewController {
 //        }
     }
     
+    @IBAction func askForPermission (_ sender: UIButton){
+        switch sender.tag {
+        case 1:
+            let status = CLLocationManager.authorizationStatus()
+            
+            switch status {
+            case .notDetermined:
+                locationManager.requestAlwaysAuthorization()
+                gpsCheckbox.isSelected = true
+                break
+            case .denied, .restricted:
+                let alert = UIAlertController(title: "Location Services disabled", message: "Bitte erlaube den Zugriff auf deine GPS Daten in den Einstellungen settings ->privacy->Location Services", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+            
+                present(alert, animated: true, completion: nil)
+                return
+            default:
+                break
+            }
+            
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation()
+            break
+        case 2:
+            break
+        default:
+            break
+        }
+    }
+    
     @IBAction func changePage(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -101,3 +152,26 @@ class RegisterViewController: UIViewController {
     
     
 }
+
+
+//let status = CLLocationManager.authorizationStatus()
+//
+//switch status {
+//case .notDetermined, .denied, .restricted:
+//    gpsCheckbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+//    break
+//case .denied, .restricted:
+//    let alert = UIAlertController(title: "Location Services disabled", message: "Please enable Location Services in Settings", preferredStyle: .alert)
+//    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//    alert.addAction(okAction)
+//
+//    present(alert, animated: true, completion: nil)
+//    return
+//case .authorizedAlways, .authorizedWhenInUse:
+//    break
+//default:
+//    break
+//}
+//
+//locationManager.delegate = self
+//locationManager.startUpdatingLocation()

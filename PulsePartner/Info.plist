@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>PulsePartners möchte auf deine GPS Daten zugreifen</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>PulsePartners möchte auf deine GPS Daten zugreifen</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
