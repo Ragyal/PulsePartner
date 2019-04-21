@@ -14,19 +14,21 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var femaleOneCheckbox: UIButton!
     @IBOutlet weak var maleSecondCheckbox: UIButton!
     @IBOutlet weak var femaleSecondCheckbox: UIButton!
+    @IBOutlet weak var fitnessLevelLab: UILabel!
     
 
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red:1.0, green: 0.0, blue: 0.0, alpha: 0.7)
-        
         //Checkbox Style
-        for checkbox in checkboxes {
-            checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
-            checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
+        if(self.restorationIdentifier! == "RegisterPage1"){
+            for checkbox in checkboxes {
+                checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+                checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
+            }
         }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -66,9 +68,36 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func changePage(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterPage2") as? RegisterViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
-//        self.navigationController?.popViewController(animated: true)
+        switch sender.tag {
+        case 1:
+            if(!femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected || !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected){
+                let alert = UIAlertController(title: "Error!", message: "Please select a gender", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }else{
+                pushController(with: "RegisterPage2")
+            }
+            break
+        case 2:
+            pushController(with: "RegisterPage3")
+            break
+        case 3:
+            pushController(with: "RegisterPage4")
+        default:
+            break
+        }
+        
     }
+    
+    func pushController(with identifier: String){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier) as? RegisterViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+        //        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func setFitnessLevel(_ sender: UISlider) {
+        fitnessLevelLab.text = String(Int(sender.value))
+    }
+    
     
 }
