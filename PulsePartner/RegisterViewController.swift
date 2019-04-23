@@ -43,10 +43,8 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             switch locationStatus {
             case .notDetermined, .denied, .restricted:
                 gpsCheckbox.isSelected = false
-                break
             case .authorizedAlways, .authorizedWhenInUse:
                 gpsCheckbox.isSelected = true
-                break
             default:
                 break
             }
@@ -65,14 +63,12 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 maleOneCheckbox.isSelected = false
             }
-            break
         case 3...4:
             if sender.tag == 3 {
                 femaleSecondCheckbox.isSelected = false
             } else {
                 maleSecondCheckbox.isSelected = false
             }
-            break
         default:
             break
         }
@@ -103,7 +99,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             case .notDetermined:
                 locationManager.requestAlwaysAuthorization()
                 gpsCheckbox.isSelected = true
-                break
             case .denied, .restricted:
                 let alert = UIAlertController(title: "Location Services disabled", message: "Bitte erlaube den Zugriff auf deine GPS Daten in den Einstellungen settings ->privacy->Location Services", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -116,7 +111,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             }
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
-            break
         case 2:
             break
         default:
