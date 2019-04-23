@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var gpsCheckbox: UIButton!
     @IBOutlet weak var pushCheckbox: UIButton!
     @IBOutlet weak var healthKitCheckbox: UIButton!
-    
+
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
     lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
@@ -34,7 +34,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
             }
-        }else if self.restorationIdentifier! == "RegisterPage3" {
+        } else if self.restorationIdentifier! == "RegisterPage3" {
             for checkbox in permissionCheckboxes {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
@@ -114,7 +114,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             default:
                 break
             }
-
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
             break
@@ -138,7 +137,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 pushController(with: "RegisterPage2")
             }
-            break
         case 2:
             pushController(with: "RegisterPage3")
         case 3:
@@ -164,4 +162,3 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         fitnessLevelLab.text = String(Int(sender.value))
     }
 }
-
