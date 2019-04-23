@@ -23,14 +23,12 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pushCheckbox: UIButton!
     @IBOutlet weak var healthKitCheckbox: UIButton!
     
-
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
     lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Checkbox Style
         if self.restorationIdentifier! == "RegisterPage1" {
             for checkbox in checkboxes {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
@@ -42,7 +40,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
             }
             let locationStatus = CLLocationManager.authorizationStatus()
-//            let healthStatus = HKHealthStore.authorizationStatus()
             switch locationStatus {
             case .notDetermined, .denied, .restricted:
                 gpsCheckbox.isSelected = false
@@ -53,14 +50,11 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             default:
                 break
             }
-
         }
-
-        // Do any additional setup after loading the view.
     }
 
     /**
- 
+     Function to check if the other radio button is already selected
      */
     @IBAction func checkMarkTapped(_ sender: UIButton) {
 
@@ -95,6 +89,11 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 //        }
     }
 
+    /**
+     Function to ask for access for
+     `Location`, `HealthKit` and `PushNotification`
+     - ToDo: Add request for HealthKit and PushNotification
+     */
     @IBAction func askForPermission (_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -126,6 +125,9 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    /**
+     Function to change the displayed controller
+     */
     @IBAction func changePage(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -139,7 +141,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             break
         case 2:
             pushController(with: "RegisterPage3")
-            break
         case 3:
             pushController(with: "RegisterPage4")
         default:
@@ -148,35 +149,19 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 
     }
 
+    /**
+     Function to push the controller with identifier `String`
+     */
     func pushController(with identifier: String) {
         let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier) as? RegisterViewController
         self.navigationController?.pushViewController(viewController!, animated: true)
-        //        self.navigationController?.popViewController(animated: true)
     }
 
+    /**
+     Function to set the text of the fitnessLevelLabel
+     */
     @IBAction func setFitnessLevel(_ sender: UISlider) {
         fitnessLevelLab.text = String(Int(sender.value))
     }
 }
 
-//let status = CLLocationManager.authorizationStatus()
-//
-//switch status {
-//case .notDetermined, .denied, .restricted:
-//    gpsCheckbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
-//    break
-//case .denied, .restricted:
-//    let alert = UIAlertController(title: "Location Services disabled", message: "Please enable Location Services in Settings", preferredStyle: .alert)
-//    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//    alert.addAction(okAction)
-//
-//    present(alert, animated: true, completion: nil)
-//    return
-//case .authorizedAlways, .authorizedWhenInUse:
-//    break
-//default:
-//    break
-//}
-//
-//locationManager.delegate = self
-//locationManager.startUpdatingLocation()
