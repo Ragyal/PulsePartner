@@ -10,14 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     @IBAction func showController(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterPage1") as? RegisterViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterPage1") as? RegisterViewController
+        self.navigationController?.pushViewController(viewController!, animated: true)
     }
-    
 }
