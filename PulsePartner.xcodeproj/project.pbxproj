@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EF79E6C22612B5800AC1C45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */; };
+		3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
 		BCECF1362256241D00AFA163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1352256241D00AFA163 /* ViewController.swift */; };
 		BCECF1392256241D00AFA163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1372256241D00AFA163 /* Main.storyboard */; };
@@ -84,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePartner.entitlements; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCECF1352256241D00AFA163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCECF1272256241D00AFA163 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 				BCECF15C2256241E00AFA163 /* PulsePartner WatchKit App */,
 				BCECF16B2256241F00AFA163 /* PulsePartner WatchKit Extension */,
 				BCECF1312256241D00AFA163 /* Products */,
+				3EF79E6D226DE4F100AC1C45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +186,7 @@
 		BCECF1322256241D00AFA163 /* PulsePartner */ = {
 			isa = PBXGroup;
 			children = (
+				3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */,
 				BCECF1332256241D00AFA163 /* AppDelegate.swift */,
 				BCECF1352256241D00AFA163 /* ViewController.swift */,
 				BCECF1372256241D00AFA163 /* Main.storyboard */,
@@ -329,6 +343,11 @@
 				TargetAttributes = {
 					BCECF12F2256241D00AFA163 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					BCECF1432256241E00AFA163 = {
 						CreatedOnToolsVersion = 10.2;
@@ -705,6 +724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BLFEEYE58;
 				INFOPLIST_FILE = PulsePartner/Info.plist;
@@ -723,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BLFEEYE58;
 				INFOPLIST_FILE = PulsePartner/Info.plist;

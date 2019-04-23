@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreLocation
+import HealthKit
 
 class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
+    let healthManager = HKHealthStore()
     @IBOutlet weak var maleOneCheckbox: UIButton!
     @IBOutlet weak var femaleOneCheckbox: UIButton!
     @IBOutlet weak var maleSecondCheckbox: UIButton!
@@ -19,9 +21,13 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var fitnessLevelLab: UILabel!
     @IBOutlet weak var gpsCheckbox: UIButton!
     @IBOutlet weak var pushCheckbox: UIButton!
+    @IBOutlet weak var healthKitCheckbox: UIButton!
+    
 
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
+    lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Checkbox Style
@@ -30,11 +36,14 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
             }
-        } else if self.restorationIdentifier! == "RegisterPage3" {
-            let status = CLLocationManager.authorizationStatus()
-            gpsCheckbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
-            gpsCheckbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
-            switch status {
+        }else if(self.restorationIdentifier! == "RegisterPage3"){
+            for checkbox in permissionCheckboxes {
+                checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+                checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
+            }
+            let locationStatus = CLLocationManager.authorizationStatus()
+//            let healthStatus = HKHealthStore.authorizationStatus()
+            switch locationStatus {
             case .notDetermined, .denied, .restricted:
                 gpsCheckbox.isSelected = false
                 break
