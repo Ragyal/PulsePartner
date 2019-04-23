@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
     lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //Checkbox Style
@@ -36,7 +36,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
             }
-        }else if(self.restorationIdentifier! == "RegisterPage3"){
+        }else if self.restorationIdentifier! == "RegisterPage3" {
             for checkbox in permissionCheckboxes {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
@@ -59,7 +59,9 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
 
-    //Checkbox function
+    /**
+ 
+     */
     @IBAction func checkMarkTapped(_ sender: UIButton) {
 
         switch sender.tag {
