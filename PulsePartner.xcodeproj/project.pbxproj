@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3EF79E6C22612B5800AC1C45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */; };
 		3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePartner.entitlements; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				BCECF13A2256241E00AFA163 /* Assets.xcassets */,
 				BCECF13C2256241E00AFA163 /* LaunchScreen.storyboard */,
 				BCECF13F2256241E00AFA163 /* Info.plist */,
+				3E243A6E226F7541000434B6 /* MainViewController.swift */,
 			);
 			path = PulsePartner;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				3EF79E6C22612B5800AC1C45 /* RegisterViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* ViewController.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
+				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
