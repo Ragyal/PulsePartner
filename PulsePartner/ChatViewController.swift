@@ -28,7 +28,6 @@ class ChatViewController: UIViewController {
     }
 
     @IBAction func goBack(_ sender: UIButton) {
-        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainPage") as? MainViewController
-        self.navigationController?.pushViewController(viewController!, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
