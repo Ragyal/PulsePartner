@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
     @IBAction func showController(_ sender: UIButton) {
         switch sender.tag {
@@ -30,5 +30,16 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

@@ -230,7 +230,7 @@
                                     <action selector="goBack:" destination="26G-yr-T1q" eventType="touchUpInside" id="i7F-01-nMf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="       You 13:31: Hey honey " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-86-XdE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="       You 13:31: Hey honey " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-86-XdE">
                                 <rect key="frame" x="16" y="202" width="343" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7652954356319408" green="0.16812076489312891" blue="0.11791241837797314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

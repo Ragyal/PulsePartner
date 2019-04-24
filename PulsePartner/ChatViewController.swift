@@ -17,9 +17,9 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         profilePicture.image = picture
         nameLabel.text = name
-        // Do any additional setup after loading the view.
     }
 
     func setProfile(image: UIImage, name: String) {
