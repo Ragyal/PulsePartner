@@ -159,9 +159,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-4F-CIP">
-                                                    <rect key="frame" x="250" y="55" width="64" height="59"/>
+                                                    <rect key="frame" x="255" y="68" width="41" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="ChatIcon"/>
+                                                    <state key="normal" image="ChatIcon2"/>
                                                     <connections>
                                                         <action selector="openChat:" destination="6LH-Gl-u8Q" eventType="touchUpInside" id="hC8-MX-Vx1"/>
                                                     </connections>
@@ -576,7 +576,7 @@
     </scenes>
     <resources>
         <image name="AddProfilePicture" width="428" height="428"/>
-        <image name="ChatIcon" width="980" height="904"/>
+        <image name="ChatIcon2" width="1633" height="1292"/>
         <image name="HeartbeatIcon" width="1867" height="995"/>
         <image name="Herz" width="600" height="595"/>
         <image name="MainProfilePicture" width="1631" height="1631"/>
