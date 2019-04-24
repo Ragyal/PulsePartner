@@ -134,7 +134,8 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         case 2:
             pushController(with: "RegisterPage3")
         case 3:
-            pushController(with: "RegisterPage4")
+            let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginPage") as? ViewController
+            self.navigationController?.pushViewController(viewController!, animated: true)
         default:
             break
         }
