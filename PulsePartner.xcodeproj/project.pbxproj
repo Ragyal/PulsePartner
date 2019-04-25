@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
 		3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7422709A07000434B6 /* ChatViewController.swift */; };
 		3EF79E6C22612B5800AC1C45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */; };
 		3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */; };
+		6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */; };
+		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
+		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
+		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
+		BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
+		BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
 		BCECF1362256241D00AFA163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1352256241D00AFA163 /* ViewController.swift */; };
 		BCECF1392256241D00AFA163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1372256241D00AFA163 /* Main.storyboard */; };
@@ -28,6 +35,9 @@
 		BCECF1712256241F00AFA163 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1702256241F00AFA163 /* NotificationController.swift */; };
 		BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1722256241F00AFA163 /* Assets.xcassets */; };
 		BCECF18B22562AAA00AFA163 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BCECF18A22562AAA00AFA163 /* .gitignore */; };
+		E701EC6527032AACC9D5FE87 /* Pods_PulsePartner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */; };
+		E76A2DDE131804A9087EAE4B /* Pods_PulsePartnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */; };
+		F4D3F3480B60CD910CA98205 /* Pods_PulsePartnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,12 +97,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PulsePartner WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		3E243A7422709A07000434B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePartner.entitlements; sourceTree = "<group>"; };
+		43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit Extension/Pods-PulsePartner WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit Extension/Pods-PulsePartner WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCECF1352256241D00AFA163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +143,12 @@
 		BCF164702271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		BCF164712271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BCF164722271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
+		D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.release.xcconfig"; sourceTree = "<group>"; };
+		E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.debug.xcconfig"; sourceTree = "<group>"; };
+		FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */,
+				E701EC6527032AACC9D5FE87 /* Pods_PulsePartner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76A2DDE131804A9087EAE4B /* Pods_PulsePartnerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D3F3480B60CD910CA98205 /* Pods_PulsePartnerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +181,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0479D8BC07F475359ED0E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +200,31 @@
 			isa = PBXGroup;
 			children = (
 				3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */,
+				02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */,
+				3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */,
+				E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */,
+				BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */,
+				6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DB7407350F1504AFB1E4576 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */,
+				DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */,
+				FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */,
+				5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */,
+				43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */,
+				476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */,
+				E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */,
+				699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */,
+				D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */,
+				521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		BCECF1272256241D00AFA163 = {
@@ -178,6 +239,7 @@
 				BCECF16B2256241F00AFA163 /* PulsePartner WatchKit Extension */,
 				BCECF1312256241D00AFA163 /* Products */,
 				3EF79E6D226DE4F100AC1C45 /* Frameworks */,
+				4DB7407350F1504AFB1E4576 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +258,7 @@
 		BCECF1322256241D00AFA163 /* PulsePartner */ = {
 			isa = PBXGroup;
 			children = (
+				BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */,
 				3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */,
 				BCECF1332256241D00AFA163 /* AppDelegate.swift */,
 				BCECF1352256241D00AFA163 /* ViewController.swift */,
@@ -259,10 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF1802256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner" */;
 			buildPhases = (
+				290B218413973798BED60970 /* [CP] Check Pods Manifest.lock */,
 				BCECF12C2256241D00AFA163 /* Sources */,
 				BCECF12D2256241D00AFA163 /* Frameworks */,
 				BCECF12E2256241D00AFA163 /* Resources */,
 				BCECF17F2256241F00AFA163 /* Embed Watch Content */,
+				7274268763FFA1F2D8A914DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +343,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF1832256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartnerTests" */;
 			buildPhases = (
+				4270365D7FAF7D461C57B214 /* [CP] Check Pods Manifest.lock */,
 				BCECF1402256241E00AFA163 /* Sources */,
 				BCECF1412256241E00AFA163 /* Frameworks */,
 				BCECF1422256241E00AFA163 /* Resources */,
@@ -296,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF1862256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartnerUITests" */;
 			buildPhases = (
+				FC433D4CFC7164A017319743 /* [CP] Check Pods Manifest.lock */,
 				BCECF14B2256241E00AFA163 /* Sources */,
 				BCECF14C2256241E00AFA163 /* Frameworks */,
 				BCECF14D2256241E00AFA163 /* Resources */,
@@ -314,8 +381,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF17C2256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit App" */;
 			buildPhases = (
+				DA82A3BDF01D183FD49C1019 /* [CP] Check Pods Manifest.lock */,
 				BCECF1562256241E00AFA163 /* Resources */,
 				BCECF17B2256241F00AFA163 /* Embed App Extensions */,
+				D0479D8BC07F475359ED0E88 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +400,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF1782256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit Extension" */;
 			buildPhases = (
+				175A7E952CB2B56E3048BA5E /* [CP] Check Pods Manifest.lock */,
 				BCECF1632256241F00AFA163 /* Sources */,
 				BCECF1642256241F00AFA163 /* Frameworks */,
 				BCECF1652256241F00AFA163 /* Resources */,
@@ -408,6 +478,7 @@
 			files = (
 				BCECF18B22562AAA00AFA163 /* .gitignore in Resources */,
 				BCECF13E2256241E00AFA163 /* LaunchScreen.storyboard in Resources */,
+				BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 				BCECF13B2256241E00AFA163 /* Assets.xcassets in Resources */,
 				BCECF1392256241D00AFA163 /* Main.storyboard in Resources */,
 			);
@@ -417,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +506,7 @@
 			files = (
 				BCECF1612256241F00AFA163 /* Assets.xcassets in Resources */,
 				BCECF15F2256241E00AFA163 /* Interface.storyboard in Resources */,
+				BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +515,150 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */,
+				BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		175A7E952CB2B56E3048BA5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PulsePartner WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		290B218413973798BED60970 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PulsePartner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4270365D7FAF7D461C57B214 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PulsePartnerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7274268763FFA1F2D8A914DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PulsePartner/Pods-PulsePartner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PulsePartner/Pods-PulsePartner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA82A3BDF01D183FD49C1019 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PulsePartner WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC433D4CFC7164A017319743 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PulsePartnerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCECF12C2256241D00AFA163 /* Sources */ = {
@@ -663,6 +877,7 @@
 		};
 		BCECF1792256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -685,6 +900,7 @@
 		};
 		BCECF17A2256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -707,6 +923,7 @@
 		};
 		BCECF17D2256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -726,6 +943,7 @@
 		};
 		BCECF17E2256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -745,6 +963,7 @@
 		};
 		BCECF1812256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
@@ -764,6 +983,7 @@
 		};
 		BCECF1822256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
@@ -783,6 +1003,7 @@
 		};
 		BCECF1842256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -803,6 +1024,7 @@
 		};
 		BCECF1852256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -823,6 +1045,7 @@
 		};
 		BCECF1872256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -842,6 +1065,7 @@
 		};
 		BCECF1882256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
