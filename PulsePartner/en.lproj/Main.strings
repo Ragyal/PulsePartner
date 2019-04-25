@@ -1,0 +1,120 @@
+
+/* Class = "UIViewController"; title = "LoginPage"; ObjectID = "2sH-JL-KWV"; */
+"2sH-JL-KWV.title" = "LoginPage";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "3mz-b0-apL"; */
+"3mz-b0-apL.placeholder" = "Password";
+
+/* Class = "UIViewController"; title = "RegisterPage2"; ObjectID = "6zg-te-bER"; */
+"6zg-te-bER.title" = "RegisterPage2";
+
+/* Class = "UILabel"; text = "HealthKit Zugriff zulassen"; ObjectID = "8UW-Me-vGM"; */
+"8UW-Me-vGM.text" = "HealthKit Zugriff zulassen";
+
+/* Class = "UILabel"; text = "Male"; ObjectID = "9vb-ds-RVd"; */
+"9vb-ds-RVd.text" = "Male";
+
+/* Class = "UILabel"; text = "PulsePartners"; ObjectID = "Ake-sp-YYh"; */
+"Ake-sp-YYh.text" = "PulsePartners";
+
+/* Class = "UITextView"; text = "       You 13:31: Hey honey "; ObjectID = "Bue-86-XdE"; */
+"Bue-86-XdE.text" = "       You 13:31: Hey honey ";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "C0f-cR-kG0"; */
+"C0f-cR-kG0.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "I am"; ObjectID = "DgV-qh-Y4w"; */
+"DgV-qh-Y4w.text" = "I am";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E85-8y-Ile"; */
+"E85-8y-Ile.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "95 BPM"; ObjectID = "Fra-Nv-1g6"; */
+"Fra-Nv-1g6.text" = "95 BPM";
+
+/* Class = "UILabel"; text = "Male"; ObjectID = "Jcy-TL-T0V"; */
+"Jcy-TL-T0V.text" = "Male";
+
+/* Class = "UITextField"; placeholder = "Weight"; ObjectID = "L79-gE-N9C"; */
+"L79-gE-N9C.placeholder" = "Weight";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Mdd-5s-d6w"; */
+"Mdd-5s-d6w.text" = "1";
+
+/* Class = "UILabel"; text = "or"; ObjectID = "QVa-tm-LfZ"; */
+"QVa-tm-LfZ.text" = "or";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "R8T-vm-yJr"; */
+"R8T-vm-yJr.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "AgeLab"; ObjectID = "RkY-Xa-6W0"; */
+"RkY-Xa-6W0.text" = "AgeLab";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "TXJ-65-3eh"; */
+"TXJ-65-3eh.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "  Type something"; ObjectID = "UiO-EW-Sph"; */
+"UiO-EW-Sph.placeholder" = "  Type something";
+
+/* Class = "UIButton"; normalTitle = "register"; ObjectID = "Uzq-Ci-8LD"; */
+"Uzq-Ci-8LD.normalTitle" = "register";
+
+/* Class = "UILabel"; text = "Female"; ObjectID = "VWp-Kk-Pyf"; */
+"VWp-Kk-Pyf.text" = "Female";
+
+/* Class = "UIViewController"; title = "RegisterPage3"; ObjectID = "Xqz-JX-oI1"; */
+"Xqz-JX-oI1.title" = "RegisterPage3";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "YVc-nz-1Tr"; */
+"YVc-nz-1Tr.placeholder" = "First name";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "Z9h-Hi-RtR"; */
+"Z9h-Hi-RtR.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Fitness level:"; ObjectID = "bFd-Qw-stE"; */
+"bFd-Qw-stE.text" = "Fitness level:";
+
+/* Class = "UILabel"; text = "Female"; ObjectID = "dBa-8i-qti"; */
+"dBa-8i-qti.text" = "Female";
+
+/* Class = "UIViewController"; title = "MainPage"; ObjectID = "dQ6-HA-ygr"; */
+"dQ6-HA-ygr.title" = "MainPage";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "gzR-yk-A6g"; */
+"gzR-yk-A6g.placeholder" = "Last name";
+
+/* Class = "UILabel"; text = "BPMLab"; ObjectID = "hBH-mu-Tc5"; */
+"hBH-mu-Tc5.text" = "BPMLab";
+
+/* Class = "UITextField"; placeholder = "Mail address"; ObjectID = "kqt-ye-tEo"; */
+"kqt-ye-tEo.placeholder" = "Mail address";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "lOY-Ol-RSf"; */
+"lOY-Ol-RSf.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Pushnachrichten zulassen"; ObjectID = "pOp-Le-2Ww"; */
+"pOp-Le-2Ww.text" = "Pushnachrichten zulassen";
+
+/* Class = "UITextField"; placeholder = "Age"; ObjectID = "pd4-hY-OO7"; */
+"pd4-hY-OO7.placeholder" = "Age";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "pif-1N-lka"; */
+"pif-1N-lka.text" = "Name";
+
+/* Class = "UILabel"; text = "Looking for"; ObjectID = "qlL-fD-ObB"; */
+"qlL-fD-ObB.text" = "Looking for";
+
+/* Class = "UILabel"; text = "NameLab"; ObjectID = "rIL-dR-BGa"; */
+"rIL-dR-BGa.text" = "NameLab";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "tFS-tt-ioZ"; */
+"tFS-tt-ioZ.placeholder" = "Username";
+
+/* Class = "UINavigationItem"; title = "Back"; ObjectID = "uMg-ea-Grp"; */
+"uMg-ea-Grp.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "z3I-08-ECj"; */
+"z3I-08-ECj.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "GPS Zugriff zulassen"; ObjectID = "zZZ-3G-dqf"; */
+"zZZ-3G-dqf.text" = "GPS Zugriff zulassen";
