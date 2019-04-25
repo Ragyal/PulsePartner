@@ -76,10 +76,10 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         }
 //        sender.isSelected = !sender.isSelected
 //        Animation for selection
-        UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 0.05, delay: 0.02, options: .curveLinear, animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }) { (_) in
-            UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.05, delay: 0.02, options: .curveLinear, animations: {
                 sender.isSelected = !sender.isSelected
                 sender.transform = .identity
             }, completion: nil)
@@ -125,24 +125,13 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
      Function to change the displayed controller
      */
     @IBAction func changePage(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected || !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
-                let alert = UIAlertController(title: "Error!", message: "Please select a gender", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true)
-            } else {
-                pushController(with: "RegisterPage2")
-            }
-        case 2:
-            pushController(with: "RegisterPage3")
-        case 3:
-            let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginPage") as? ViewController
-            self.navigationController?.pushViewController(viewController!, animated: true)
-        default:
-            break
+        if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected || !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
+            let alert = UIAlertController(title: "Error!", message: "Please select a gender", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            self.performSegue(withIdentifier: "SecondRegisterSegue", sender: self)
         }
-
     }
 
     /**

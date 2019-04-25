@@ -15,26 +15,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+        let img = UIImage()
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+            self.hideKeyboardWhenTappedAround()
 //        self.navigationController?.isNavigationBarHidden = true
     }
     @IBAction func showController(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            if usernameTextField.text! == "lover69" && passwordTextField.text! == "1234" {
-                let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainPage") as? MainViewController
-                self.navigationController?.pushViewController(viewController!, animated: true)
-            }
-        case 2:
-            let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterPage1") as? RegisterViewController
-            self.navigationController?.pushViewController(viewController!, animated: true)
-        default:
-            break
+        if usernameTextField.text! == "lover69" && passwordTextField.text! == "1234" {
+            self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
         }
     }
-
 }
-
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

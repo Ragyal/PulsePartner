@@ -27,6 +27,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let img = UIImage()
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
         self.tableView.delegate = self
         self.tableView.dataSource = self
