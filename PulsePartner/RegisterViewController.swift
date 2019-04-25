@@ -78,12 +78,11 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 //        Animation for selection
         UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        }) { (success) in
+        }) { (_) in
             UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
                 sender.isSelected = !sender.isSelected
                 sender.transform = .identity
             }, completion: nil)
-
         }
     }
 
