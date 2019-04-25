@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>pulsepartner.PulsePartner</string>
+	<string>com.pulsepartner.PulsePartner</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
