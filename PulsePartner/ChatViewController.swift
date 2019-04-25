@@ -17,6 +17,7 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.isNavigationBarHidden = false
         self.hideKeyboardWhenTappedAround()
         profilePicture.image = picture
         nameLabel.text = name

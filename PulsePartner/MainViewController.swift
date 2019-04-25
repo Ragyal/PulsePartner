@@ -27,10 +27,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.isNavigationBarHidden = true
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.reloadData()
-        // Do any additional setup after loading the view.
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

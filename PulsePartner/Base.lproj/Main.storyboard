@@ -14,14 +14,17 @@
         <scene sceneID="iZk-PC-6ua">
             <objects>
                 <navigationController modalTransitionStyle="partialCurl" navigationBarHidden="YES" id="yZW-0u-F1j" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q2r-dj-1jF">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Q2r-dj-1jF">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gzv-ZN-oHq">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="2sH-JL-KWV" kind="relationship" relationship="rootViewController" id="sDQ-I9-N9Q"/>
+                        <segue destination="2sH-JL-KWV" kind="relationship" relationship="rootViewController" id="Erj-Ub-gpo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxD-2F-83H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,16 +223,6 @@
                                     <constraint firstAttribute="height" constant="110" id="Jk2-zs-BQ5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYp-J6-sdg">
-                                <rect key="frame" x="16" y="40" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="goBack:" destination="26G-yr-T1q" eventType="touchUpInside" id="i7F-01-nMf"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="       You 13:31: Hey honey " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-86-XdE">
                                 <rect key="frame" x="16" y="202" width="343" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mue-cE-bdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="319.95073891625617"/>
+            <point key="canvasLocation" x="718" y="320"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Ija-lo-ES3">
@@ -379,9 +372,7 @@
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="1t2-gc-HG8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5sZ-g2-ThV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="uM0-uT-1XP"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="5sZ-g2-ThV"/>
                     <connections>
                         <outlet property="femaleOneCheckbox" destination="euP-Pr-Tt2" id="gV2-zh-7AB"/>
                         <outlet property="femaleSecondCheckbox" destination="biJ-EA-YFi" id="nCu-pe-yWf"/>
@@ -391,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012" y="1025"/>
+            <point key="canvasLocation" x="-1012" y="1040"/>
         </scene>
         <!--RegisterPage2-->
         <scene sceneID="Iwv-Md-uFC">
@@ -490,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218.40000000000001" y="1024.8768472906404"/>
+            <point key="canvasLocation" x="-218" y="1040"/>
         </scene>
         <!--RegisterPage3-->
         <scene sceneID="dO2-Ao-JJI">
@@ -534,12 +525,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5s-x1-ZgV">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5s-x1-ZgV">
                                 <rect key="frame" x="42" y="351" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="askForPermission:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="oIp-Og-Zr8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HealthKit Zugriff zulassen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-Me-vGM">
                                 <rect key="frame" x="98" y="354" width="225" height="24"/>
@@ -571,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="1024.8768472906404"/>
+            <point key="canvasLocation" x="718" y="1040"/>
         </scene>
     </scenes>
     <resources>
@@ -579,6 +573,6 @@
         <image name="ChatIcon2" width="1633" height="1292"/>
         <image name="HeartbeatIcon" width="1867" height="995"/>
         <image name="Herz" width="600" height="595"/>
-        <image name="MainProfilePicture" width="1631" height="1631"/>
+        <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
 </document>

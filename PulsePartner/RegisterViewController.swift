@@ -29,6 +29,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.isNavigationBarHidden = false
         self.hideKeyboardWhenTappedAround()
         if self.restorationIdentifier! == "RegisterPage1" {
             for checkbox in checkboxes {
@@ -73,17 +74,17 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         default:
             break
         }
-        sender.isSelected = !sender.isSelected
+//        sender.isSelected = !sender.isSelected
 //        Animation for selection
-//        UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
-//                sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-//        }) { (success) in
-//            UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
-//                sender.isSelected = !sender.isSelected
-//                sender.transform = .identity
-//            }, completion: nil)
-//
-//        }
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+                sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (success) in
+            UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+
+        }
     }
 
     /**
@@ -113,7 +114,9 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
         case 2:
-            break
+            pushCheckbox.isSelected = true
+        case 3:
+            healthKitCheckbox.isSelected = true
         default:
             break
         }

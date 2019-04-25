@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+//        self.navigationController?.isNavigationBarHidden = true
     }
     @IBAction func showController(_ sender: UIButton) {
         switch sender.tag {
