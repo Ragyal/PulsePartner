@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nvp-5m-ET2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1802.4000000000001" y="518.7192118226601"/>
+            <point key="canvasLocation" x="-1809" y="519"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="Aif-A7-yQG">
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vo-H3-ij7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="518.7192118226601"/>
+            <point key="canvasLocation" x="1399" y="534"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="AUG-Ay-32c">
@@ -262,11 +262,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mue-cE-bdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3248.8000000000002" y="518.7192118226601"/>
+            <point key="canvasLocation" x="2228" y="534"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Ija-lo-ES3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RegisterPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LT-sJ-WhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -378,13 +379,13 @@
                         <segue destination="6zg-te-bER" kind="show" identifier="SecondRegisterSegue" id="aZc-lg-Pyo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010" y="1062"/>
+            <point key="canvasLocation" x="-1810" y="1394"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Iwv-Md-uFC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT0-ZP-8jk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -477,13 +478,13 @@
                         <outlet property="fitnessLevelLab" destination="Mdd-5s-d6w" id="0Pn-LS-wKo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218" y="1062"/>
+            <point key="canvasLocation" x="-1018" y="1394"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="dO2-Ao-JJI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RegisterPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xqz-JX-oI1" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wr-1T-HLl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -561,9 +562,8 @@
                         <outlet property="pushCheckbox" destination="3mz-xV-Fwa" id="80W-5w-WPJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="1062"/>
+            <point key="canvasLocation" x="-191" y="1393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4V-fe-VZO">
@@ -591,6 +591,7 @@
         <!--Navigation Controller-->
         <scene sceneID="We2-mC-PFm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPg-c3-eKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RwN-U1-tXw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -606,9 +607,8 @@
                         <segue destination="dQ6-HA-ygr" kind="relationship" relationship="rootViewController" id="Rxu-YT-gk3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPg-c3-eKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="519"/>
+            <point key="canvasLocation" x="607" y="534"/>
         </scene>
     </scenes>
     <resources>
@@ -619,6 +619,6 @@
         <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dau-wV-aPO"/>
+        <segue reference="tJP-Jn-cdH"/>
     </inferredMetricsTieBreakers>
 </document>
