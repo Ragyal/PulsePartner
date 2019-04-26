@@ -18,7 +18,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var femaleOneCheckbox: UIButton!
     @IBOutlet weak var maleSecondCheckbox: UIButton!
     @IBOutlet weak var femaleSecondCheckbox: UIButton!
-    @IBOutlet weak var fitnessLevelLab: UILabel!
     @IBOutlet weak var gpsCheckbox: UIButton!
     @IBOutlet weak var pushCheckbox: UIButton!
     @IBOutlet weak var healthKitCheckbox: UIButton!
@@ -56,7 +55,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     /**
      Function to check if the other radio button is already selected
      */
-    @IBAction func checkMarkTapped(_ sender: UIButton) {
+    @IBAction func onCheckboxClick(_ sender: UIButton) {
 
         switch sender.tag {
         case 1...2:
@@ -140,12 +139,5 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     func pushController(with identifier: String) {
         let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier) as? RegisterViewController
         self.navigationController?.pushViewController(viewController!, animated: true)
-    }
-
-    /**
-     Function to set the text of the fitnessLevelLabel
-     */
-    @IBAction func setFitnessLevel(_ sender: UISlider) {
-        fitnessLevelLab.text = String(Int(sender.value))
     }
 }
