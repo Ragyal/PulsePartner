@@ -259,19 +259,16 @@
 		BCECF1322256241D00AFA163 /* PulsePartner */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF5FF722737F40005848CE /* View */,
+				BCFF5FF622737CD9005848CE /* Controller */,
+				BCFF5FF522737CC7005848CE /* Model */,
 				BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */,
 				3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */,
 				BCECF1332256241D00AFA163 /* AppDelegate.swift */,
-				BCECF1352256241D00AFA163 /* ViewController.swift */,
 				BCECF1372256241D00AFA163 /* Main.storyboard */,
-				BCFF5FF322736566005848CE /* RegisterFormViewController.swift */,
-				3E243A7422709A07000434B6 /* ChatViewController.swift */,
-				3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */,
 				BCECF13A2256241E00AFA163 /* Assets.xcassets */,
 				BCECF13C2256241E00AFA163 /* LaunchScreen.storyboard */,
 				BCECF13F2256241E00AFA163 /* Info.plist */,
-				3E243A6E226F7541000434B6 /* MainViewController.swift */,
-				3E243A7222708FCE000434B6 /* MatchCell.swift */,
 			);
 			path = PulsePartner;
 			sourceTree = "<group>";
@@ -315,6 +312,33 @@
 				BCECF1752256241F00AFA163 /* PushNotificationPayload.apns */,
 			);
 			path = "PulsePartner WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		BCFF5FF522737CC7005848CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCFF5FF622737CD9005848CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCECF1352256241D00AFA163 /* ViewController.swift */,
+				BCFF5FF322736566005848CE /* RegisterFormViewController.swift */,
+				3E243A7422709A07000434B6 /* ChatViewController.swift */,
+				3EF79E6B22612B5800AC1C45 /* RegisterViewController.swift */,
+				3E243A6E226F7541000434B6 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCFF5FF722737F40005848CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E243A7222708FCE000434B6 /* MatchCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
