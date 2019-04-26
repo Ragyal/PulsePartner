@@ -10,7 +10,7 @@ import UIKit
 
 struct User {
 
-    var id: Int
+    var userID: Int
     var image: String
     var name: String
     var age: String
@@ -20,9 +20,9 @@ struct User {
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var users = [
-        User(id: 1, image: "ProfilePicture", name: "Clarissa", age: "27", bpm: "92"),
-        User(id: 2, image: "ProfilePicture2", name: "Alina", age: "23", bpm: "98"),
-        User(id: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
+        User(userID: 1, image: "ProfilePicture", name: "Clarissa", age: "27", bpm: "92"),
+        User(userID: 2, image: "ProfilePicture2", name: "Alina", age: "23", bpm: "98"),
+        User(userID: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
     ]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {

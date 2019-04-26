@@ -267,7 +267,6 @@
         <!--Register View Controller-->
         <scene sceneID="Ija-lo-ES3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RegisterPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LT-sJ-WhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -294,7 +293,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="checkMarkTapped:" destination="MYs-EL-81f" eventType="touchUpInside" id="Tvf-oa-Sql"/>
+                                    <action selector="onCheckboxClick:" destination="MYs-EL-81f" eventType="touchUpInside" id="LjJ-hR-mL6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-TL-T0V">
@@ -311,7 +310,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="checkMarkTapped:" destination="MYs-EL-81f" eventType="touchUpInside" id="jfT-AG-fwq"/>
+                                    <action selector="onCheckboxClick:" destination="MYs-EL-81f" eventType="touchUpInside" id="ba5-ml-B6f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBa-8i-qti">
@@ -328,7 +327,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="checkMarkTapped:" destination="MYs-EL-81f" eventType="touchUpInside" id="aSD-cS-Dnl"/>
+                                    <action selector="onCheckboxClick:" destination="MYs-EL-81f" eventType="touchUpInside" id="ekh-Ej-DFa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vb-ds-RVd">
@@ -345,7 +344,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="checkMarkTapped:" destination="MYs-EL-81f" eventType="touchUpInside" id="JMS-rk-RZT"/>
+                                    <action selector="onCheckboxClick:" destination="MYs-EL-81f" eventType="touchUpInside" id="sR5-fQ-siX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWp-Kk-Pyf">
@@ -363,7 +362,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePage:" destination="MYs-EL-81f" eventType="touchUpInside" id="WFV-Ql-Ttr"/>
+                                    <action selector="changePage:" destination="MYs-EL-81f" eventType="touchUpInside" id="7wr-wW-DR3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -379,14 +378,14 @@
                         <segue destination="6zg-te-bER" kind="show" identifier="SecondRegisterSegue" id="aZc-lg-Pyo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1810" y="1394"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register Form View Controller-->
         <scene sceneID="Iwv-Md-uFC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterFormViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT0-ZP-8jk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +402,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqt-ye-tEo">
                                 <rect key="frame" x="82" y="253" width="210" height="30"/>
@@ -446,7 +445,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xqz-JX-oI1" kind="show" id="c8X-Xz-ozY"/>
+                                    <action selector="onButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="Kp5-C4-RsI"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-jm-jsI">
@@ -475,16 +474,19 @@
                         <viewLayoutGuide key="safeArea" id="hER-fE-S13"/>
                     </view>
                     <connections>
-                        <outlet property="fitnessLevelLab" destination="Mdd-5s-d6w" id="0Pn-LS-wKo"/>
+                        <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
+                        <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
+                        <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
+                        <segue destination="Xqz-JX-oI1" kind="show" identifier="ThirdRegisterSegue" id="m4J-Qz-M8s"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1018" y="1394"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="dO2-Ao-JJI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RegisterPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xqz-JX-oI1" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wr-1T-HLl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -562,6 +564,7 @@
                         <outlet property="pushCheckbox" destination="3mz-xV-Fwa" id="80W-5w-WPJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-191" y="1393"/>
         </scene>
@@ -591,7 +594,6 @@
         <!--Navigation Controller-->
         <scene sceneID="We2-mC-PFm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPg-c3-eKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RwN-U1-tXw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -607,6 +609,7 @@
                         <segue destination="dQ6-HA-ygr" kind="relationship" relationship="rootViewController" id="Rxu-YT-gk3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPg-c3-eKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="607" y="534"/>
         </scene>
