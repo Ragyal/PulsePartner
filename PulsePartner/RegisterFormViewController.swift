@@ -10,8 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class RegisterFormViewController: UIViewController {
-    
-    
+
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
@@ -30,7 +29,7 @@ class RegisterFormViewController: UIViewController {
         if !validateInput() {
             return
         }
-        
+
         Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!) { (user, error) in
             if error == nil {
                 guard let user = Auth.auth().currentUser else {
@@ -39,29 +38,29 @@ class RegisterFormViewController: UIViewController {
                 let email = user.email ?? ""
                 let uid = user.uid
                 let message = "Email: " + email + "\nUID: " + uid
-                
+
                 let alertController = UIAlertController(title: "New User", message: message, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                
+
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
-                
+
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                
+
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
             }
         }
     }
-    
+
     func validateInput() -> Bool {
         var isValid: Bool = true
-        
+
         isValid = passwordInput.hasText
         isValid = emailInput.hasText
-        
+
         return isValid
     }
 
