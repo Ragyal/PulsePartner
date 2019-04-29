@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="register"/>
                                 <connections>
-                                    <segue destination="MYs-EL-81f" kind="show" id="q6D-RE-9PM"/>
+                                    <segue destination="6zg-te-bER" kind="show" id="p8N-po-4rL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeartbeatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Osj-fp-n3t">
@@ -267,7 +267,7 @@
         <!--Register View Controller-->
         <scene sceneID="Ija-lo-ES3">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LT-sJ-WhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,17 +375,17 @@
                         <outlet property="femaleSecondCheckbox" destination="biJ-EA-YFi" id="nCu-pe-yWf"/>
                         <outlet property="maleOneCheckbox" destination="rxa-xe-n31" id="Xce-Ti-L52"/>
                         <outlet property="maleSecondCheckbox" destination="sLY-6S-U4M" id="NSU-pk-A9b"/>
-                        <segue destination="6zg-te-bER" kind="show" identifier="SecondRegisterSegue" id="aZc-lg-Pyo"/>
+                        <segue destination="Xqz-JX-oI1" kind="show" identifier="SecondRegisterSegue" id="JM6-mL-Zh3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="1394"/>
+            <point key="canvasLocation" x="-978" y="1394"/>
         </scene>
         <!--Register Form View Controller-->
         <scene sceneID="Iwv-Md-uFC">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterFormViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterFormViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT0-ZP-8jk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,12 +477,12 @@
                         <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
                         <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
-                        <segue destination="Xqz-JX-oI1" kind="show" identifier="ThirdRegisterSegue" id="m4J-Qz-M8s"/>
+                        <segue destination="MYs-EL-81f" kind="show" identifier="ThirdRegisterSegue" id="c1D-ZG-FTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1018" y="1394"/>
+            <point key="canvasLocation" x="-1810" y="1394"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="dO2-Ao-JJI">

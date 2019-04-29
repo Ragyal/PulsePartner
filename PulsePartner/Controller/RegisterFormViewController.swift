@@ -19,6 +19,7 @@ class RegisterFormViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
 
     @IBAction func setFitnessLevel(_ sender: UISlider) {
@@ -40,11 +41,12 @@ class RegisterFormViewController: UIViewController {
                 let message = "Email: " + email + "\nUID: " + uid
 
                 let alertController = UIAlertController(title: "New User", message: message, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+                    self.performSegue(withIdentifier: "ThirdRegisterSegue", sender: self)
+                })
 
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
-
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
