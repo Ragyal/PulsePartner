@@ -13,7 +13,7 @@
         <!--LoginPage-->
         <scene sceneID="GIM-8O-jLn">
             <objects>
-                <viewController storyboardIdentifier="LoginPage" title="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2sH-JL-KWV" customClass="ViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" title="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2sH-JL-KWV" customClass="LoginViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dof-BF-wzm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,9 +474,13 @@
                         <viewLayoutGuide key="safeArea" id="hER-fE-S13"/>
                     </view>
                     <connections>
+                        <outlet property="ageInput" destination="pd4-hY-OO7" id="VbP-1U-RcW"/>
                         <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
+                        <outlet property="firstnameInput" destination="YVc-nz-1Tr" id="ZI3-rL-gRc"/>
                         <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
+                        <outlet property="lastnameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
+                        <outlet property="weightInput" destination="L79-gE-N9C" id="L6N-h2-SB6"/>
                         <segue destination="MYs-EL-81f" kind="show" identifier="ThirdRegisterSegue" id="c1D-ZG-FTn"/>
                     </connections>
                 </viewController>
@@ -622,6 +626,6 @@
         <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tJP-Jn-cdH"/>
+        <segue reference="Dau-wV-aPO"/>
     </inferredMetricsTieBreakers>
 </document>

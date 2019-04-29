@@ -7,12 +7,16 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class RegisterFormViewController: UIViewController {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var firstnameInput: UITextField!
+    @IBOutlet weak var lastnameInput: UITextField!
+    @IBOutlet weak var ageInput: UITextField!
+    @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
 
     override func viewDidLoad() {

@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationController?.isNavigationBarHidden = false
-        self.hideKeyboardWhenTappedAround()
+//        self.hideKeyboardWhenTappedAround()
         if self.restorationIdentifier! == "RegisterPage1" {
             for checkbox in checkboxes {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
