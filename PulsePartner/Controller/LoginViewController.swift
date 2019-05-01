@@ -24,17 +24,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onLoginButtonClick(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: emailInput.text!, password: passwordInput.text!) { (_, error) in
-            if error == nil {
-                self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
-            } else {
-                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }
+        let userManager = UserManager.sharedInstance
+        userManager.signIn(withEmail: emailInput.text ?? "", password: passwordInput.text ?? "", sender: self)
     }
 }
 

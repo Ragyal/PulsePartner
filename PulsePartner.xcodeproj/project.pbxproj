@@ -36,6 +36,7 @@
 		BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1722256241F00AFA163 /* Assets.xcassets */; };
 		BCECF18B22562AAA00AFA163 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BCECF18A22562AAA00AFA163 /* .gitignore */; };
 		BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF5FF322736566005848CE /* RegisterFormViewController.swift */; };
+		BCFF5FF92279C864005848CE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF5FF82279C864005848CE /* UserManager.swift */; };
 		E701EC6527032AACC9D5FE87 /* Pods_PulsePartner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */; };
 		E76A2DDE131804A9087EAE4B /* Pods_PulsePartnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */; };
 		F4D3F3480B60CD910CA98205 /* Pods_PulsePartnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */; };
@@ -145,6 +146,7 @@
 		BCF164712271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BCF164722271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		BCFF5FF322736566005848CE /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
+		BCFF5FF82279C864005848CE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.release.xcconfig"; sourceTree = "<group>"; };
 		E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +319,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF5FF82279C864005848CE /* UserManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
+				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
