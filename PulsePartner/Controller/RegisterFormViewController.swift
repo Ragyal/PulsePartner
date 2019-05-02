@@ -7,18 +7,22 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class RegisterFormViewController: UIViewController {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var firstnameInput: UITextField!
+    @IBOutlet weak var lastnameInput: UITextField!
+    @IBOutlet weak var ageInput: UITextField!
+    @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
 
     @IBAction func setFitnessLevel(_ sender: UISlider) {
@@ -26,42 +30,38 @@ class RegisterFormViewController: UIViewController {
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
-        if !validateInput() {
+        validateInput(completion: { registerData in
+            UserManager.sharedInstance.createUser(withUserData: registerData,
+                                                  sender: self) { success in
+                                                    if success {
+                                                        self.performSegue(withIdentifier: "FirstRegisterSegue", sender: self)
+                                                    }
+            }
+        })
+    }
+
+    private func validateInput(completion: (UserRegisterData) -> Void) {
+        guard let firstname = firstnameInput.text else {
+            return
+        }
+        guard let surname = lastnameInput.text else {
+            return
+        }
+        guard let email = emailInput.text else {
+            return
+        }
+        guard let password = passwordInput.text else {
+            return
+        }
+        guard let age = ageInput.text else {
+            return
+        }
+        guard let weight = weightInput.text else {
             return
         }
 
-        Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!) { (user, error) in
-            if error == nil {
-                guard let user = Auth.auth().currentUser else {
-                    return
-                }
-                let email = user.email ?? ""
-                let uid = user.uid
-                let message = "Email: " + email + "\nUID: " + uid
-
-                let alertController = UIAlertController(title: "New User", message: message, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-
-            } else {
-                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }
-    }
-
-    func validateInput() -> Bool {
-        var isValid: Bool = true
-
-        isValid = passwordInput.hasText
-        isValid = emailInput.hasText
-
-        return isValid
+        let registerData = UserRegisterData(firstname: firstname, surname: surname, email: email, password: password, age: age, weight: weight)
+        completion(registerData)
     }
 
     /*
