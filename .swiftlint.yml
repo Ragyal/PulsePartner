@@ -1,2 +1,2 @@
 disabled_rules: # rule identifiers to exclude from running
-    - line_length
+#    - line_length

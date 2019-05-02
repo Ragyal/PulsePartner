@@ -100,7 +100,9 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 locationManager.requestAlwaysAuthorization()
                 gpsCheckbox.isSelected = true
             case .denied, .restricted:
-                let alert = UIAlertController(title: "Location Services disabled", message: "Bitte erlaube den Zugriff auf deine GPS Daten in den Einstellungen settings ->privacy->Location Services", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Location Services disabled",
+                                              message: "Bitte erlaube den Zugriff auf deine GPS Daten.",
+                                              preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(okAction)
 
@@ -124,8 +126,11 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
      Function to change the displayed controller
      */
     @IBAction func changePage(_ sender: UIButton) {
-        if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected || !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
-            let alert = UIAlertController(title: "Error!", message: "Please select a gender", preferredStyle: .alert)
+        if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected ||
+            !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
+            let alert = UIAlertController(title: "Error!",
+                                          message: "Please select a gender",
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         } else {
@@ -137,7 +142,9 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
      Function to push the controller with identifier `String`
      */
     func pushController(with identifier: String) {
-        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier) as? RegisterViewController
+        let viewController = UIStoryboard.init(name: "Main",
+                                               bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: identifier) as? RegisterViewController
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
 }

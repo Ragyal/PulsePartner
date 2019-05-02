@@ -34,7 +34,8 @@ class RegisterFormViewController: UIViewController {
             UserManager.sharedInstance.createUser(withUserData: registerData,
                                                   sender: self) { success in
                                                     if success {
-                                                        self.performSegue(withIdentifier: "FirstRegisterSegue", sender: self)
+                                                        self.performSegue(withIdentifier: "FirstRegisterSegue",
+                                                                          sender: self)
                                                     }
             }
         })
@@ -60,7 +61,12 @@ class RegisterFormViewController: UIViewController {
             return
         }
 
-        let registerData = UserRegisterData(firstname: firstname, surname: surname, email: email, password: password, age: age, weight: weight)
+        let registerData = UserRegisterData(firstname: firstname,
+                                            surname: surname,
+                                            email: email,
+                                            password: password,
+                                            age: age,
+                                            weight: weight)
         completion(registerData)
     }
 

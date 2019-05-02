@@ -40,7 +40,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
 
         let user = users[indexPath.row]
-        cell.insertContent(image: user.image, name: user.name, age: "\(user.age) Years old", bpm: "\(user.bpm) BPM", navigation: self.navigationController!)
+        cell.insertContent(image: user.image,
+                           name: user.name,
+                           age: "\(user.age) Years old",
+                           bpm: "\(user.bpm) BPM",
+                           navigation: self.navigationController!)
 
         return cell
     }

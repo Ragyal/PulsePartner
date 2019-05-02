@@ -27,7 +27,11 @@ class MatchCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func insertContent(image: String, name: String, age: String, bpm: String, navigation: UINavigationController) {
+    func insertContent(image: String,
+                       name: String,
+                       age: String,
+                       bpm: String,
+                       navigation: UINavigationController) {
         profilePicture.image = UIImage(named: image)
         nameLabel.text = name
         ageLabel.text = age
@@ -36,7 +40,9 @@ class MatchCell: UITableViewCell {
     }
 
     @IBAction func openChat(_ sender: UIButton) {
-        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ChatPage") as? ChatViewController
+        let viewController = UIStoryboard.init(name: "Main",
+                                               bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "ChatPage") as? ChatViewController
         viewController?.setProfile(image: profilePicture.image!, name: nameLabel.text!)
         navController.pushViewController(viewController!, animated: true)
     }
