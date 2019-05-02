@@ -481,7 +481,7 @@
                         <outlet property="lastnameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
                         <outlet property="weightInput" destination="L79-gE-N9C" id="L6N-h2-SB6"/>
-                        <segue destination="MYs-EL-81f" kind="show" identifier="ThirdRegisterSegue" id="c1D-ZG-FTn"/>
+                        <segue destination="MYs-EL-81f" kind="show" identifier="FirstRegisterSegue" id="c1D-ZG-FTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>

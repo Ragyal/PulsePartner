@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -24,17 +23,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onLoginButtonClick(_ sender: UIButton) {
-        let userManager = UserManager.sharedInstance
-        userManager.signIn(withEmail: emailInput.text ?? "", password: passwordInput.text ?? "", sender: self)
-    }
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+        UserManager.sharedInstance.signIn(withEmail: emailInput.text ?? "",
+                                          password: passwordInput.text ?? "",
+                                          sender: self) { result in
+            if result {
+                self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
+            }
+        }
     }
 }

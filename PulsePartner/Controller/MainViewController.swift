@@ -8,15 +8,6 @@
 
 import UIKit
 
-struct User {
-
-    var userID: Int
-    var image: String
-    var name: String
-    var age: String
-    var bpm: String
-
-}
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var users = [
@@ -25,6 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         User(userID: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
     ]
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let img = UIImage()

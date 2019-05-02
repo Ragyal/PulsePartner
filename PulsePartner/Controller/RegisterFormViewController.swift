@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class RegisterFormViewController: UIViewController {
 
@@ -31,21 +30,38 @@ class RegisterFormViewController: UIViewController {
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
-        if !validateInput() {
+        validateInput(completion: { registerData in
+            UserManager.sharedInstance.createUser(withUserData: registerData,
+                                                  sender: self) { success in
+                                                    if success {
+                                                        self.performSegue(withIdentifier: "FirstRegisterSegue", sender: self)
+                                                    }
+            }
+        })
+    }
+
+    private func validateInput(completion: (UserRegisterData) -> Void) {
+        guard let firstname = firstnameInput.text else {
+            return
+        }
+        guard let surname = lastnameInput.text else {
+            return
+        }
+        guard let email = emailInput.text else {
+            return
+        }
+        guard let password = passwordInput.text else {
+            return
+        }
+        guard let age = ageInput.text else {
+            return
+        }
+        guard let weight = weightInput.text else {
             return
         }
 
-        let userManager = UserManager.sharedInstance
-        userManager.createUser(withEmail: emailInput.text ?? "", password: passwordInput.text ?? "", sender: self)
-    }
-
-    func validateInput() -> Bool {
-        var isValid: Bool = true
-
-        isValid = passwordInput.hasText
-        isValid = emailInput.hasText
-
-        return isValid
+        let registerData = UserRegisterData(firstname: firstname, surname: surname, email: email, password: password, age: age, weight: weight)
+        completion(registerData)
     }
 
     /*
