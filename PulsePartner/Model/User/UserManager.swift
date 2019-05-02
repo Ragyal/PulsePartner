@@ -45,7 +45,6 @@ class UserManager {
                         completion(true)
                     }
                 }
-                completion(true)
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
