@@ -108,7 +108,7 @@
 "rIL-dR-BGa.text" = "NameLab";
 
 /* Class = "UITextField"; placeholder = "Username"; ObjectID = "tFS-tt-ioZ"; */
-"tFS-tt-ioZ.placeholder" = "Username";
+"tFS-tt-ioZ.placeholder" = "E-Mail";
 
 /* Class = "UINavigationItem"; title = "Back"; ObjectID = "uMg-ea-Grp"; */
 "uMg-ea-Grp.title" = "Back";
