@@ -180,7 +180,13 @@
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3bO-aX-Ih6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5L2-1g-0hK"/>
+                    <navigationItem key="navigationItem" id="5L2-1g-0hK">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="yC5-ju-Lli">
+                            <connections>
+                                <action selector="onLogout:" destination="dQ6-HA-ygr" id="yZC-IF-Sgc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wn6-da-7fl" id="w4h-H1-RzF"/>
                         <segue destination="26G-yr-T1q" kind="show" identifier="ChatSegue" id="fOO-IK-uec"/>
