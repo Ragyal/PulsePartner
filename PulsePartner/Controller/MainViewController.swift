@@ -16,9 +16,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         User(userID: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
     ]
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var longTestLabel: UILabel!
+    @IBOutlet weak var latTestLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let locationManager = LocationManager()
+        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
+        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
