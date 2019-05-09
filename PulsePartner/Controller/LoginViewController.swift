@@ -21,6 +21,13 @@ class LoginViewController: UIViewController {
             self.hideKeyboardWhenTappedAround()
 //        self.navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (UserManager.sharedInstance.isLoggedIn) {
+            self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
+        }
+    }
 
     @IBAction func onLoginButtonClick(_ sender: UIButton) {
         UserManager.sharedInstance.signIn(withEmail: emailInput.text ?? "",
