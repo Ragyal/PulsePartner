@@ -15,14 +15,12 @@ class UserManager {
 
     let auth: Auth
     let fStore: Firestore
-    
+
     var isLoggedIn: Bool {
-        get {
-            if Auth.auth().currentUser != nil {
-                return true
-            }
-            return false
+        if Auth.auth().currentUser != nil {
+            return true
         }
+        return false
     }
 
     private init() {
