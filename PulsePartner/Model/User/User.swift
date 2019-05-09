@@ -19,6 +19,7 @@ struct UserRegisterData {
     var surname: String
     var email: String
     var password: String
-    var age: String
-    var weight: String
+    var age: Int
+    var weight: Float
+    var fitnessLevel: Int
 }

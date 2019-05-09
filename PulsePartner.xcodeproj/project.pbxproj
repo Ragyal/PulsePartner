@@ -17,6 +17,7 @@
 		BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */; };
 		BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */; };
 		BC4B20CB227B48D400F7B1FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CA227B48D400F7B1FF /* String.swift */; };
+		BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CC22844C0600F7B1FF /* UITextField.swift */; };
 		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
@@ -122,6 +123,7 @@
 		BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWIFTLINT.md; sourceTree = "<group>"; };
 		BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		BC4B20CC22844C0600F7B1FF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
 				BC4B20CA227B48D400F7B1FF /* String.swift */,
+				BC4B20CC22844C0600F7B1FF /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
+				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,8 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
+    
+    var fitnessLevel: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class RegisterFormViewController: UIViewController {
 
     @IBAction func setFitnessLevel(_ sender: UISlider) {
         fitnessLevelLabel.text = String(Int(sender.value))
+        fitnessLevel = Int(sender.value)
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
@@ -56,10 +59,12 @@ class RegisterFormViewController: UIViewController {
         guard let password = passwordInput.text else {
             return
         }
-        guard let age = ageInput.text else {
+        guard let age = ageInput.intValue else {
+            print("Age: kein Int")
             return
         }
-        guard let weight = weightInput.text else {
+        guard let weight = weightInput.floatValue else {
+            print("Age: kein Float")
             return
         }
 
@@ -68,7 +73,8 @@ class RegisterFormViewController: UIViewController {
                                             email: email,
                                             password: password,
                                             age: age,
-                                            weight: weight)
+                                            weight: weight,
+                                            fitnessLevel: fitnessLevel)
         completion(registerData)
     }
 
