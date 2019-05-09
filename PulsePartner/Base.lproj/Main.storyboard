@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="2228" y="534"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register Preferences View Controller-->
         <scene sceneID="Ija-lo-ES3">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterPreferencesViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LT-sJ-WhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

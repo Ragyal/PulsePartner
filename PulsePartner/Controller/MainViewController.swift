@@ -20,13 +20,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var longTestLabel: UILabel!
     @IBOutlet weak var latTestLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let locationManager = LocationManager()
         longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
         latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
-        distanceLabel.text = "Dist: \(locationManager.getDistance(from: CLLocation(latitude: 53.083552,longitude: 8.805238)))"
+        let distance = locationManager.getDistance(from: CLLocation(latitude: 53.083552, longitude: 8.805238))
+        distanceLabel.text = "Dist: \(distance)"
+
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)

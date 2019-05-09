@@ -12,7 +12,7 @@ import UIKit
 
 class LocationManager: UIViewController, CLLocationManagerDelegate {
         let manager = CLLocationManager()
-    
+
     func determineMyCurrentLocation() -> [String] {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -28,7 +28,7 @@ class LocationManager: UIViewController, CLLocationManagerDelegate {
         let error = ["Zugriff verweigert", "Bitte Einstellungen pruefen"]
         return error
     }
-    
+
     func getDistance (from location: CLLocation) -> Int {
         return Int(manager.location!.distance(from: location))
     }

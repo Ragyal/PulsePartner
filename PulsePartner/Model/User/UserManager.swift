@@ -42,7 +42,10 @@ class UserManager {
                     "surname": userData.surname,
                     "email": userData.email,
                     "age": userData.age,
-                    "weight": userData.weight
+                    "weight": userData.weight,
+                    "fitnessLevel": userData.fitnessLevel,
+                    "gender": userData.gender!,
+                    "preferences": userData.preferences!
                 ]) { err in
                     if let err = err {
                         print("Error writing document: \(err)")

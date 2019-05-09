@@ -14,28 +14,20 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     let healthManager = HKHealthStore()
-    @IBOutlet weak var maleOneCheckbox: UIButton!
-    @IBOutlet weak var femaleOneCheckbox: UIButton!
-    @IBOutlet weak var maleSecondCheckbox: UIButton!
-    @IBOutlet weak var femaleSecondCheckbox: UIButton!
+
     @IBOutlet weak var gpsCheckbox: UIButton!
     @IBOutlet weak var pushCheckbox: UIButton!
     @IBOutlet weak var healthKitCheckbox: UIButton!
-
-    lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
     lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 //        self.navigationController?.isNavigationBarHidden = false
 //        self.hideKeyboardWhenTappedAround()
-        if self.restorationIdentifier! == "RegisterPage2" {
-            for checkbox in checkboxes {
-                checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
-                checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
-            }
-        } else if self.restorationIdentifier! == "RegisterPage3" {
+
+        if self.restorationIdentifier! == "RegisterPage3" {
             for checkbox in permissionCheckboxes {
                 checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
                 checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
@@ -50,39 +42,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
                 break
             }
         }
-    }
-
-    /**
-     Function to check if the other radio button is already selected
-     */
-    @IBAction func onCheckboxClick(_ sender: UIButton) {
-
-        switch sender.tag {
-        case 1...2:
-            if sender.tag == 1 {
-                femaleOneCheckbox.isSelected = false
-            } else {
-                maleOneCheckbox.isSelected = false
-            }
-        case 3...4:
-            if sender.tag == 3 {
-                femaleSecondCheckbox.isSelected = false
-            } else {
-                maleSecondCheckbox.isSelected = false
-            }
-        default:
-            break
-        }
-//        sender.isSelected = !sender.isSelected
-//        Animation for selection
-        UIView.animate(withDuration: 0.05, delay: 0.02, options: .curveLinear, animations: {
-                sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        }, completion: { (_) in
-            UIView.animate(withDuration: 0.05, delay: 0.02, options: .curveLinear, animations: {
-                sender.isSelected = !sender.isSelected
-                sender.transform = .identity
-            }, completion: nil)
-        })
     }
 
     /**
@@ -119,22 +78,6 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
             healthKitCheckbox.isSelected = true
         default:
             break
-        }
-    }
-
-    /**
-     Function to change the displayed controller
-     */
-    @IBAction func changePage(_ sender: UIButton) {
-        if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected ||
-            !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
-            let alert = UIAlertController(title: "Error!",
-                                          message: "Please select a gender",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
-        } else {
-            self.performSegue(withIdentifier: "SecondRegisterSegue", sender: self)
         }
     }
 
