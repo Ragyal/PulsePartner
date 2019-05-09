@@ -22,4 +22,6 @@ struct UserRegisterData {
     var age: Int
     var weight: Float
     var fitnessLevel: Int
+    var gender: String?
+    var preferences: [String]?
 }

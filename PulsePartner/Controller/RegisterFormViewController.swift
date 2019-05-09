@@ -74,7 +74,9 @@ class RegisterFormViewController: UIViewController {
                                             password: password,
                                             age: age,
                                             weight: weight,
-                                            fitnessLevel: fitnessLevel)
+                                            fitnessLevel: fitnessLevel,
+                                            gender: nil,
+                                            preferences: nil)
         completion()
     }
 

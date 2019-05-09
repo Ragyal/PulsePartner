@@ -43,22 +43,12 @@ class RegisterPreferencesViewController: UIViewController {
      Function to check if the other radio button is already selected
      */
     @IBAction func onCheckboxClick(_ sender: UIButton) {
-
-        switch sender.tag {
-        case 1...2:
+        if case 1...2 = sender.tag {
             if sender.tag == 1 {
                 femaleOneCheckbox.isSelected = false
             } else {
                 maleOneCheckbox.isSelected = false
             }
-        case 3...4:
-            if sender.tag == 3 {
-                femaleSecondCheckbox.isSelected = false
-            } else {
-                maleSecondCheckbox.isSelected = false
-            }
-        default:
-            break
         }
         //        sender.isSelected = !sender.isSelected
         //        Animation for selection
@@ -79,12 +69,30 @@ class RegisterPreferencesViewController: UIViewController {
         if !femaleOneCheckbox.isSelected && !maleOneCheckbox.isSelected ||
             !femaleSecondCheckbox.isSelected && !maleSecondCheckbox.isSelected {
             let alert = UIAlertController(title: "Error!",
-                                          message: "Please select a gender",
+                                          message: "Please make your selection complete.",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         } else {
-            self.performSegue(withIdentifier: "SecondRegisterSegue", sender: self)
+            self.registerData!.gender = femaleOneCheckbox.isSelected ? "w" : "m"
+
+            var preferences = [String]()
+            if femaleSecondCheckbox.isSelected {
+                preferences.append("w")
+            }
+            if maleSecondCheckbox.isSelected {
+                preferences.append("m")
+            }
+            self.registerData!.preferences = preferences
+
+            UserManager.sharedInstance.createUser(withUserData: self.registerData!,
+                                                  sender: self,
+                                                  completion: { success in
+                                                    if success {
+                                                        self.performSegue(withIdentifier: "SecondRegisterSegue",
+                                                                          sender: self)
+                                                    }
+            })
         }
     }
 }
