@@ -17,8 +17,9 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
-    
+
     var fitnessLevel: Int = 1
+    var registerData: UserRegisterData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +28,23 @@ class RegisterFormViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! RegisterPreferencesViewController
+        destinationVC.registerData = registerData
+    }
+
     @IBAction func setFitnessLevel(_ sender: UISlider) {
         fitnessLevelLabel.text = String(Int(sender.value))
         fitnessLevel = Int(sender.value)
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
-        validateInput(completion: { registerData in
-            UserManager.sharedInstance.createUser(withUserData: registerData,
-                                                  sender: self) { success in
-                                                    if success {
-                                                        self.performSegue(withIdentifier: "FirstRegisterSegue",
-                                                                          sender: self)
-                                                    }
-            }
+        validateInput(completion: {
+            self.performSegue(withIdentifier: "FirstRegisterSegue", sender: self)
         })
     }
 
-    private func validateInput(completion: (UserRegisterData) -> Void) {
+    private func validateInput(completion: () -> Void) {
         guard let firstname = firstnameInput.text else {
             return
         }
@@ -68,14 +68,14 @@ class RegisterFormViewController: UIViewController {
             return
         }
 
-        let registerData = UserRegisterData(firstname: firstname,
+        self.registerData = UserRegisterData(firstname: firstname,
                                             surname: surname,
                                             email: email,
                                             password: password,
                                             age: age,
                                             weight: weight,
                                             fitnessLevel: fitnessLevel)
-        completion(registerData)
+        completion()
     }
 
     /*
