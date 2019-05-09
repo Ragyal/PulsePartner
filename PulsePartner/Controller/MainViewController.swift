@@ -28,6 +28,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
 
+    @IBAction func onLogout(_ sender: Any) {
+        UserManager.sharedInstance.logout()
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

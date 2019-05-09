@@ -48,7 +48,9 @@ class RegisterFormViewController: UIViewController {
         guard let surname = lastnameInput.text else {
             return
         }
-        guard let email = emailInput.text else {
+        guard let email = emailInput.text, email.isValidEmail else {
+//            emailInput.layer.borderColor = UIColor.red.cgColor
+//            emailInput.layer.borderWidth = 1.0
             return
         }
         guard let password = passwordInput.text else {

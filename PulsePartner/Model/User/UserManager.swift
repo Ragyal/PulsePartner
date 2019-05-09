@@ -16,6 +16,13 @@ class UserManager {
     let auth: Auth
     let fStore: Firestore
 
+    var isLoggedIn: Bool {
+        if Auth.auth().currentUser != nil {
+            return true
+        }
+        return false
+    }
+
     private init() {
         auth = Auth.auth()
         fStore = Firestore.firestore()
@@ -76,5 +83,17 @@ class UserManager {
                 completion(false)
             }
         }
+    }
+
+    public func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initial = storyboard.instantiateInitialViewController()
+        UIApplication.shared.keyWindow?.rootViewController = initial
     }
 }

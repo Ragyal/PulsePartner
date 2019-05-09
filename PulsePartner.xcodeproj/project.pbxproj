@@ -16,6 +16,7 @@
 		6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */; };
 		BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */; };
 		BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */; };
+		BC4B20CB227B48D400F7B1FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CA227B48D400F7B1FF /* String.swift */; };
 		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
@@ -120,6 +121,7 @@
 		BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWIFTLINT.md; sourceTree = "<group>"; };
 		BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
+				BC4B20CA227B48D400F7B1FF /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */,
+				BC4B20CB227B48D400F7B1FF /* String.swift in Sources */,
 				BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */,
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* RegisterViewController.swift in Sources */,
