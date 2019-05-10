@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import HealthKit
 
-class RegisterViewController: UIViewController, CLLocationManagerDelegate {
+class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     let healthManager = HKHealthStore()
@@ -27,20 +27,18 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
 //        self.navigationController?.isNavigationBarHidden = false
 //        self.hideKeyboardWhenTappedAround()
 
-        if self.restorationIdentifier! == "RegisterPage3" {
-            for checkbox in permissionCheckboxes {
-                checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
-                checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
-            }
-            let locationStatus = CLLocationManager.authorizationStatus()
-            switch locationStatus {
-            case .notDetermined, .denied, .restricted:
-                gpsCheckbox.isSelected = false
-            case .authorizedAlways, .authorizedWhenInUse:
-                gpsCheckbox.isSelected = true
-            default:
-                break
-            }
+        for checkbox in permissionCheckboxes {
+            checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+            checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
+        }
+        let locationStatus = CLLocationManager.authorizationStatus()
+        switch locationStatus {
+        case .notDetermined, .denied, .restricted:
+            gpsCheckbox.isSelected = false
+        case .authorizedAlways, .authorizedWhenInUse:
+            gpsCheckbox.isSelected = true
+        default:
+            break
         }
     }
 
@@ -79,15 +77,5 @@ class RegisterViewController: UIViewController, CLLocationManagerDelegate {
         default:
             break
         }
-    }
-
-    /**
-     Function to push the controller with identifier `String`
-     */
-    func pushController(with identifier: String) {
-        let viewController = UIStoryboard.init(name: "Main",
-                                               bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: identifier) as? RegisterViewController
-        self.navigationController?.pushViewController(viewController!, animated: true)
     }
 }

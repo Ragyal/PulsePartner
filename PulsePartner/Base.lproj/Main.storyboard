@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="register"/>
                                 <connections>
-                                    <segue destination="6zg-te-bER" kind="show" id="p8N-po-4rL"/>
+                                    <segue destination="MYs-EL-81f" kind="show" id="l7l-oQ-OVx"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeartbeatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Osj-fp-n3t">
@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="2228" y="534"/>
         </scene>
-        <!--Register Preferences View Controller-->
+        <!--Preferences View Controller-->
         <scene sceneID="Ija-lo-ES3">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="RegisterPreferencesViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYs-EL-81f" customClass="PreferencesViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LT-sJ-WhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,28 +405,21 @@
                         <outlet property="femaleSecondCheckbox" destination="biJ-EA-YFi" id="nCu-pe-yWf"/>
                         <outlet property="maleOneCheckbox" destination="rxa-xe-n31" id="Xce-Ti-L52"/>
                         <outlet property="maleSecondCheckbox" destination="sLY-6S-U4M" id="NSU-pk-A9b"/>
-                        <segue destination="Xqz-JX-oI1" kind="show" identifier="SecondRegisterSegue" id="JM6-mL-Zh3"/>
+                        <segue destination="6zg-te-bER" kind="show" identifier="showRegisterFormSegue" id="ZQT-FI-yxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgX-jh-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1000" y="1394"/>
+            <point key="canvasLocation" x="-1810" y="1394"/>
         </scene>
         <!--Register Form View Controller-->
         <scene sceneID="Iwv-Md-uFC">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterFormViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-te-bER" customClass="RegisterFormViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT0-ZP-8jk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-nz-1Tr">
-                                <rect key="frame" x="82" y="139" width="210" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="given-name"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXJ-65-3eh">
                                 <rect key="frame" x="82" y="215" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -443,7 +436,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-yk-A6g">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-yk-A6g">
                                 <rect key="frame" x="82" y="177" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -457,11 +450,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-ae-uud">
-                                <rect key="frame" x="139" y="27" width="96" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AddProfilePicture"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L79-gE-N9C">
                                 <rect key="frame" x="82" y="329" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -470,10 +458,10 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOY-Ol-RSf">
-                                <rect key="frame" x="154" y="572" width="66" height="48"/>
+                                <rect key="frame" x="128" y="572" width="118" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -501,6 +489,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-ae-uud">
+                                <rect key="frame" x="139" y="44" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AddProfilePicture"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="hER-fE-S13"/>
@@ -508,22 +501,21 @@
                     <connections>
                         <outlet property="ageInput" destination="pd4-hY-OO7" id="VbP-1U-RcW"/>
                         <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
-                        <outlet property="firstnameInput" destination="YVc-nz-1Tr" id="ZI3-rL-gRc"/>
                         <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
-                        <outlet property="lastnameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
+                        <outlet property="usernameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="weightInput" destination="L79-gE-N9C" id="L6N-h2-SB6"/>
-                        <segue destination="MYs-EL-81f" kind="show" identifier="FirstRegisterSegue" id="c1D-ZG-FTn"/>
+                        <segue destination="Xqz-JX-oI1" kind="show" identifier="showPermissionsSegue" id="bjW-yT-WQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-MF-oyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="1394"/>
+            <point key="canvasLocation" x="-1001" y="1394"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Permissions View Controller-->
         <scene sceneID="dO2-Ao-JJI">
             <objects>
-                <viewController storyboardIdentifier="RegisterPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xqz-JX-oI1" customClass="RegisterViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xqz-JX-oI1" customClass="PermissionsViewController" customModule="PulsePartner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wr-1T-HLl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -580,10 +572,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0f-cR-kG0">
-                                <rect key="frame" x="131" y="572" width="118" height="48"/>
+                                <rect key="frame" x="131" y="572" width="113" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -602,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei0-Jz-qqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="1394"/>
+            <point key="canvasLocation" x="-191.19999999999999" y="1393.5960591133005"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4V-fe-VZO">
@@ -658,6 +650,6 @@
         <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dau-wV-aPO"/>
+        <segue reference="tJP-Jn-cdH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -38,14 +38,13 @@ class UserManager {
                     return
                 }
                 self.fStore.collection("users").document(uid).setData([
-                    "fistname": userData.firstname,
-                    "surname": userData.surname,
+                    "username": userData.username,
                     "email": userData.email,
                     "age": userData.age,
                     "weight": userData.weight,
                     "fitnessLevel": userData.fitnessLevel,
-                    "gender": userData.gender!,
-                    "preferences": userData.preferences!
+                    "gender": userData.gender,
+                    "preferences": userData.preferences
                 ]) { err in
                     if let err = err {
                         print("Error writing document: \(err)")

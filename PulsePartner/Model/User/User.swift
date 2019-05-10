@@ -15,13 +15,17 @@ struct User {
 }
 
 struct UserRegisterData {
-    var firstname: String
-    var surname: String
+    var username: String
     var email: String
     var password: String
     var age: Int
     var weight: Float
     var fitnessLevel: Int
-    var gender: String?
-    var preferences: [String]?
+    var gender: String
+    var preferences: [String]
+}
+
+struct GenderSettings {
+    var ownGender: String
+    var preferences: [String]
 }
