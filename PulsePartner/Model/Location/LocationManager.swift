@@ -11,15 +11,15 @@ import MapKit
 import UIKit
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-    
+
     // Singleton
     static let sharedInstance = LocationManager()
-    
+
     let manager = CLLocationManager()
-    
+
     override init() {
         super.init()
-        
+
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()

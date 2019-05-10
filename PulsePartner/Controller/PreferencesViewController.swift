@@ -70,7 +70,7 @@ class PreferencesViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         } else {
-            
+
             let ownGender = femaleOneCheckbox.isSelected ? "w" : "m"
 
             var preferences = [String]()
@@ -80,7 +80,7 @@ class PreferencesViewController: UIViewController {
             if maleSecondCheckbox.isSelected {
                 preferences.append("m")
             }
-            
+
             self.genderSettings = GenderSettings(ownGender: ownGender, preferences: preferences)
 
             self.performSegue(withIdentifier: "showRegisterFormSegue", sender: self)
