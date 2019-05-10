@@ -10,13 +10,22 @@ import CoreLocation
 import MapKit
 import UIKit
 
-class LocationManager: UIViewController, CLLocationManagerDelegate {
-        let manager = CLLocationManager()
-
-    func determineMyCurrentLocation() -> [String] {
+class LocationManager: NSObject, CLLocationManagerDelegate {
+    
+    // Singleton
+    static let sharedInstance = LocationManager()
+    
+    let manager = CLLocationManager()
+    
+    override init() {
+        super.init()
+        
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
+    }
+
+    func determineMyCurrentLocation() -> [String] {
         if CLLocationManager.locationServicesEnabled() {
             print("Start Updating")
             manager.startUpdatingLocation()
@@ -32,5 +41,4 @@ class LocationManager: UIViewController, CLLocationManagerDelegate {
     func getDistance (from location: CLLocation) -> Int {
         return Int(manager.location!.distance(from: location))
     }
-
 }

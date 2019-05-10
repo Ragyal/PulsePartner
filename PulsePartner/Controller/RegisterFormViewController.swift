@@ -12,14 +12,13 @@ class RegisterFormViewController: UIViewController {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var firstnameInput: UITextField!
-    @IBOutlet weak var lastnameInput: UITextField!
+    @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
 
     var fitnessLevel: Int = 1
-    var registerData: UserRegisterData?
+    var genderSettings: GenderSettings?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,27 +27,28 @@ class RegisterFormViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! RegisterPreferencesViewController
-        destinationVC.registerData = registerData
-    }
-
     @IBAction func setFitnessLevel(_ sender: UISlider) {
         fitnessLevelLabel.text = String(Int(sender.value))
         fitnessLevel = Int(sender.value)
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
-        validateInput(completion: {
-            self.performSegue(withIdentifier: "FirstRegisterSegue", sender: self)
+        validateInput(completion: { data in
+            UserManager.sharedInstance.createUser(withUserData: data,
+                                                  sender: self) { success in
+                                                    if success {
+                                                        self.performSegue(withIdentifier: "showPermissionsSegue",
+                                                                          sender: self)
+                                                    }
+            }
         })
     }
 
-    private func validateInput(completion: () -> Void) {
-        guard let firstname = firstnameInput.text else {
+    private func validateInput(completion: (UserRegisterData) -> Void) {
+        guard let genderSettings = self.genderSettings else {
             return
         }
-        guard let surname = lastnameInput.text else {
+        guard let username = usernameInput.text else {
             return
         }
         guard let email = emailInput.text, email.isValidEmail else {
@@ -68,16 +68,15 @@ class RegisterFormViewController: UIViewController {
             return
         }
 
-        self.registerData = UserRegisterData(firstname: firstname,
-                                            surname: surname,
+        let registerData = UserRegisterData(username: username,
                                             email: email,
                                             password: password,
                                             age: age,
                                             weight: weight,
                                             fitnessLevel: fitnessLevel,
-                                            gender: nil,
-                                            preferences: nil)
-        completion()
+                                            gender: genderSettings.ownGender,
+                                            preferences: genderSettings.preferences)
+        completion(registerData)
     }
 
     /*

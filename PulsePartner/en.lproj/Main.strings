@@ -21,7 +21,7 @@
 "Bue-86-XdE.text" = "       You 13:31: Hey honey ";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "C0f-cR-kG0"; */
-"C0f-cR-kG0.normalTitle" = "Register";
+"C0f-cR-kG0.normalTitle" = "Start";
 
 /* Class = "UILabel"; text = "I am"; ObjectID = "DgV-qh-Y4w"; */
 "DgV-qh-Y4w.text" = "I am";
@@ -80,8 +80,8 @@
 /* Class = "UIViewController"; title = "MainPage"; ObjectID = "dQ6-HA-ygr"; */
 "dQ6-HA-ygr.title" = "MainPage";
 
-/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "gzR-yk-A6g"; */
-"gzR-yk-A6g.placeholder" = "Last name";
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "gzR-yk-A6g"; */
+"gzR-yk-A6g.placeholder" = "Username";
 
 /* Class = "UILabel"; text = "BPMLab"; ObjectID = "hBH-mu-Tc5"; */
 "hBH-mu-Tc5.text" = "BPMLab";
@@ -90,10 +90,10 @@
 "kqt-ye-tEo.placeholder" = "Mail address";
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "lOY-Ol-RSf"; */
-"lOY-Ol-RSf.normalTitle" = "Next";
+"lOY-Ol-RSf.normalTitle" = "Register";
 
 /* Class = "UILabel"; text = "Pushnachrichten zulassen"; ObjectID = "pOp-Le-2Ww"; */
-"pOp-Le-2Ww.text" = "Pushnachrichten zulassen";
+"pOp-Le-2Ww.text" = "Allow push notifications ";
 
 /* Class = "UITextField"; placeholder = "Age"; ObjectID = "pd4-hY-OO7"; */
 "pd4-hY-OO7.placeholder" = "Age";
@@ -107,7 +107,7 @@
 /* Class = "UILabel"; text = "NameLab"; ObjectID = "rIL-dR-BGa"; */
 "rIL-dR-BGa.text" = "NameLab";
 
-/* Class = "UITextField"; placeholder = "Username"; ObjectID = "tFS-tt-ioZ"; */
+/* Class = "UITextField"; placeholder = "E-Mail"; ObjectID = "tFS-tt-ioZ"; */
 "tFS-tt-ioZ.placeholder" = "E-Mail";
 
 /* Class = "UINavigationItem"; title = "Back"; ObjectID = "uMg-ea-Grp"; */
@@ -117,4 +117,4 @@
 "z3I-08-ECj.normalTitle" = "Login";
 
 /* Class = "UILabel"; text = "GPS Zugriff zulassen"; ObjectID = "zZZ-3G-dqf"; */
-"zZZ-3G-dqf.text" = "GPS Zugriff zulassen";
+"zZZ-3G-dqf.text" = "Allow GPS";

@@ -8,16 +8,15 @@
 
 import UIKit
 
-class RegisterPreferencesViewController: UIViewController {
+class PreferencesViewController: UIViewController {
 
     @IBOutlet weak var maleOneCheckbox: UIButton!
     @IBOutlet weak var femaleOneCheckbox: UIButton!
     @IBOutlet weak var maleSecondCheckbox: UIButton!
     @IBOutlet weak var femaleSecondCheckbox: UIButton!
-
     lazy var checkboxes = [maleOneCheckbox, femaleOneCheckbox, maleSecondCheckbox, femaleSecondCheckbox]
 
-    var registerData: UserRegisterData?
+    var genderSettings: GenderSettings?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +28,12 @@ class RegisterPreferencesViewController: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let destinationVC = segue.destination as? RegisterFormViewController else {
+            return
+        }
+        destinationVC.genderSettings = self.genderSettings
     }
-    */
 
     /**
      Function to check if the other radio button is already selected
@@ -74,7 +70,8 @@ class RegisterPreferencesViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         } else {
-            self.registerData!.gender = femaleOneCheckbox.isSelected ? "w" : "m"
+            
+            let ownGender = femaleOneCheckbox.isSelected ? "w" : "m"
 
             var preferences = [String]()
             if femaleSecondCheckbox.isSelected {
@@ -83,16 +80,10 @@ class RegisterPreferencesViewController: UIViewController {
             if maleSecondCheckbox.isSelected {
                 preferences.append("m")
             }
-            self.registerData!.preferences = preferences
+            
+            self.genderSettings = GenderSettings(ownGender: ownGender, preferences: preferences)
 
-            UserManager.sharedInstance.createUser(withUserData: self.registerData!,
-                                                  sender: self,
-                                                  completion: { success in
-                                                    if success {
-                                                        self.performSegue(withIdentifier: "SecondRegisterSegue",
-                                                                          sender: self)
-                                                    }
-            })
+            self.performSegue(withIdentifier: "showRegisterFormSegue", sender: self)
         }
     }
 }

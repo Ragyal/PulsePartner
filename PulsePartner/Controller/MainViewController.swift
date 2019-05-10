@@ -11,24 +11,25 @@ import CoreLocation
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var users = [
-        User(userID: 1, image: "ProfilePicture", name: "Clarissa", age: "27", bpm: "92"),
-        User(userID: 2, image: "ProfilePicture2", name: "Alina", age: "23", bpm: "98"),
-        User(userID: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
-    ]
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var longTestLabel: UILabel!
     @IBOutlet weak var latTestLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
 
+    var users = [
+        User(userID: 1, image: "ProfilePicture", name: "Clarissa", age: "27", bpm: "92"),
+        User(userID: 2, image: "ProfilePicture2", name: "Alina", age: "23", bpm: "98"),
+        User(userID: 3, image: "ProfilePicture3", name: "Jenny", age: "19", bpm: "95")
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let locationManager = LocationManager()
-        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
-        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
-        let distance = locationManager.getDistance(from: CLLocation(latitude: 53.083552, longitude: 8.805238))
-        distanceLabel.text = "Dist: \(distance)"
+//        let locationManager = LocationManager.sharedInstance
+//        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
+//        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
+//        let distance = locationManager.getDistance(from: CLLocation(latitude: 53.083552, longitude: 8.805238))
+//        distanceLabel.text = "Dist: \(distance)"
 
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
