@@ -465,7 +465,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="Kp5-C4-RsI"/>
+                                    <action selector="onRegisterButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="Kp5-C4-RsI"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-jm-jsI">
@@ -493,6 +493,9 @@
                                 <rect key="frame" x="139" y="44" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AddProfilePicture"/>
+                                <connections>
+                                    <action selector="onPictureButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="XJv-hf-MAP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterFormViewController: UIViewController {
+class RegisterFormViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
@@ -17,6 +17,8 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
 
+    var imagePicker: UIImagePickerController!
+    
     var fitnessLevel: Int = 1
     var genderSettings: GenderSettings?
 
@@ -32,7 +34,51 @@ class RegisterFormViewController: UIViewController {
         fitnessLevel = Int(sender.value)
     }
 
-    @IBAction func onButtonClick(_ sender: UIButton) {
+    @IBAction func onPictureButtonClick(_ sender: Any) {
+        let alertController = UIAlertController(title: nil,
+                                                message: "Where do you want to select the picture?",
+                                                preferredStyle: .actionSheet)
+        
+        let defaultAction = UIAlertAction(title: "Camera", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+                
+                let alertController = UIAlertController.init(title: nil, message: "Device has no camera. Please test on real device", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction.init(title: "Alright", style: .default, handler: {(alert: UIAlertAction!) in
+                })
+                
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else {
+                self.imagePicker =  UIImagePickerController()
+                self.imagePicker.delegate = self
+                self.imagePicker.sourceType = .camera
+                
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+        })
+        
+        let deleteAction = UIAlertAction(title: "Library", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .savedPhotosAlbum
+            
+            self.present(self.imagePicker, animated: true, completion: nil)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert: UIAlertAction!) -> Void in
+            //  Do something here upon cancellation.
+        })
+        
+        alertController.addAction(defaultAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
             UserManager.sharedInstance.createUser(withUserData: data,
                                                   sender: self) { success in
