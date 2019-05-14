@@ -10,6 +10,8 @@ target 'PulsePartner' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
 
+  pod 'CropViewController'
+
   target 'PulsePartnerTests' do
     inherit! :search_paths
     # Pods for testing

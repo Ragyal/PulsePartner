@@ -20,6 +20,7 @@
 		BC4B20CB227B48D400F7B1FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CA227B48D400F7B1FF /* String.swift */; };
 		BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CC22844C0600F7B1FF /* UITextField.swift */; };
 		BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */; };
+		BC519FB0228B75500053D116 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BC519FAF228B75500053D116 /* Podfile */; };
 		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
@@ -128,6 +129,7 @@
 		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BC4B20CC22844C0600F7B1FF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		BC519FAF228B75500053D116 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		BCECF1272256241D00AFA163 = {
 			isa = PBXGroup;
 			children = (
+				BC519FAF228B75500053D116 /* Podfile */,
 				BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */,
 				BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */,
 				BCECF1892256265B00AFA163 /* README.md */,
@@ -555,6 +558,7 @@
 			files = (
 				BCECF18B22562AAA00AFA163 /* .gitignore in Resources */,
 				BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */,
+				BC519FB0228B75500053D116 /* Podfile in Resources */,
 				BCECF13E2256241E00AFA163 /* LaunchScreen.storyboard in Resources */,
 				BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */,
 				BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */,
@@ -677,6 +681,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PulsePartner/Pods-PulsePartner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -690,6 +695,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
