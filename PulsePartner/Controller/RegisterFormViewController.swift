@@ -60,7 +60,6 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
                              animated: true,
                              completion: nil)
             } else {
-                self.imagePicker =  UIImagePickerController()
                 self.imagePicker.sourceType = .camera
 
                 self.present(self.imagePicker,
@@ -92,7 +91,6 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
                 print("Unknown state.")
                 return
             }
-            self.imagePicker =  UIImagePickerController()
             self.imagePicker.sourceType = .savedPhotosAlbum
 
             self.present(self.imagePicker, animated: true, completion: nil)
@@ -109,28 +107,28 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
         self.present(alertController, animated: true, completion: nil)
     }
 
-    @objc private func imagePickerController(picker: UIImagePickerController,
-                                             didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         print("dismissed")
-        guard let image: UIImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
+        guard let image: UIImage = info[.originalImage] as? UIImage else {
             return
         }
-//        presentCropViewController(withImage: image)
+        presentCropViewController(withImage: image)
     }
 
-//    func presentCropViewController(withImage image: UIImage) {
-//        let cropViewController = CropViewController(croppingStyle: .circular, image: image)
-//        cropViewController.delegate = self
-//        self.present(cropViewController, animated: true, completion: nil)
-//    }
-//
-//    private func cropViewController(_ cropViewController: TOCropViewController?,
-//                                    didCropToCircularImage image: UIImage?,
-//                                    with cropRect: CGRect,
-//                                    angle: Int) {
-//        // 'image' is the newly cropped, circular version of the original image
-//    }
+    func presentCropViewController(withImage image: UIImage) {
+        let cropViewController = CropViewController(croppingStyle: .circular, image: image)
+        cropViewController.delegate = self
+        self.present(cropViewController, animated: true, completion: nil)
+    }
+
+    private func cropViewController(_ cropViewController: TOCropViewController?,
+                                    didCropToCircularImage image: UIImage?,
+                                    with cropRect: CGRect,
+                                    angle: Int) {
+        // 'image' is the newly cropped, circular version of the original image
+    }
 
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
