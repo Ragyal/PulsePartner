@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
+		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -109,6 +110,7 @@
 /* Begin PBXFileReference section */
 		02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PulsePartner WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E02EA8F228EF0CA00464C93 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E02EA8E228EF0A700464C93 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				3E02EA8F228EF0CA00464C93 /* MatchManager.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
 		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +355,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E02EA8E228EF0A700464C93 /* Match */,
 				BCFF5FFD227A2681005848CE /* User */,
 				BC5D4858228641DA0084E1C7 /* Location */,
 			);
@@ -769,6 +780,7 @@
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 				BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */,
+				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

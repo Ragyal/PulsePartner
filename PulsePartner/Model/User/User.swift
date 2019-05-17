@@ -10,8 +10,8 @@ struct User {
     var userID: Int
     var image: String
     var name: String
-    var age: String
-    var bpm: String
+    var age: Int
+    var bpm: Int
 }
 
 struct UserRegisterData {
