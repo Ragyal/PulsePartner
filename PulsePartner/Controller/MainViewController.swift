@@ -12,9 +12,7 @@ import CoreLocation
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var longTestLabel: UILabel!
-    @IBOutlet weak var latTestLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var profilePicture: UIButton!
 
     var users = [
         User(userID: 1, image: "ProfilePicture", name: "Clarissa", age: "27", bpm: "92"),
@@ -24,7 +22,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserManager.sharedInstance.getProfilePicture(withView: self)
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
 //        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
