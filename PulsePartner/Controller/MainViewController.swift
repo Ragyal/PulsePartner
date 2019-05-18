@@ -18,16 +18,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var allMatches = [User]() {
         didSet {
-            print(allMatches.count)
-//            reload()
+            print("Hello \(allMatches.count)")
         }
     }
 
-        static let sharedInstance = MainViewController()
+    static let sharedInstance = MainViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabV = self.tableView
         UserManager.sharedInstance.getProfilePicture(withView: self)
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
@@ -36,11 +34,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        distanceLabel.text = "Dist: \(distance)"
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        MatchManager.sharedInstance.getMatches()
+//        allMatches = MatchManager.sharedInstance.getMatches()
+        print("Start download")
+        MatchManager.sharedInstance.loadMatches() {
+            // Data for UITableView is populated from the CatManager singleton
+            print("reload Table")
+            self.allMatches = MatchManager.sharedInstance.allMatches
+            self.tableView.reloadData()
+        }
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func reload(userList: [User]) {
+        for user in userList {
+            allMatches.append(user)
+        }
     }
 
     @IBAction func onLogout(_ sender: Any) {
@@ -58,19 +69,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
 
-//        let user = self.allMatches[indexPath.row]
-//        cell.insertContent(image: user.image,
-//                            name: user.name,
-//                            age: String(user.age),
-//                            bpm: String(user.bpm),
-//                            navigation: self.navigationController!)
-
-        cell.insertContent(image: "ProfilePicture",
-                           name: "Hans",
-                           age: "23",
-                           bpm: "22",
-                           navigation: self.navigationController!)
-
+        let user = self.allMatches[indexPath.row]
+        cell.insertContent(image: user.image,
+                            name: user.name,
+                            age: String(user.age),
+                            bpm: String(user.bpm),
+                            navigation: self.navigationController!)
         return cell
     }
 }
