@@ -34,29 +34,56 @@ class UserManager {
                            image: UIImage?,
                            sender: UIViewController,
                            completion: @escaping (Bool) -> Void) {
+
         self.auth.createUser(withEmail: userData.email, password: userData.password) { (user, error) in
             if error == nil {
                 guard let uid = user?.user.uid else {
                     completion(false)
                     return
                 }
-                self.fStore.collection("users").document(uid).setData([
-                    "username": userData.username,
-                    "email": userData.email,
-                    "age": userData.age,
-                    "weight": userData.weight,
-                    "fitnessLevel": userData.fitnessLevel,
-                    "gender": userData.gender,
-                    "preferences": userData.preferences
-                ]) { err in
-                    if let err = err {
-                        print("Error writing document: \(err)")
-                        completion(false)
-                    } else {
-                        print("Document successfully written!")
-                        completion(true)
+                // Data in memory
+                if let data = image?.pngData() {
+                    // Create a reference to the file you want to upload
+                    let pictureRef = self.fStorage.reference().child("profilePictures/\(uid).png")
+
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/png"
+
+                    // Upload the file to the path "images/rivers.jpg"
+                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, error) in
+                        guard metadata != nil else {
+                            // Uh-oh, an error occurred!
+                            return
+                        }
+                        // You can also access to download URL after upload.
+                        pictureRef.downloadURL { (url, _) in
+                            guard let downloadURL = url else {
+                                // Uh-oh, an error occurred!
+                                return
+                            }
+
+                            self.fStore.collection("users").document(uid).setData([
+                                "username": userData.username,
+                                "email": userData.email,
+                                "age": userData.age,
+                                "weight": userData.weight,
+                                "fitnessLevel": userData.fitnessLevel,
+                                "gender": userData.gender,
+                                "preferences": userData.preferences,
+                                "pictureURL": downloadURL.absoluteString
+                            ]) { err in
+                                if let err = err {
+                                    print("Error writing document: \(err)")
+                                    completion(false)
+                                } else {
+                                    print("Document successfully written!")
+                                    completion(true)
+                                }
+                            }
+                        }
                     }
                 }
+
             } else {
                 let alertController = UIAlertController(title: "Error",
                                                         message: error?.localizedDescription,
