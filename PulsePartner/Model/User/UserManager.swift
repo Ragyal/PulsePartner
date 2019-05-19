@@ -102,7 +102,7 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
-    public func getProfilePicture(withView view: MainViewController) {
+    func getProfilePicture(completion: @escaping (UIImage) -> Void) {
             let downloadURL = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
             let imageRef = self.fStorage.reference(forURL: downloadURL)
             imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
@@ -110,9 +110,7 @@ class UserManager {
                     print("Error: \(error)")
                 } else {
                     if let imageData = data {
-                        DispatchQueue.main.async {
-                            view.profilePicture.setImage(UIImage(data: imageData)!, for: .normal)
-                        }
+                        completion(UIImage(data: imageData)!)
                     }
                 }
             })

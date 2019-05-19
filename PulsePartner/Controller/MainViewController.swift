@@ -22,11 +22,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 
-    static let sharedInstance = MainViewController()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserManager.sharedInstance.getProfilePicture(withView: self)
+        UserManager.sharedInstance.getProfilePicture() { picture in
+            profilePicture.setImage(picture, for: .normal)
+            
+        }
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
 //        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
