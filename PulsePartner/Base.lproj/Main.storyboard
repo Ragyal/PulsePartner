@@ -506,6 +506,7 @@
                         <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
                         <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
+                        <outlet property="pictureButton" destination="So2-ae-uud" id="MYC-AG-v0L"/>
                         <outlet property="usernameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="weightInput" destination="L79-gE-N9C" id="L6N-h2-SB6"/>
                         <segue destination="Xqz-JX-oI1" kind="show" identifier="showPermissionsSegue" id="bjW-yT-WQW"/>

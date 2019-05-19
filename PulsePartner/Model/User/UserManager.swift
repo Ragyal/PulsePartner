@@ -29,6 +29,7 @@ class UserManager {
     }
 
     public func createUser(withUserData userData: UserRegisterData,
+                           image: UIImage?,
                            sender: UIViewController,
                            completion: @escaping (Bool) -> Void) {
         self.auth.createUser(withEmail: userData.email, password: userData.password) { (user, error) in

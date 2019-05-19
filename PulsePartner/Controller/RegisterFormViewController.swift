@@ -13,6 +13,7 @@ import Photos
 class RegisterFormViewController: UIViewController,
 UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControllerDelegate {
 
+    @IBOutlet weak var pictureButton: UIButton!
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var usernameInput: UITextField!
@@ -21,6 +22,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
     @IBOutlet weak var fitnessLevelLabel: UILabel!
 
     var imagePicker: UIImagePickerController!
+    var image: UIImage?
 
     var fitnessLevel: Int = 1
     var genderSettings: GenderSettings?
@@ -108,9 +110,8 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
     }
 
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imagePicker.dismiss(animated: true, completion: nil)
-        print("dismissed")
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil)
         guard let image: UIImage = info[.originalImage] as? UIImage else {
             return
         }
@@ -123,16 +124,21 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
         self.present(cropViewController, animated: true, completion: nil)
     }
 
-    private func cropViewController(_ cropViewController: TOCropViewController?,
-                                    didCropToCircularImage image: UIImage?,
-                                    with cropRect: CGRect,
+    @objc func cropViewController(_ cropViewController: CropViewController,
+                                    didCropToCircularImage image: UIImage,
+                                    withRect cropRect: CGRect,
                                     angle: Int) {
         // 'image' is the newly cropped, circular version of the original image
+        cropViewController.dismiss(animated: true, completion: nil)
+        
+        pictureButton.setImage(image, for: .normal)
+        self.image = image
     }
 
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
             UserManager.sharedInstance.createUser(withUserData: data,
+                                                  image: image,
                                                   sender: self) { success in
                                                     if success {
                                                         self.performSegue(withIdentifier: "showPermissionsSegue",
