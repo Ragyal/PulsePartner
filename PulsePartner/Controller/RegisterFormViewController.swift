@@ -125,12 +125,12 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
     }
 
     @objc func cropViewController(_ cropViewController: CropViewController,
-                                    didCropToCircularImage image: UIImage,
-                                    withRect cropRect: CGRect,
-                                    angle: Int) {
+                                  didCropToCircularImage image: UIImage,
+                                  withRect cropRect: CGRect,
+                                  angle: Int) {
         // 'image' is the newly cropped, circular version of the original image
         cropViewController.dismiss(animated: true, completion: nil)
-        
+
         pictureButton.setImage(image, for: .normal)
         self.image = image
     }

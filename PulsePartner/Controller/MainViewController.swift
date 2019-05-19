@@ -36,7 +36,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.dataSource = self
 //        allMatches = MatchManager.sharedInstance.getMatches()
         print("Start download")
-        MatchManager.sharedInstance.loadMatches() {
+        MatchManager.sharedInstance.loadMatches {
             // Data for UITableView is populated from the CatManager singleton
             print("reload Table")
             self.allMatches = MatchManager.sharedInstance.allMatches
@@ -47,7 +47,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
     }
-    
+
     func reload(userList: [User]) {
         for user in userList {
             allMatches.append(user)

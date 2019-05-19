@@ -22,7 +22,7 @@ class MatchManager {
     }
 
     func getMatches() -> [User] {
-        fStore.collection("users").getDocuments() { (querySnapshot, error) in
+        fStore.collection("users").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error: \(error)")
                 return
@@ -35,11 +35,11 @@ class MatchManager {
                                            bpm: document.get("weight")! as! Int))
                 }
             }
-            
+
         }
         return allMatches
     }
-    
+
     func loadMatches(completion: @escaping () -> Void) {
         fStore.collection("users").getDocuments { snapshot, error in
             print(error ?? "No error.")
@@ -60,4 +60,3 @@ class MatchManager {
         }
     }
 }
-
