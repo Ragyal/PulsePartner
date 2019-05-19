@@ -15,6 +15,7 @@ class UserManager {
 
     let auth: Auth
     let fStore: Firestore
+    let fStorage: Storage
 
     var isLoggedIn: Bool {
         if Auth.auth().currentUser != nil {
@@ -26,6 +27,7 @@ class UserManager {
     private init() {
         auth = Auth.auth()
         fStore = Firestore.firestore()
+        fStorage = Storage.storage()
     }
 
     public func createUser(withUserData userData: UserRegisterData,
@@ -98,5 +100,21 @@ class UserManager {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
+    }
+
+    public func getProfilePicture(withView view: MainViewController) {
+            let downloadURL = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
+            let imageRef = self.fStorage.reference(forURL: downloadURL)
+            imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else {
+                    if let imageData = data {
+                        DispatchQueue.main.async {
+                            view.profilePicture.setImage(UIImage(data: imageData)!, for: .normal)
+                        }
+                    }
+                }
+            })
     }
 }

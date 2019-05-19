@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
+		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -20,13 +21,11 @@
 		BC4B20CB227B48D400F7B1FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CA227B48D400F7B1FF /* String.swift */; };
 		BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CC22844C0600F7B1FF /* UITextField.swift */; };
 		BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */; };
-		BC519FB0228B75500053D116 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BC519FAF228B75500053D116 /* Podfile */; };
 		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
-		BCC1C22A228D859F006F2E80 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1C229228D859F006F2E80 /* ImageManager.swift */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
 		BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1352256241D00AFA163 /* LoginViewController.swift */; };
 		BCECF1392256241D00AFA163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1372256241D00AFA163 /* Main.storyboard */; };
@@ -111,6 +110,7 @@
 /* Begin PBXFileReference section */
 		02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PulsePartner WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E02EA8F228EF0CA00464C93 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -130,9 +130,7 @@
 		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BC4B20CC22844C0600F7B1FF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		BC519FAF228B75500053D116 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BCC1C229228D859F006F2E80 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCECF1352256241D00AFA163 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +218,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E02EA8E228EF0A700464C93 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				3E02EA8F228EF0CA00464C93 /* MatchManager.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
 		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,18 +264,9 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		BCC1C228228D857D006F2E80 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				BCC1C229228D859F006F2E80 /* ImageManager.swift */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		BCECF1272256241D00AFA163 = {
 			isa = PBXGroup;
 			children = (
-				BC519FAF228B75500053D116 /* Podfile */,
 				BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */,
 				BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */,
 				BCECF1892256265B00AFA163 /* README.md */,
@@ -358,7 +355,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BCC1C228228D857D006F2E80 /* Image */,
+				3E02EA8E228EF0A700464C93 /* Match */,
 				BCFF5FFD227A2681005848CE /* User */,
 				BC5D4858228641DA0084E1C7 /* Location */,
 			);
@@ -569,7 +566,6 @@
 			files = (
 				BCECF18B22562AAA00AFA163 /* .gitignore in Resources */,
 				BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */,
-				BC519FB0228B75500053D116 /* Podfile in Resources */,
 				BCECF13E2256241E00AFA163 /* LaunchScreen.storyboard in Resources */,
 				BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */,
 				BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */,
@@ -692,10 +688,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PulsePartner/Pods-PulsePartner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -706,10 +702,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -777,7 +773,6 @@
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
-				BCC1C22A228D859F006F2E80 /* ImageManager.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
@@ -785,6 +780,7 @@
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 				BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */,
+				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,7 +1081,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BLFEEYE58;
 				INFOPLIST_FILE = PulsePartner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1106,7 +1101,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BLFEEYE58;
 				INFOPLIST_FILE = PulsePartner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

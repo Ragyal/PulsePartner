@@ -17,6 +17,9 @@ PODS:
   - Firebase/Firestore (5.20.2):
     - Firebase/CoreOnly
     - FirebaseFirestore (= 1.2.1)
+  - Firebase/Storage (5.20.2):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.1.1)
   - FirebaseAnalytics (5.8.1):
     - FirebaseCore (~> 5.4)
     - FirebaseInstanceID (~> 3.8)
@@ -54,6 +57,13 @@ PODS:
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/UserDefaults (~> 5.2)
+  - FirebaseStorage (3.1.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (6.2.1):
+    - Firebase/Storage (~> 5.0)
+    - SDWebImage (~> 4.0)
   - GoogleAppMeasurement (5.8.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -102,12 +112,17 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.7.0)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
 
 DEPENDENCIES:
   - CropViewController
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Firebase/Storage
+  - FirebaseUI/Storage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -120,6 +135,8 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseFirestore
     - FirebaseInstanceID
+    - FirebaseStorage
+    - FirebaseUI
     - GoogleAppMeasurement
     - GoogleUtilities
     - "gRPC-C++"
@@ -128,6 +145,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
@@ -139,6 +157,8 @@ SPEC CHECKSUMS:
   FirebaseCore: f1a9a8be1aee4bf71a2fc0f4096df6788bdfda61
   FirebaseFirestore: faca891c0f0d1d6c10c793473e2f6a29d75014b5
   FirebaseInstanceID: a122b0c258720cf250551bb2bedf48c699f80d90
+  FirebaseStorage: 6162ef4322502b818d9de0ec552f5226d283de43
+  FirebaseUI: c9e227a7d44e2e422a461cb3f4ead8dc5c7326e6
   GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   "gRPC-C++": e76441995900ac90e9bd98644ab4733f12521edf
@@ -147,7 +167,12 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: ad3b3d6e47a655c6b88001bac3caa1bf14859abc
+=======
+PODFILE CHECKSUM: 81558f2f310986f8af766ecbf67f78f6c0ad9842
+>>>>>>> b5a8ef233d0645ff2412c65479ad8bea7c5fc97d
 
 COCOAPODS: 1.6.1
