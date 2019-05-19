@@ -174,29 +174,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E85-8y-Ile">
                                 <rect key="frame" x="16" y="9" width="111" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="MainProfilePicture"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-op-22C">
-                                <rect key="frame" x="16" y="114" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV4-Gs-t1V">
-                                <rect key="frame" x="16" y="133" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWW-6G-T3I">
-                                <rect key="frame" x="16" y="153" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3bO-aX-Ih6"/>
@@ -209,9 +187,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="distanceLabel" destination="MWW-6G-T3I" id="k1O-ma-Gjr"/>
-                        <outlet property="latTestLabel" destination="xV4-Gs-t1V" id="Cs2-Ud-Mgx"/>
-                        <outlet property="longTestLabel" destination="gMt-op-22C" id="haZ-Hy-mtH"/>
+                        <outlet property="profilePicture" destination="E85-8y-Ile" id="CMK-lx-MQv"/>
                         <outlet property="tableView" destination="wn6-da-7fl" id="w4h-H1-RzF"/>
                         <segue destination="26G-yr-T1q" kind="show" identifier="ChatSegue" id="fOO-IK-uec"/>
                     </connections>
@@ -465,7 +441,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="Kp5-C4-RsI"/>
+                                    <action selector="onRegisterButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="Kp5-C4-RsI"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-jm-jsI">
@@ -493,6 +469,9 @@
                                 <rect key="frame" x="139" y="44" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AddProfilePicture"/>
+                                <connections>
+                                    <action selector="onPictureButtonClick:" destination="6zg-te-bER" eventType="touchUpInside" id="XJv-hf-MAP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -503,6 +482,7 @@
                         <outlet property="emailInput" destination="kqt-ye-tEo" id="gwv-fj-uUg"/>
                         <outlet property="fitnessLevelLabel" destination="Mdd-5s-d6w" id="R4Z-za-UMr"/>
                         <outlet property="passwordInput" destination="TXJ-65-3eh" id="d9L-cR-F9H"/>
+                        <outlet property="pictureButton" destination="So2-ae-uud" id="MYC-AG-v0L"/>
                         <outlet property="usernameInput" destination="gzR-yk-A6g" id="l6Y-UJ-56m"/>
                         <outlet property="weightInput" destination="L79-gE-N9C" id="L6N-h2-SB6"/>
                         <segue destination="Xqz-JX-oI1" kind="show" identifier="showPermissionsSegue" id="bjW-yT-WQW"/>
@@ -647,7 +627,6 @@
         <image name="ChatIcon2" width="1633" height="1292"/>
         <image name="HeartbeatIcon" width="1867" height="995"/>
         <image name="Herz" width="600" height="595"/>
-        <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tJP-Jn-cdH"/>

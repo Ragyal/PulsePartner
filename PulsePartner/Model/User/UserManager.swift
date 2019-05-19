@@ -15,6 +15,7 @@ class UserManager {
 
     let auth: Auth
     let fStore: Firestore
+    let fStorage: Storage
 
     var isLoggedIn: Bool {
         if Auth.auth().currentUser != nil {
@@ -26,34 +27,63 @@ class UserManager {
     private init() {
         auth = Auth.auth()
         fStore = Firestore.firestore()
+        fStorage = Storage.storage()
     }
 
     public func createUser(withUserData userData: UserRegisterData,
+                           image: UIImage?,
                            sender: UIViewController,
                            completion: @escaping (Bool) -> Void) {
+
         self.auth.createUser(withEmail: userData.email, password: userData.password) { (user, error) in
             if error == nil {
                 guard let uid = user?.user.uid else {
                     completion(false)
                     return
                 }
-                self.fStore.collection("users").document(uid).setData([
-                    "username": userData.username,
-                    "email": userData.email,
-                    "age": userData.age,
-                    "weight": userData.weight,
-                    "fitnessLevel": userData.fitnessLevel,
-                    "gender": userData.gender,
-                    "preferences": userData.preferences
-                ]) { err in
-                    if let err = err {
-                        print("Error writing document: \(err)")
-                        completion(false)
-                    } else {
-                        print("Document successfully written!")
-                        completion(true)
+                // Data in memory
+                if let data = image?.pngData() {
+                    // Create a reference to the file you want to upload
+                    let pictureRef = self.fStorage.reference().child("profilePictures/\(uid).png")
+
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/png"
+
+                    // Upload the file to the path "images/rivers.jpg"
+                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, error) in
+                        guard metadata != nil else {
+                            // Uh-oh, an error occurred!
+                            return
+                        }
+                        // You can also access to download URL after upload.
+                        pictureRef.downloadURL { (url, _) in
+                            guard let downloadURL = url else {
+                                // Uh-oh, an error occurred!
+                                return
+                            }
+
+                            self.fStore.collection("users").document(uid).setData([
+                                "username": userData.username,
+                                "email": userData.email,
+                                "age": userData.age,
+                                "weight": userData.weight,
+                                "fitnessLevel": userData.fitnessLevel,
+                                "gender": userData.gender,
+                                "preferences": userData.preferences,
+                                "pictureURL": downloadURL.absoluteString
+                            ]) { err in
+                                if let err = err {
+                                    print("Error writing document: \(err)")
+                                    completion(false)
+                                } else {
+                                    print("Document successfully written!")
+                                    completion(true)
+                                }
+                            }
+                        }
                     }
                 }
+
             } else {
                 let alertController = UIAlertController(title: "Error",
                                                         message: error?.localizedDescription,
@@ -97,5 +127,19 @@ class UserManager {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
+    }
+
+    func getProfilePicture(completion: @escaping (UIImage) -> Void) {
+            let downloadURL = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
+            let imageRef = self.fStorage.reference(forURL: downloadURL)
+            imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else {
+                    if let imageData = data {
+                        completion(UIImage(data: imageData)!)
+                    }
+                }
+            })
     }
 }

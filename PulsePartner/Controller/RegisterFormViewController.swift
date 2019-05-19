@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import CropViewController
+import Photos
 
-class RegisterFormViewController: UIViewController {
+class RegisterFormViewController: UIViewController,
+UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControllerDelegate {
 
+    @IBOutlet weak var pictureButton: UIButton!
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
     @IBOutlet weak var fitnessLevelLabel: UILabel!
+
+    var imagePicker: UIImagePickerController!
+    var image: UIImage?
 
     var fitnessLevel: Int = 1
     var genderSettings: GenderSettings?
@@ -24,6 +31,9 @@ class RegisterFormViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
+
         self.hideKeyboardWhenTappedAround()
     }
 
@@ -32,9 +42,103 @@ class RegisterFormViewController: UIViewController {
         fitnessLevel = Int(sender.value)
     }
 
-    @IBAction func onButtonClick(_ sender: UIButton) {
+    @IBAction func onPictureButtonClick(_ sender: Any) {
+        let alertController = UIAlertController(title: nil,
+                                                message: "Where do you want to select the picture?",
+                                                preferredStyle: .actionSheet)
+
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+
+                let alertController = UIAlertController.init(title: nil,
+                                                             message: "Device has no camera.",
+                                                             preferredStyle: .alert)
+
+                let okAction = UIAlertAction.init(title: "Alright", style: .default, handler: {(_: UIAlertAction!) in
+                })
+
+                alertController.addAction(okAction)
+                self.present(alertController,
+                             animated: true,
+                             completion: nil)
+            } else {
+                self.imagePicker.sourceType = .camera
+
+                self.present(self.imagePicker,
+                             animated: true,
+                             completion: nil)
+            }
+        })
+
+        let libraryAction = UIAlertAction(title: "Library", style: .default, handler: { (_: UIAlertAction!) -> Void in
+            let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+            switch photoAuthorizationStatus {
+            case .notDetermined:
+                PHPhotoLibrary.requestAuthorization({ (newStatus) in
+                    if newStatus !=  PHAuthorizationStatus.authorized {
+                        print("User has denied the permission.")
+                        return
+                    }
+                })
+                print("It is not determined until now")
+            case .restricted:
+                print("User do not have access to photo album.")
+                return
+            case .denied:
+                print("User has denied the permission.")
+                return
+            case .authorized:
+                    print("Access is granted by user")
+            @unknown default:
+                print("Unknown state.")
+                return
+            }
+            self.imagePicker.sourceType = .savedPhotosAlbum
+
+            self.present(self.imagePicker, animated: true, completion: nil)
+        })
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (_: UIAlertAction!) -> Void in
+            //  Do something here upon cancellation.
+        })
+
+        alertController.addAction(cameraAction)
+        alertController.addAction(libraryAction)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image: UIImage = info[.originalImage] as? UIImage else {
+            return
+        }
+        presentCropViewController(withImage: image)
+    }
+
+    func presentCropViewController(withImage image: UIImage) {
+        let cropViewController = CropViewController(croppingStyle: .circular, image: image)
+        cropViewController.delegate = self
+        self.present(cropViewController, animated: true, completion: nil)
+    }
+
+    @objc func cropViewController(_ cropViewController: CropViewController,
+                                  didCropToCircularImage image: UIImage,
+                                  withRect cropRect: CGRect,
+                                  angle: Int) {
+        // 'image' is the newly cropped, circular version of the original image
+        cropViewController.dismiss(animated: true, completion: nil)
+
+        pictureButton.setImage(image, for: .normal)
+        self.image = image
+    }
+
+    @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
             UserManager.sharedInstance.createUser(withUserData: data,
+                                                  image: image,
                                                   sender: self) { success in
                                                     if success {
                                                         self.performSegue(withIdentifier: "showPermissionsSegue",
