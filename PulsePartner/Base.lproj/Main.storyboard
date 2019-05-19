@@ -174,7 +174,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E85-8y-Ile">
                                 <rect key="frame" x="16" y="9" width="111" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="MainProfilePicture"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -628,7 +627,6 @@
         <image name="ChatIcon2" width="1633" height="1292"/>
         <image name="HeartbeatIcon" width="1867" height="995"/>
         <image name="Herz" width="600" height="595"/>
-        <image name="MainProfilePicture" width="474" height="474"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tJP-Jn-cdH"/>

@@ -26,7 +26,7 @@ class MatchManager {
             print(error ?? "No error.")
             self.allMatches = []
             guard let snapshot = snapshot else {
-                completion([User]())
+                completion(self.allMatches)
                 return
             }
             for doc in snapshot.documents {

@@ -12,21 +12,15 @@ import Firebase
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var tabV = UITableView()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
 
-    var allMatches = [User]() {
-        didSet {
-            print("Hello \(allMatches.count)")
-        }
-    }
+    var allMatches = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserManager.sharedInstance.getProfilePicture() { picture in
-            profilePicture.setImage(picture, for: .normal)
-            
+        UserManager.sharedInstance.getProfilePicture { image in
+            self.profilePicture.setImage(image, for: .normal)
         }
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
@@ -35,24 +29,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        distanceLabel.text = "Dist: \(distance)"
         self.tableView.delegate = self
         self.tableView.dataSource = self
-//        allMatches = MatchManager.sharedInstance.getMatches()
-        print("Start download")
-        MatchManager.sharedInstance.loadMatches {
-            // Data for UITableView is populated from the CatManager singleton
-            print("reload Table")
-            self.allMatches = MatchManager.sharedInstance.allMatches
+        MatchManager.sharedInstance.loadMatches { matches in
+            self.allMatches = matches
             self.tableView.reloadData()
         }
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
-    }
-
-    func reload(userList: [User]) {
-        for user in userList {
-            allMatches.append(user)
-        }
     }
 
     @IBAction func onLogout(_ sender: Any) {
