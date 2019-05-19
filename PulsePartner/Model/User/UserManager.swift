@@ -50,7 +50,7 @@ class UserManager {
                     metadata.contentType = "image/png"
 
                     // Upload the file to the path "images/rivers.jpg"
-                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, error) in
+                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, _) in
                         guard metadata != nil else {
                             // Uh-oh, an error occurred!
                             return
