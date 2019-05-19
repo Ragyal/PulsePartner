@@ -48,7 +48,7 @@ class UserManager {
 
                     let metadata = StorageMetadata()
                     metadata.contentType = "image/png"
-                    
+
                     // Upload the file to the path "images/rivers.jpg"
                     _ = pictureRef.putData(data, metadata: metadata) { (metadata, error) in
                         guard metadata != nil else {
@@ -56,12 +56,12 @@ class UserManager {
                             return
                         }
                         // You can also access to download URL after upload.
-                        pictureRef.downloadURL { (url, error) in
+                        pictureRef.downloadURL { (url, _) in
                             guard let downloadURL = url else {
                                 // Uh-oh, an error occurred!
                                 return
                             }
-                            
+
                             self.fStore.collection("users").document(uid).setData([
                                 "username": userData.username,
                                 "email": userData.email,
@@ -83,7 +83,7 @@ class UserManager {
                         }
                     }
                 }
-                
+
             } else {
                 let alertController = UIAlertController(title: "Error",
                                                         message: error?.localizedDescription,
