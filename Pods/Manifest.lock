@@ -6,6 +6,8 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.2)
   - BoringSSL-GRPC/Interface (0.0.2)
   - CropViewController (2.4.0)
+  - Firebase/Analytics (5.20.2):
+    - Firebase/Core
   - Firebase/Auth (5.20.2):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.4.2)
@@ -118,6 +120,7 @@ PODS:
 
 DEPENDENCIES:
   - CropViewController
+  - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -169,6 +172,6 @@ SPEC CHECKSUMS:
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 63f44b8bbd103f214a36a77e73cdf914a90fcbd9
+PODFILE CHECKSUM: f944da972285357ba9587e62b9aafc053488396c
 
 COCOAPODS: 1.6.1
