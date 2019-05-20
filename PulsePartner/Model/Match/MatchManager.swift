@@ -34,7 +34,8 @@ class MatchManager {
                                 image: "ProfilePicture",
                                 name: doc.get("username")! as! String,
                                 age: doc.get("age")! as! Int,
-                                bpm: doc.get("weight")! as! Int)
+                                bpm: doc.get("weight")! as! Int,
+                                profilePicture: doc.get("profile_picture")! as! String)
                 self.allMatches.append(user)
             }
             completion(self.allMatches)

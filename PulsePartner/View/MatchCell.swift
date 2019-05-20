@@ -32,11 +32,14 @@ class MatchCell: UITableViewCell {
                        age: String,
                        bpm: String,
                        navigation: UINavigationController) {
-        profilePicture.image = UIImage(named: image)
-        nameLabel.text = name
-        ageLabel.text = age
-        bpmLabel.text = bpm
-        navController = navigation
+        UserManager.sharedInstance.getProfilePicture(url: image) { file in
+            print("Imagefile: \(file)")
+            self.profilePicture.image = file
+            self.nameLabel.text = name
+            self.ageLabel.text = age
+            self.bpmLabel.text = bpm
+            self.navController = navigation
+        }
     }
 
     @IBAction func openChat(_ sender: UIButton) {

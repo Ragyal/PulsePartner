@@ -137,6 +137,9 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
 
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
+            if image == nil{
+                image = UIImage(named: "PlaceholderImage")
+            }
             UserManager.sharedInstance.createUser(withUserData: data,
                                                   image: image,
                                                   sender: self) { success in

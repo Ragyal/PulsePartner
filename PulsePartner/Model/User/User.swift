@@ -12,6 +12,7 @@ struct User {
     var name: String
     var age: Int
     var bpm: Int
+    var profilePicture: String
 }
 
 struct UserRegisterData {

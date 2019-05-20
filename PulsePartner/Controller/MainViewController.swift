@@ -19,7 +19,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserManager.sharedInstance.getProfilePicture { image in
+        let url = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
+        UserManager.sharedInstance.getProfilePicture(url: url) { image in
             self.profilePicture.setImage(image, for: .normal)
         }
 //        let locationManager = LocationManager.sharedInstance
@@ -55,7 +56,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
 
         let user = self.allMatches[indexPath.row]
-        cell.insertContent(image: user.image,
+        cell.insertContent(image: user.profilePicture,
                             name: user.name,
                             age: String(user.age),
                             bpm: String(user.bpm),

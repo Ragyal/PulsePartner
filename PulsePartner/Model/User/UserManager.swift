@@ -70,7 +70,7 @@ class UserManager {
                                 "fitnessLevel": userData.fitnessLevel,
                                 "gender": userData.gender,
                                 "preferences": userData.preferences,
-                                "pictureURL": downloadURL.absoluteString
+                                "profile_picture": downloadURL.absoluteString
                             ]) { err in
                                 if let err = err {
                                     print("Error writing document: \(err)")
@@ -129,9 +129,8 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
-    func getProfilePicture(completion: @escaping (UIImage) -> Void) {
-            let downloadURL = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
-            let imageRef = self.fStorage.reference(forURL: downloadURL)
+    func getProfilePicture(url: String, completion: @escaping (UIImage) -> Void) {
+            let imageRef = self.fStorage.reference(forURL: url)
             imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
                 if let error = error {
                     print("Error: \(error)")
