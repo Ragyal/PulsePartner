@@ -30,13 +30,14 @@ class MatchManager {
                 return
             }
             for doc in snapshot.documents {
-                let user = User(userID: 0,
-                                image: "ProfilePicture",
-                                name: doc.get("username")! as! String,
-                                age: doc.get("age")! as! Int,
-                                bpm: doc.get("weight")! as! Int,
-                                profilePicture: doc.get("profile_picture")! as! String)
-                self.allMatches.append(user)
+                    let user = User(userID: 0,
+                                    image: doc.get("profile_picture")! as! String,
+                                    name: doc.get("username")! as! String,
+                                    age: doc.get("age")! as! Int,
+                                    bpm: doc.get("weight")! as! Int,
+                                    profilePicture: UIImage())
+                        self.allMatches.append(user)
+                
             }
             completion(self.allMatches)
         }

@@ -27,19 +27,16 @@ class MatchCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func insertContent(image: String,
+    func insertContent(image: UIImage,
                        name: String,
                        age: String,
                        bpm: String,
                        navigation: UINavigationController) {
-        UserManager.sharedInstance.getProfilePicture(url: image) { file in
-            print("Imagefile: \(file)")
-            self.profilePicture.image = file
+            self.profilePicture.image = image
             self.nameLabel.text = name
-            self.ageLabel.text = age
-            self.bpmLabel.text = bpm
+            self.ageLabel.text = "Age: \(age)"
+            self.bpmLabel.text = "Weight: \(bpm)"
             self.navController = navigation
-        }
     }
 
     @IBAction func openChat(_ sender: UIButton) {

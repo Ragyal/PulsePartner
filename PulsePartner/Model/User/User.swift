@@ -5,14 +5,14 @@
 //  Created by Ove von Stackelberg on 01.05.19.
 //  Copyright © 2019 PulsePartner. All rights reserved.
 //
-
+import UIKit
 struct User {
     var userID: Int
     var image: String
     var name: String
     var age: Int
     var bpm: Int
-    var profilePicture: String
+    var profilePicture: UIImage
 }
 
 struct UserRegisterData {
