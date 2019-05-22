@@ -30,16 +30,19 @@ class MatchManager {
                 return
             }
             for doc in snapshot.documents {
+                UserManager.sharedInstance.getProfilePicture(url: doc.get("profile_picture")! as! String) { file in
                     let user = User(userID: 0,
                                     image: doc.get("profile_picture")! as! String,
                                     name: doc.get("username")! as! String,
                                     age: doc.get("age")! as! Int,
                                     bpm: doc.get("weight")! as! Int,
-                                    profilePicture: UIImage())
-                        self.allMatches.append(user)
-                
+                                    profilePicture: file)
+                    self.allMatches.append(user)
+                    if self.allMatches.count == snapshot.documents.count {
+                        completion(self.allMatches)
+                    }
+                }
             }
-            completion(self.allMatches)
         }
     }
 }

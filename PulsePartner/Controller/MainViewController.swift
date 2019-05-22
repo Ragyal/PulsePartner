@@ -19,11 +19,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let url = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
-//        UserManager.sharedInstance.getProfilePicture(url: url) { image in
-//            self.profilePicture.setImage(image, for: .normal)
-//        }
-        self.profilePicture.setImage(UIImage(named: "PlaceholderImage"), for: .normal)
+        UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
+            UserManager.sharedInstance.getProfilePicture(url: url as! String) { image in
+                self.profilePicture.setImage(image, for: .normal)
+            }
+        }
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
 //        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
@@ -34,11 +34,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         MatchManager.sharedInstance.loadMatches { matches in
             self.allMatches = matches
             self.tableView.reloadData()
-            UserManager.sharedInstance.loadProfilePictures(users: self.allMatches) { newMatches in
-                self.allMatches = newMatches
-                self.tableView.reloadData()
-            }
-            
         }
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img

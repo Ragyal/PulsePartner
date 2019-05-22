@@ -129,6 +129,16 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
+    func getUserInformation(dbInfo: String, completion: @escaping (Any?) -> Void) {
+        let user = fStore.collection("users").document(auth.currentUser!.uid)
+        user.getDocument { (document, error) in
+            if let error = error {
+                print("Error: \(error)")
+            }
+            completion(document?.get(dbInfo))
+        }
+    }
+
     func getProfilePicture(url: String, completion: @escaping (UIImage) -> Void) {
             let imageRef = self.fStorage.reference(forURL: url)
             imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
@@ -140,31 +150,5 @@ class UserManager {
                     }
                 }
             })
-    }
-    
-    func loadProfilePictures(users: [User], completion: @escaping ([User]) -> Void) {
-        var newMatches = [User]()
-        for user in users {
-            let imageRef = self.fStorage.reference(forURL: user.image)
-            imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                } else {
-                    if let imageData = data {
-                        newMatches.append(User(userID: 0,
-                                               image: user.image,
-                                               name: user.name,
-                                               age: user.age,
-                                               bpm: user.bpm,
-                                               profilePicture: UIImage(data: imageData)!))
-                        if newMatches.count == users.count {
-                            print("Picture \(newMatches[0].profilePicture)")
-                            completion(newMatches)
-                        }
-                    }
-                }
-            })
-        }
-        
     }
 }
