@@ -19,9 +19,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "https://firebasestorage.googleapis.com/v0/b/pulsepartner-ca85d.appspot.com/o/profilePictures%2FMainProfilePicture.png?alt=media&token=af8c9fb8-b02e-41f7-b261-ca6cb6ee2358"
-        UserManager.sharedInstance.getProfilePicture(url: url) { image in
-            self.profilePicture.setImage(image, for: .normal)
+        UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
+            UserManager.sharedInstance.getProfilePicture(url: (url as? String)!) { image in
+                self.profilePicture.setImage(image, for: .normal)
+            }
         }
 //        let locationManager = LocationManager.sharedInstance
 //        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
@@ -53,13 +54,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
+        let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
 
         let user = self.allMatches[indexPath.row]
         cell.insertContent(image: user.profilePicture,
                             name: user.name,
                             age: String(user.age),
-                            bpm: String(user.bpm),
+                            bpm: String(user.weight),
                             navigation: self.navigationController!)
         return cell
     }

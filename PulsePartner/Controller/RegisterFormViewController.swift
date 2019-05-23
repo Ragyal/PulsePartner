@@ -130,18 +130,23 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
                                   angle: Int) {
         // 'image' is the newly cropped, circular version of the original image
         cropViewController.dismiss(animated: true, completion: nil)
-
         pictureButton.setImage(image, for: .normal)
         self.image = image
     }
 
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
-            if image == nil{
+            if image == nil {
                 image = UIImage(named: "PlaceholderImage")
             }
+            let size = CGSize(width: 128, height: 128)
+            let rect = CGRect(x: 0, y: 0, width: 128, height: 128)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            image!.draw(in: rect)
+            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
             UserManager.sharedInstance.createUser(withUserData: data,
-                                                  image: image,
+                                                  image: resizedImage!,
                                                   sender: self) { success in
                                                     if success {
                                                         self.performSegue(withIdentifier: "showPermissionsSegue",

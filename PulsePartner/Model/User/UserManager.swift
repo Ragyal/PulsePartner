@@ -129,6 +129,16 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
+    func getUserInformation(dbInfo: String, completion: @escaping (Any?) -> Void) {
+        let user = fStore.collection("users").document(auth.currentUser!.uid)
+        user.getDocument { (document, error) in
+            if let error = error {
+                print("Error: \(error)")
+            }
+            completion(document?.get(dbInfo))
+        }
+    }
+
     func getProfilePicture(url: String, completion: @escaping (UIImage) -> Void) {
             let imageRef = self.fStorage.reference(forURL: url)
             imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
