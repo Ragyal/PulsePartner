@@ -115,13 +115,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
         guard let image: UIImage = info[.originalImage] as? UIImage else {
             return
         }
-        let size = CGSize(width: 90, height: 90)
-        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        image.draw(in: rect)
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        presentCropViewController(withImage: resizedImage!)
+        presentCropViewController(withImage: image)
     }
 
     func presentCropViewController(withImage image: UIImage) {
@@ -145,8 +139,14 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
             if image == nil {
                 image = UIImage(named: "PlaceholderImage")
             }
+            let size = CGSize(width: 128, height: 128)
+            let rect = CGRect(x: 0, y: 0, width: 128, height: 128)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            image!.draw(in: rect)
+            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
             UserManager.sharedInstance.createUser(withUserData: data,
-                                                  image: image,
+                                                  image: resizedImage!,
                                                   sender: self) { success in
                                                     if success {
                                                         self.performSegue(withIdentifier: "showPermissionsSegue",

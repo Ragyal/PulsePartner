@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
-            UserManager.sharedInstance.getProfilePicture(url: url as! String) { image in
+            UserManager.sharedInstance.getProfilePicture(url: (url as? String)!) { image in
                 self.profilePicture.setImage(image, for: .normal)
             }
         }
@@ -54,13 +54,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
+        let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
 
         let user = self.allMatches[indexPath.row]
         cell.insertContent(image: user.profilePicture,
                             name: user.name,
                             age: String(user.age),
-                            bpm: String(user.bpm),
+                            bpm: String(user.weight),
                             navigation: self.navigationController!)
         return cell
     }
