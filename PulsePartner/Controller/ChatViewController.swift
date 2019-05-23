@@ -12,6 +12,7 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    var user: User!
     var picture = UIImage()
     var name = ""
 
@@ -19,8 +20,8 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 //        self.navigationController?.isNavigationBarHidden = false
         self.hideKeyboardWhenTappedAround()
-        profilePicture.image = picture
-        nameLabel.text = name
+        profilePicture.image = user.profilePicture
+        nameLabel.text = user.name
     }
 
     func setProfile(image: UIImage, name: String) {

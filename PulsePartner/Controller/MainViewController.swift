@@ -54,7 +54,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.rowHeight = 150
+        tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
         let user = self.allMatches[indexPath.row]
         cell.insertContent(image: user.profilePicture,
@@ -70,5 +70,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         UIGraphicsEndImageContext()
         cell.profilePicture.image = resizedImage
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        //Pass the indexPath as sender
+        let user = self.allMatches[indexPath.row]
+        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = sender as? IndexPath else {
+            return
+        }
+        guard let destinationVC = segue.destination as? ChatViewController else {
+            return
+        }
+        destinationVC.user = self.allMatches[indexPath.row]
     }
 }

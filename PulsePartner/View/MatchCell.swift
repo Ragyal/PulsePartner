@@ -15,6 +15,7 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var bpmLabel: UILabel!
     var navController = UINavigationController()
+    var user: User!
 
     override func awakeFromNib() {
         super.awakeFromNib()
