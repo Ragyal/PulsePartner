@@ -16,6 +16,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var profilePicture: UIButton!
 
     var allMatches = [User]()
+    
+    private lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        manager.requestAlwaysAuthorization()
+        manager.allowsBackgroundLocationUpdates = true
+        manager.pausesLocationUpdatesAutomatically = true
+        manager.activityType = CLActivityType.fitness
+        return manager
+    }()
+    
+    private var lastUpdate: TimeInterval = NSDate.timeIntervalSinceReferenceDate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +37,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.profilePicture.setImage(image, for: .normal)
             }
         }
-//        let locationManager = LocationManager.sharedInstance
-//        longTestLabel.text = "Lat: \(locationManager.determineMyCurrentLocation()[0])"
-//        latTestLabel.text = "Long: \(locationManager.determineMyCurrentLocation()[1])"
-//        let distance = locationManager.getDistance(from: CLLocation(latitude: 53.083552, longitude: 8.805238))
-//        distanceLabel.text = "Dist: \(distance)"
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         MatchManager.sharedInstance.loadMatches { matches in
             self.allMatches = matches
             self.tableView.reloadData()
         }
+        
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
+        
+        locationManager.startUpdatingLocation()
     }
 
     @IBAction func onLogout(_ sender: Any) {
@@ -86,5 +98,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension MainViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
+            return
+        }
+        
+        guard let mostRecentLocation = locations.last else {
+            return
+        }
+        
+        UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
+        
+        lastUpdate = NSDate.timeIntervalSinceReferenceDate
     }
 }
