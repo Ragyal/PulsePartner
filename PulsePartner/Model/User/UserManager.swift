@@ -24,7 +24,7 @@ class UserManager {
         }
         return false
     }
-    
+
     var getUID: String? {
         guard let user = Auth.auth().currentUser else {
             return nil
@@ -159,12 +159,12 @@ class UserManager {
                 }
             })
     }
-    
+
     func updateMatchData(coordinates: CLLocationCoordinate2D) {
         guard let uid = getUID else {
             return
         }
-        
+
         self.fStore.collection("matchData").document(uid).setData([
             "timestamp": Timestamp(date: Date()),
             "location": GeoPoint(latitude: coordinates.latitude, longitude: coordinates.longitude),
