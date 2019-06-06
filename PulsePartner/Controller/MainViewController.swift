@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         manager.requestAlwaysAuthorization()
         manager.allowsBackgroundLocationUpdates = true
+// https://developer.apple.com/documentation/corelocation/cllocationmanager/1620553-pauseslocationupdatesautomatical
         manager.pausesLocationUpdatesAutomatically = true
         manager.activityType = CLActivityType.fitness
         return manager
