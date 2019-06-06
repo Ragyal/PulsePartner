@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var profilePicture: UIButton!
 
     var allMatches = [User]()
-    
+
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.delegate = self
@@ -27,7 +27,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         manager.activityType = CLActivityType.fitness
         return manager
     }()
-    
+
     private var lastUpdate: TimeInterval = NSDate.timeIntervalSinceReferenceDate
 
     override func viewDidLoad() {
@@ -37,19 +37,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.profilePicture.setImage(image, for: .normal)
             }
         }
-        
+
         self.tableView.delegate = self
         self.tableView.dataSource = self
         MatchManager.sharedInstance.loadMatches { matches in
             self.allMatches = matches
             self.tableView.reloadData()
         }
-        
+
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
-        
+
         locationManager.startUpdatingLocation()
     }
 
@@ -103,19 +103,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 // MARK: - CLLocationManagerDelegate
 extension MainViewController: CLLocationManagerDelegate {
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+
         if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
             return
         }
-        
+
         guard let mostRecentLocation = locations.last else {
             return
         }
-        
+
         UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
-        
+
         lastUpdate = NSDate.timeIntervalSinceReferenceDate
     }
 }
