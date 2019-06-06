@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
 
+    var messageListener: ListenerRegistration?
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     var user: User!
@@ -18,10 +20,12 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChatManager.sharedInstance.fetchMessages()
 //        self.navigationController?.isNavigationBarHidden = false
         self.hideKeyboardWhenTappedAround()
         profilePicture.image = user.profilePicture
         nameLabel.text = user.name
+        
     }
 
     func setProfile(image: UIImage, name: String) {
@@ -33,3 +37,4 @@ class ChatViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+

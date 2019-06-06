@@ -7,7 +7,7 @@
 //
 import UIKit
 struct User {
-    var userID: Int
+    var userID: String
     var image: String
     var name: String
     var age: Int
