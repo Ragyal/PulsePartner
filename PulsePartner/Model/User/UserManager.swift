@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import CoreLocation
 
 class UserManager {
 
@@ -22,6 +23,13 @@ class UserManager {
             return true
         }
         return false
+    }
+
+    var getUID: String? {
+        guard let user = Auth.auth().currentUser else {
+            return nil
+        }
+        return user.uid
     }
 
     private init() {
@@ -150,5 +158,23 @@ class UserManager {
                     }
                 }
             })
+    }
+
+    func updateMatchData(coordinates: CLLocationCoordinate2D) {
+        guard let uid = getUID else {
+            return
+        }
+
+        self.fStore.collection("matchData").document(uid).setData([
+            "timestamp": Timestamp(date: Date()),
+            "location": GeoPoint(latitude: coordinates.latitude, longitude: coordinates.longitude),
+            "bpm": 120
+        ]) { err in
+            if let err = err {
+                print("Error writing MatchData: \(err)")
+            } else {
+                print("MatchData successfully written!")
+            }
+        }
     }
 }
