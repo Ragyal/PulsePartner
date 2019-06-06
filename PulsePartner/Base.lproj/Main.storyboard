@@ -211,7 +211,7 @@
                                     <constraint firstAttribute="width" constant="110" id="rlh-Mc-3jr"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="       You 13:31: Hey honey " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-86-XdE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-86-XdE">
                                 <rect key="frame" x="16" y="150" width="343" height="454"/>
                                 <color key="backgroundColor" red="0.7652954356319408" green="0.16812076489312891" blue="0.11791241837797314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -223,11 +223,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Type something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-EW-Sph">
-                                <rect key="frame" x="16" y="628" width="343" height="30"/>
+                                <rect key="frame" x="16" y="628" width="293" height="30"/>
                                 <color key="backgroundColor" red="0.7661927342414856" green="0.1705051064491272" blue="0.11758536845445633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="dHp-mR-HFB"/>
+                                    <constraint firstAttribute="width" constant="293" id="dHp-mR-HFB"/>
                                     <constraint firstAttribute="height" constant="30" id="dTS-I4-8MV"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,6 +240,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt4-23-xy3">
+                                <rect key="frame" x="317" y="627" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="26G-yr-T1q" eventType="touchUpInside" id="EVI-cB-kff"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -258,6 +266,8 @@
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="uMg-ea-Grp"/>
                     <connections>
+                        <outlet property="messageBox" destination="Bue-86-XdE" id="TA3-5B-61C"/>
+                        <outlet property="messageField" destination="UiO-EW-Sph" id="ow6-U1-B3g"/>
                         <outlet property="nameLabel" destination="pif-1N-lka" id="Tcz-aN-xaG"/>
                         <outlet property="profilePicture" destination="JZs-oE-eTz" id="7hx-BY-275"/>
                     </connections>

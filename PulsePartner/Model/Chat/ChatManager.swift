@@ -19,18 +19,36 @@ class ChatManager {
         fStorage = Storage.storage()
     }
     
-    func fetchMessages() {
-        fStore.collection("users").document(UserManager.sharedInstance.auth.currentUser!.uid)
-            .addSnapshotListener { documentSnapshot, error in
-                guard let document = documentSnapshot else {
+    func fetchMessages(userID: String, view: ChatViewController) {
+
+//        , "owner", isEqualTo: userID
+        fStore.collection("users").document(UserManager.sharedInstance.auth.currentUser!.uid).collection("matches").document(userID).collection("chat").whereField("type", isEqualTo: "message")
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
                     print("ERROR!: \(error.debugDescription)")
                     return
                 }
-                guard let data = document.data() else {
-                    print("Document was empty")
-                    return
+                let messages = documents.map{ $0["message"]! }
+                view.messageBox.text? = ""
+                for message in messages {
+                    view.messageBox.text? = view.messageBox.text! + "\((message as? String)!)\n"
                 }
-                print("DATA: \(data)")
+                
+                
         }
     }
-}
+    
+    func sendMessage(receiver: String, message: String) {
+        fStore.collection("users").document(receiver).collection("matches").document(UserManager.sharedInstance.auth.currentUser!.uid).collection("chat").document("\(NSDate.timeIntervalSinceReferenceDate)").setData([
+            "type": "message",
+            "message": message,
+            "owner": UserManager.sharedInstance.auth.currentUser!.uid
+            ])
+         fStore.collection("users").document(UserManager.sharedInstance.auth.currentUser!.uid).collection("matches").document(receiver).collection("chat").document("\(NSDate.timeIntervalSinceReferenceDate)").setData([
+            "type": "message",
+            "message": message,
+            "owner": UserManager.sharedInstance.auth.currentUser!.uid
+            ])
+        }
+    }
+
