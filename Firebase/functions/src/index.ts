@@ -9,6 +9,24 @@ const firebase = admin.initializeApp();
 //  response.send("Hello from Firebase!");
 // });
 
+export const removeMatchData = functions
+  .region("europe-west1")
+  .pubsub
+  .topic("removeOldData")
+  .onPublish(async message => {
+    console.log("Garbage collection invoked...")
+
+    const now = admin.firestore.Timestamp.now()
+    const threshold = new admin.firestore.Timestamp(now.seconds - (5*60), 0)
+
+    return firebase.firestore().collection("matchData").where("timestamp", "<=", threshold).get().then(querySnapshot => {
+      querySnapshot.forEach(async doc => {
+        console.log(doc.id)
+        await doc.ref.delete()
+      })
+    })
+  });
+
 export const matchUsers = functions
   .region("europe-west1")
   .pubsub
