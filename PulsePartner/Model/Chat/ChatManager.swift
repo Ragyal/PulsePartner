@@ -32,7 +32,7 @@ class ChatManager {
                     print("ERROR!: \(error.debugDescription)")
                     return
                 }
-                view.messages.removeAll()
+//                view.messages.removeAll()
                 for (index, message) in documents.enumerated() {
                     view.insertMessage(MockMessage(sender: Sender(id: (message.get("owner") as? String)!,
                                                                   displayName: "Name"),

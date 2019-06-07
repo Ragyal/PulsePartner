@@ -22,6 +22,7 @@ internal struct MockMessage: MessageType {
         self.messageId = messageId
         self.sentDate = Date()
         self.kind = kind
+        print(self.sentDate)
     }
 }
 import UIKit
@@ -35,7 +36,7 @@ class ChatViewController: MessagesViewController {
     var user: User!
     var picture = UIImage()
     var name = ""
-    var messages: [MessageType] = []
+    var messages: [MockMessage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,6 @@ class ChatViewController: MessagesViewController {
             .navigationBar
             .titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationItem.title = user.name
-
     }
 
     func setProfile(image: UIImage, name: String) {
@@ -58,8 +58,11 @@ class ChatViewController: MessagesViewController {
     }
 
     func insertMessage(_ message: MockMessage) {
-        messages.append(message)
-        messagesCollectionView.reloadData()
+        if !messages.contains(where: {$0.messageId == message.messageId}) {
+            messages.append(message)
+            messagesCollectionView.reloadData()
+            messagesCollectionView.scrollToBottom(animated: true)
+        }
     }
 
 }

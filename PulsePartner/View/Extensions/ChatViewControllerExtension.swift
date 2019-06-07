@@ -35,11 +35,11 @@ extension ChatViewController: MessagesDataSource {
 }
 
 extension ChatViewController: MessagesLayoutDelegate {
-    func avatarSize(for message: MessageType,
-                    at indexPath: IndexPath,
-                    in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        return .zero
-    }
+//    func avatarSize(for message: MessageType,
+//                    at indexPath: IndexPath,
+//                    in messagesCollectionView: MessagesCollectionView) -> CGSize {
+//        return .zero
+//    }
     func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
         return CGSize(width: 0, height: 8)
     }
@@ -48,6 +48,13 @@ extension ChatViewController: MessagesLayoutDelegate {
                            with maxWidth: CGFloat,
                            in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
+    }
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        if message.sender.id.elementsEqual(UserManager.sharedInstance.auth.currentUser!.uid)  {
+            avatarView.image = UserManager.sharedInstance.profilePicture
+        } else {
+            avatarView.image = user.profilePicture
+        }
     }
 }
 
