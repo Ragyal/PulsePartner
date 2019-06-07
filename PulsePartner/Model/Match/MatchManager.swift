@@ -59,7 +59,11 @@ class MatchManager {
                                         weight: weight,
                                         profilePicture: file)
                         self.allMatches.append(user)
-                        self.fStore.collection("users").document(selfID).collection("matches").document(userID).setData([
+                        self.fStore
+                            .collection("users")
+                            .document(selfID)
+                            .collection("matches")
+                            .document(userID).setData([
                             "username": name,
                             "profile_picture": url
                             ])

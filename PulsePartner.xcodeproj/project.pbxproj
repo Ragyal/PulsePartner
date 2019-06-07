@@ -10,6 +10,7 @@
 		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
 		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
 		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
+		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -114,6 +115,7 @@
 		3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PulsePartner WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E02EA8F228EF0CA00464C93 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		3E02EA9222A92A8900464C93 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
 				BC4B20CA227B48D400F7B1FF /* String.swift */,
 				BC4B20CC22844C0600F7B1FF /* UITextField.swift */,
+				3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
+				3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 				BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */,
