@@ -10,6 +10,7 @@ import UIKit
 
 class MatchCell: UITableViewCell {
 
+    @IBOutlet weak var messageCounter: UIButton!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!

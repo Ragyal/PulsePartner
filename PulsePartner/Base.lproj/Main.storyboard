@@ -144,6 +144,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-c9-kn3">
+                                                    <rect key="frame" x="246" y="33" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="DNU-pd-xPN" firstAttribute="top" secondItem="6ec-rP-SNx" secondAttribute="top" id="1jj-At-tkn"/>
@@ -158,6 +165,7 @@
                                             <outlet property="ageLabel" destination="RkY-Xa-6W0" id="N2s-Ub-T8A"/>
                                             <outlet property="bpmLabel" destination="hBH-mu-Tc5" id="s2g-Cv-boa"/>
                                             <outlet property="imageView" destination="DNU-pd-xPN" id="YKR-h8-Pmt"/>
+                                            <outlet property="messageCounter" destination="Jph-c9-kn3" id="eTR-IY-S2P"/>
                                             <outlet property="nameLabel" destination="rIL-dR-BGa" id="Mgp-TB-Pgi"/>
                                             <outlet property="profilePicture" destination="DNU-pd-xPN" id="Unb-14-ndd"/>
                                             <outletCollection property="gestureRecognizers" destination="N43-FN-zqr" appends="YES" id="b1z-SR-Ok5"/>

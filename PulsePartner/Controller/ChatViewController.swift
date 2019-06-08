@@ -33,13 +33,24 @@ import MessageUI
 
 class ChatViewController: MessagesViewController {
 
+    var newMessages: Int = 0 {
+        didSet {
+            if(!self.view.isFocused) {
+                messageCounter.setTitle("\(newMessages)", for: .normal)
+                messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
+            }
+        }
+    }
+    
     var user: User!
     var picture = UIImage()
     var name = ""
     var messages: [MockMessage] = []
+    var messageCounter: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        newMessages = 0
         messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -52,6 +63,12 @@ class ChatViewController: MessagesViewController {
         self.navigationItem.title = user.name
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        newMessages = 0
+        messageCounter.setTitle("", for: .normal)
+        messageCounter.setBackgroundImage(UIImage(), for: .normal)
+    }
+
     func setProfile(image: UIImage, name: String) {
         picture = image
         self.name = name
@@ -59,6 +76,7 @@ class ChatViewController: MessagesViewController {
 
     func insertMessage(_ message: MockMessage) {
         if !messages.contains(where: {$0.messageId == message.messageId}) {
+            newMessages += 1
             messages.append(message)
             messagesCollectionView.reloadData()
             messagesCollectionView.scrollToBottom(animated: true)

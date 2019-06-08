@@ -51,7 +51,8 @@ class ChatManager {
             .setData([
                 "type": "message",
                 "message": message,
-                "owner": UserManager.sharedInstance.auth.currentUser!.uid
+                "owner": UserManager.sharedInstance.auth.currentUser!.uid,
+                "date": Date()
             ])
          fStore.collection("users")
             .document(UserManager.sharedInstance.auth.currentUser!.uid)
@@ -61,7 +62,8 @@ class ChatManager {
             .document("\(NSDate.timeIntervalSinceReferenceDate)").setData([
                 "type": "message",
                 "message": message,
-                "owner": UserManager.sharedInstance.auth.currentUser!.uid
+                "owner": UserManager.sharedInstance.auth.currentUser!.uid,
+                "date": Date()
             ])
         }
     }
