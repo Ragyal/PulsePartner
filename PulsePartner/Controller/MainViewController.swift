@@ -17,20 +17,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var allMatches = [User]()
 
-    private lazy var locationManager: CLLocationManager = {
-        let manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        manager.requestAlwaysAuthorization()
-        manager.allowsBackgroundLocationUpdates = true
-// https://developer.apple.com/documentation/corelocation/cllocationmanager/1620553-pauseslocationupdatesautomatical
-        manager.pausesLocationUpdatesAutomatically = true
-        manager.activityType = CLActivityType.fitness
-        return manager
-    }()
-
-    private var lastUpdate: TimeInterval = NSDate.timeIntervalSinceReferenceDate
-
     override func viewDidLoad() {
         super.viewDidLoad()
         UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
@@ -51,10 +37,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
 
-        locationManager.startUpdatingLocation()
+        LocationManager.sharedInstance.startUpdatingLocation()
     }
 
     @IBAction func onLogout(_ sender: Any) {
+        LocationManager.sharedInstance.stopUpdatingLocation()
         UserManager.sharedInstance.logout()
     }
 
@@ -86,8 +73,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        //Pass the indexPath as sender
-        let user = self.allMatches[indexPath.row]
+        // Pass the indexPath as sender
+//        let user = self.allMatches[indexPath.row]
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 
@@ -99,24 +86,5 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
-    }
-}
-
-// MARK: - CLLocationManagerDelegate
-extension MainViewController: CLLocationManagerDelegate {
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-        if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
-            return
-        }
-
-        guard let mostRecentLocation = locations.last else {
-            return
-        }
-
-        UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
-
-        lastUpdate = NSDate.timeIntervalSinceReferenceDate
     }
 }

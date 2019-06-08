@@ -16,29 +16,37 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     static let sharedInstance = LocationManager()
 
     let manager = CLLocationManager()
+    private var lastUpdate: TimeInterval = 0
 
     override init() {
         super.init()
 
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         manager.requestAlwaysAuthorization()
+        manager.allowsBackgroundLocationUpdates = true
+// https://developer.apple.com/documentation/corelocation/cllocationmanager/1620553-pauseslocationupdatesautomatical
+        manager.pausesLocationUpdatesAutomatically = true
+        manager.activityType = CLActivityType.fitness
     }
 
-    func determineMyCurrentLocation() -> [String] {
-        if CLLocationManager.locationServicesEnabled() {
-            print("Start Updating")
-            manager.startUpdatingLocation()
-            manager.startUpdatingHeading()
-            let userLocation = ["\(manager.location!.coordinate.latitude)",
-                "\(manager.location!.coordinate.longitude)"]
-            return userLocation
+    func startUpdatingLocation() {
+        manager.startUpdatingLocation()
+    }
+
+    func stopUpdatingLocation() {
+        manager.stopUpdatingLocation()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
+            return
         }
-        let error = ["Zugriff verweigert", "Bitte Einstellungen pruefen"]
-        return error
-    }
+        guard let mostRecentLocation = locations.last else {
+            return
+        }
 
-    func getDistance (from location: CLLocation) -> Int {
-        return Int(manager.location!.distance(from: location))
+        UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
+        lastUpdate = NSDate.timeIntervalSinceReferenceDate
     }
 }
