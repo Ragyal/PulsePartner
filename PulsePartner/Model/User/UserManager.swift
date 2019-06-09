@@ -183,15 +183,13 @@ class UserManager {
     }
 
     func updateMatchData(coordinates: CLLocationCoordinate2D) {
-        guard let uid = self.uid else {
+        guard let user = self.user else {
             return
         }
-
-        self.fStore.collection("matchData").document(uid).setData([
-            "timestamp": Timestamp(date: Date()),
-            "location": GeoPoint(latitude: coordinates.latitude, longitude: coordinates.longitude),
-            "bpm": 120
-        ]) { err in
+        
+        let matchData: MatchData = MatchData(user: user, coordinates: coordinates)
+        
+        self.fStore.collection("matchData").document(user.documentID).setModel(matchData) { err in
             if let err = err {
                 print("Error writing MatchData: \(err)")
             } else {

@@ -5,7 +5,7 @@
 //  Created by Ove von Stackelberg on 01.05.19.
 //  Copyright © 2019 PulsePartner. All rights reserved.
 //
-import UIKit
+
 import FirebaseFirestore
 
 struct User {

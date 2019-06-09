@@ -6,7 +6,6 @@
 //  Copyright © 2019 PulsePartner. All rights reserved.
 //
 
-import Foundation
 import Firebase
 
 class MatchManager {
