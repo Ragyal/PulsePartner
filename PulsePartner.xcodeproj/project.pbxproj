@@ -20,6 +20,7 @@
 		6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */; };
 		BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */; };
 		BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1422AC9181008DD4DF /* UserObserver.swift */; };
+		BC42FE3322AD128F0093B763 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42FE3222AD128F0093B763 /* MatchData.swift */; };
 		BC461393229174D4008391CA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BC461392229174D3008391CA /* Podfile */; };
 		BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */; };
 		BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */; };
@@ -134,6 +135,7 @@
 		BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		BC31BB1422AC9181008DD4DF /* UserObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObserver.swift; sourceTree = "<group>"; };
+		BC42FE3222AD128F0093B763 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		BC461392229174D3008391CA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWIFTLINT.md; sourceTree = "<group>"; };
 		BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				3E02EA8F228EF0CA00464C93 /* MatchManager.swift */,
+				BC42FE3222AD128F0093B763 /* MatchData.swift */,
 			);
 			path = Match;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */,
+				BC42FE3322AD128F0093B763 /* MatchData.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,

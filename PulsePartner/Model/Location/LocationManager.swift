@@ -16,7 +16,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     static let sharedInstance = LocationManager()
 
     let manager = CLLocationManager()
-    private var lastUpdate: TimeInterval = 0
+    private var lastUpdate: Date = Date()
 
     override init() {
         super.init()
@@ -39,7 +39,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
+        if lastUpdate.timeIntervalSinceNow.magnitude < 15 {
             return
         }
         guard let mostRecentLocation = locations.last else {
@@ -47,6 +47,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         }
 
         UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
-        lastUpdate = NSDate.timeIntervalSinceReferenceDate
+        lastUpdate = Date()
     }
 }
