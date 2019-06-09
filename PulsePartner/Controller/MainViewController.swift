@@ -17,27 +17,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var allMatches = [User]()
 
-    private lazy var locationManager: CLLocationManager = {
-        let manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        manager.requestAlwaysAuthorization()
-        manager.allowsBackgroundLocationUpdates = true
-// https://developer.apple.com/documentation/corelocation/cllocationmanager/1620553-pauseslocationupdatesautomatical
-        manager.pausesLocationUpdatesAutomatically = true
-        manager.activityType = CLActivityType.fitness
-        return manager
-    }()
-
-    private var lastUpdate: TimeInterval = NSDate.timeIntervalSinceReferenceDate
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
-            UserManager.sharedInstance.getProfilePicture(url: (url as? String)!) { image in
-                self.profilePicture.setImage(image, for: .normal)
-            }
+
+        if let user = UserManager.sharedInstance.user {
+            updateImage(user: user)
         }
+        UserManager.sharedInstance.addObserver(self)
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -51,11 +37,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
 
-        locationManager.startUpdatingLocation()
+        LocationManager.sharedInstance.startUpdatingLocation()
     }
 
     @IBAction func onLogout(_ sender: Any) {
+        LocationManager.sharedInstance.stopUpdatingLocation()
         UserManager.sharedInstance.logout()
+    }
+
+    func updateImage(user: FullUser) {
+        UserManager.sharedInstance.getProfilePicture(url: user.image) { image in
+            self.profilePicture.setImage(image, for: .normal)
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,8 +79,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        //Pass the indexPath as sender
-        let user = self.allMatches[indexPath.row]
+        // Pass the indexPath as sender
+//        let user = self.allMatches[indexPath.row]
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 
@@ -99,24 +92,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
+        guard let cell = self.tableView.cellForRow(at: indexPath) as? MatchCell else {
+            return
+        }
+        destinationVC.messageCounter = cell.messageCounter
     }
 }
 
-// MARK: - CLLocationManagerDelegate
-extension MainViewController: CLLocationManagerDelegate {
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-        if NSDate.timeIntervalSinceReferenceDate - lastUpdate < 15 {
+extension MainViewController: UserObserver {
+    func userData(didUpdate user: FullUser?) {
+        guard let user = user else {
             return
         }
-
-        guard let mostRecentLocation = locations.last else {
-            return
-        }
-
-        UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
-
-        lastUpdate = NSDate.timeIntervalSinceReferenceDate
+        updateImage(user: user)
     }
 }

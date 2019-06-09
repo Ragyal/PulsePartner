@@ -6,22 +6,67 @@
 //  Copyright © 2019 PulsePartner. All rights reserved.
 //
 
+//The Message Layout was created with MessageKit
+//Source: https://messagekit.github.io
+internal struct MockMessage: MessageType {
+    var sender: Sender
+
+    var messageId: String
+
+    var sentDate: Date
+
+    var kind: MessageKind
+
+    init(sender: Sender, messageId: String, kind: MessageKind) {
+        self.sender = sender
+        self.messageId = messageId
+        self.sentDate = Date()
+        self.kind = kind
+        print(self.sentDate)
+    }
+}
 import UIKit
+import MessageKit
+import MessageInputBar
+import Messages
+import MessageUI
 
-class ChatViewController: UIViewController {
+class ChatViewController: MessagesViewController {
 
-    @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    var newMessages: Int = 0 {
+        didSet {
+            if !self.view.isFocused {
+                messageCounter.setTitle("\(newMessages)", for: .normal)
+                messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
+            }
+        }
+    }
+
     var user: User!
     var picture = UIImage()
     var name = ""
+    var messages: [MockMessage] = []
+    var messageCounter: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.isNavigationBarHidden = false
+        newMessages = 0
+        messageInputBar.delegate = self
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
+        ChatManager.sharedInstance.fetchMessages(userID: user.userID, view: self)
         self.hideKeyboardWhenTappedAround()
-        profilePicture.image = user.profilePicture
-        nameLabel.text = user.name
+        self.navigationController?
+            .navigationBar
+            .titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationItem.title = user.name
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        newMessages = 0
+        messageCounter.setTitle("", for: .normal)
+        messageCounter.setBackgroundImage(UIImage(), for: .normal)
     }
 
     func setProfile(image: UIImage, name: String) {
@@ -29,7 +74,13 @@ class ChatViewController: UIViewController {
         self.name = name
     }
 
-    @IBAction func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    func insertMessage(_ message: MockMessage) {
+        if !messages.contains(where: {$0.messageId == message.messageId}) {
+            newMessages += 1
+            messages.append(message)
+            messagesCollectionView.reloadData()
+            messagesCollectionView.scrollToBottom(animated: true)
+        }
     }
+
 }

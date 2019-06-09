@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
 		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
+		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
+		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -16,6 +18,8 @@
 		3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF79E6B22612B5800AC1C45 /* PermissionsViewController.swift */; };
 		3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */; };
 		6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */; };
+		BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */; };
+		BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1422AC9181008DD4DF /* UserObserver.swift */; };
 		BC461393229174D4008391CA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BC461392229174D3008391CA /* Podfile */; };
 		BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */; };
 		BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */; };
@@ -112,6 +116,8 @@
 		02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PulsePartner WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E02EA8F228EF0CA00464C93 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
+		3E02EA9222A92A8900464C93 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -126,7 +132,9 @@
 		6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC461392229174D3008391CA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
+		BC31BB1422AC9181008DD4DF /* UserObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObserver.swift; sourceTree = "<group>"; };
+		BC461392229174D3008391CA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWIFTLINT.md; sourceTree = "<group>"; };
 		BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -228,6 +236,14 @@
 			path = Match;
 			sourceTree = "<group>";
 		};
+		3E02EA9122A92A7700464C93 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3E02EA9222A92A8900464C93 /* ChatManager.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +272,14 @@
 				521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC31BB1122AC6F56008DD4DF /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		BC5D4858228641DA0084E1C7 /* Location */ = {
@@ -358,6 +382,8 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E02EA9122A92A7700464C93 /* Chat */,
+				BC31BB1122AC6F56008DD4DF /* Firebase */,
 				3E02EA8E228EF0A700464C93 /* Match */,
 				BCFF5FFD227A2681005848CE /* User */,
 				BC5D4858228641DA0084E1C7 /* Location */,
@@ -393,6 +419,7 @@
 				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
 				BC4B20CA227B48D400F7B1FF /* String.swift */,
 				BC4B20CC22844C0600F7B1FF /* UITextField.swift */,
+				3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +429,7 @@
 			children = (
 				BCFF5FF82279C864005848CE /* UserManager.swift */,
 				BCFF5FFE227A2690005848CE /* User.swift */,
+				BC31BB1422AC9181008DD4DF /* UserObserver.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -698,6 +726,8 @@
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -713,6 +743,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -779,17 +811,21 @@
 				3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */,
 				BC4B20CB227B48D400F7B1FF /* String.swift in Sources */,
 				BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */,
+				BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */,
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
+				3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
+				3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
 				BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */,
 				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
+				BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

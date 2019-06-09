@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserManager.sharedInstance.isLoggedIn {
+        if UserManager.sharedInstance.authenticated {
             self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
         }
     }
