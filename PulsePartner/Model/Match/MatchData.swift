@@ -27,11 +27,11 @@ extension MatchData: FirestoreModel {
     var documentID: String! {
         return userID
     }
-    
+
     var customID: String? {
         return "userID"
     }
-    
+
     init?(modelData: FirestoreModelData) {
         try? self.init(userID: modelData.documentID,
                        username: modelData.value(forKey: "username"),
@@ -46,12 +46,12 @@ extension MatchData: FirestoreModel {
                        timestamp: modelData.value(forKey: "timestamp")
         )
     }
-    
+
     init(user: FullUser,
          heartrate: Int = 95,
          coordinates: CLLocationCoordinate2D,
          timestamp: Date = Date()) {
-        
+
         self.init(userID: user.documentID,
                   username: user.username,
                   image: user.image,
