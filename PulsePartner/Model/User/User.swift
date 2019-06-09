@@ -67,4 +67,17 @@ extension FullUser: FirestoreModel {
                        preferences: modelData.value(forKey: "preferences")
         )
     }
+
+    init(userID: String, registerData: UserRegisterData, imageURL: URL) {
+        self.init(userID: userID,
+                  username: registerData.username,
+                  email: registerData.email,
+                  image: imageURL.absoluteString,
+                  age: registerData.age,
+                  weight: registerData.weight,
+                  fitnessLevel: registerData.fitnessLevel,
+                  gender: registerData.gender,
+                  preferences: registerData.preferences
+        )
+    }
 }
