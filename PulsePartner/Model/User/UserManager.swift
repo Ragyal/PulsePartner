@@ -17,6 +17,7 @@ class UserManager {
     let auth: Auth
     let fStore: Firestore
     let fStorage: Storage
+    var profilePicture = UIImage()
 
     var userDataListener: ListenerRegistration?
 
@@ -174,6 +175,7 @@ class UserManager {
                     print("Error: \(error)")
                 } else {
                     if let imageData = data {
+                        self.profilePicture = UIImage(data: imageData)!
                         completion(UIImage(data: imageData)!)
                     }
                 }

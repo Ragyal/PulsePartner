@@ -92,6 +92,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
+        guard let cell = self.tableView.cellForRow(at: indexPath) as? MatchCell else {
+            return
+        }
+        destinationVC.messageCounter = cell.messageCounter
     }
 }
 

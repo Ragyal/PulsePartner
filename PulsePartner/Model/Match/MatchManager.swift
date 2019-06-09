@@ -30,8 +30,11 @@ class MatchManager {
                 return
             }
             for doc in snapshot.documents {
-                UserManager.sharedInstance.getProfilePicture(url: (doc.get("image") as? String)!) { file in
-                    guard let image = doc.get("image") as? String else {
+                let url = (doc.get("profile_picture") as? String)!
+                UserManager.sharedInstance.getProfilePicture(url: url) { file in
+                    let userID = doc.documentID
+                    let selfID = UserManager.sharedInstance.auth.currentUser!.uid
+                    guard let image = doc.get("profile_picture") as? String else {
                         return
                     }
 
@@ -46,16 +49,26 @@ class MatchManager {
                     guard let weight = doc.get("weight") as? Int else {
                         return
                     }
-
-                    let user = User(userID: 0,
-                                    image: image,
-                                    name: name,
-                                    age: age,
-                                    bpm: 95,
-                                    weight: weight,
-                                    profilePicture: file)
-                    self.allMatches.append(user)
-                    if self.allMatches.count == snapshot.documents.count {
+                    print("UserID: \(userID)")
+                    if selfID != userID {
+                        let user = User(userID: userID,
+                                        image: image,
+                                        name: name,
+                                        age: age,
+                                        bpm: 95,
+                                        weight: weight,
+                                        profilePicture: file)
+                        self.allMatches.append(user)
+                        self.fStore
+                            .collection("users")
+                            .document(selfID)
+                            .collection("matches")
+                            .document(userID).setData([
+                            "username": name,
+                            "profile_picture": url
+                            ])
+                    }
+                    if self.allMatches.count == snapshot.documents.count-1 {
                         completion(self.allMatches)
                     }
                 }

@@ -15,6 +15,9 @@ target 'PulsePartner' do
   pod 'FirebaseUI/Storage'
 
   pod 'CropViewController'
+  
+  pod 'MessageKit'
+  pod 'Firebase/Messaging'
 
   target 'PulsePartnerTests' do
     inherit! :search_paths
