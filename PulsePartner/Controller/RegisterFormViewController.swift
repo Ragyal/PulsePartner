@@ -175,8 +175,8 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, CropViewControl
             print("Age: kein Int")
             return
         }
-        guard let weight = weightInput.floatValue else {
-            print("Age: kein Float")
+        guard let weight = weightInput.intValue else {
+            print("Weight: kein Int")
             return
         }
 

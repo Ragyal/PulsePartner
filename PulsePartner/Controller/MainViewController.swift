@@ -19,11 +19,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserManager.sharedInstance.getUserInformation(dbInfo: "profile_picture") { url in
-            UserManager.sharedInstance.getProfilePicture(url: (url as? String)!) { image in
-                self.profilePicture.setImage(image, for: .normal)
-            }
+
+        if let user = UserManager.sharedInstance.user {
+            updateImage(user: user)
         }
+        UserManager.sharedInstance.addObserver(self)
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -43,6 +43,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func onLogout(_ sender: Any) {
         LocationManager.sharedInstance.stopUpdatingLocation()
         UserManager.sharedInstance.logout()
+    }
+
+    func updateImage(user: FullUser) {
+        UserManager.sharedInstance.getProfilePicture(url: user.image) { image in
+            self.profilePicture.setImage(image, for: .normal)
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,5 +92,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
+    }
+}
+
+extension MainViewController: UserObserver {
+    func userData(didUpdate user: FullUser?) {
+        guard let user = user else {
+            return
+        }
+        updateImage(user: user)
     }
 }

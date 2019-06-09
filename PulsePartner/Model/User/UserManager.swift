@@ -18,24 +18,39 @@ class UserManager {
     let fStore: Firestore
     let fStorage: Storage
 
-    var isLoggedIn: Bool {
-        if Auth.auth().currentUser != nil {
-            return true
-        }
-        return false
+    var userDataListener: ListenerRegistration?
+
+    var authenticated: Bool { return Auth.auth().currentUser != nil ? true : false }
+    var uid: String? { return Auth.auth().currentUser?.uid }
+    var user: FullUser? {
+        didSet { stateDidChange() }
     }
 
-    var getUID: String? {
-        guard let user = Auth.auth().currentUser else {
-            return nil
-        }
-        return user.uid
-    }
+    private var observations = [ObjectIdentifier: Observation]()
 
     private init() {
         auth = Auth.auth()
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
+
+        auth.addStateDidChangeListener({ (_, user) in
+            guard let uid = user?.uid else {
+                self.userDataListener?.remove()
+                return
+            }
+            self.userDataListener = self.fStore.collection("users").document(uid)
+                .addSnapshotListener({ (snapshot, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    guard let snapshot = snapshot else {
+                        return
+                    }
+
+                    self.user = FullUser(modelData: FirestoreModelData(snapshot: snapshot))
+                })
+        })
     }
 
     public func createUser(withUserData userData: UserRegisterData,
@@ -57,31 +72,32 @@ class UserManager {
                     let metadata = StorageMetadata()
                     metadata.contentType = "image/png"
 
-                    // Upload the file to the path "images/rivers.jpg"
-                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, _) in
+                    // Upload the file to the path "profilePictures/UID.png"
+                    _ = pictureRef.putData(data, metadata: metadata) { (metadata, err) in
                         guard metadata != nil else {
-                            // Uh-oh, an error occurred!
+                            print(err?.localizedDescription ?? "Error occured during upload.")
                             return
                         }
                         // You can also access to download URL after upload.
-                        pictureRef.downloadURL { (url, _) in
+                        pictureRef.downloadURL { (url, err) in
                             guard let downloadURL = url else {
-                                // Uh-oh, an error occurred!
+                                print(err?.localizedDescription ?? "Error occured while catching image URL.")
                                 return
                             }
 
-                            self.fStore.collection("users").document(uid).setData([
-                                "username": userData.username,
-                                "email": userData.email,
-                                "age": userData.age,
-                                "weight": userData.weight,
-                                "fitnessLevel": userData.fitnessLevel,
-                                "gender": userData.gender,
-                                "preferences": userData.preferences,
-                                "profile_picture": downloadURL.absoluteString
-                            ]) { err in
+                            let user = FullUser(userID: uid,
+                                                username: userData.username,
+                                                email: userData.email,
+                                                image: downloadURL.absoluteString,
+                                                age: userData.age,
+                                                weight: userData.weight,
+                                                fitnessLevel: userData.fitnessLevel,
+                                                gender: userData.gender,
+                                                preferences: userData.preferences)
+
+                            self.fStore.collection("users").document(user.documentID).setModel(user) { err in
                                 if let err = err {
-                                    print("Error writing document: \(err)")
+                                    print("Error writing document: \(err.localizedDescription)")
                                     completion(false)
                                 } else {
                                     print("Document successfully written!")
@@ -138,8 +154,12 @@ class UserManager {
     }
 
     func getUserInformation(dbInfo: String, completion: @escaping (Any?) -> Void) {
-        let user = fStore.collection("users").document(auth.currentUser!.uid)
-        user.getDocument { (document, error) in
+        guard let uid = self.uid else {
+            return
+        }
+
+        let userRef = fStore.collection("users").document(uid)
+        userRef.getDocument { (document, error) in
             if let error = error {
                 print("Error: \(error)")
             }
@@ -161,7 +181,7 @@ class UserManager {
     }
 
     func updateMatchData(coordinates: CLLocationCoordinate2D) {
-        guard let uid = getUID else {
+        guard let uid = self.uid else {
             return
         }
 
@@ -175,6 +195,39 @@ class UserManager {
             } else {
                 print("MatchData successfully written!")
             }
+        }
+    }
+}
+
+private extension UserManager {
+    struct Observation {
+        weak var observer: UserObserver?
+    }
+}
+
+extension UserManager {
+    func addObserver(_ observer: UserObserver) {
+        let oid = ObjectIdentifier(observer)
+        observations[oid] = Observation(observer: observer)
+    }
+
+    func removeObserver(_ observer: UserObserver) {
+        let oid = ObjectIdentifier(observer)
+        observations.removeValue(forKey: oid)
+    }
+}
+
+private extension UserManager {
+    func stateDidChange() {
+        for (oid, observation) in observations {
+            // If the observer is no longer in memory, we
+            // can clean up the observation for its ID
+            guard let observer = observation.observer else {
+                observations.removeValue(forKey: oid)
+                continue
+            }
+
+            observer.userData(didUpdate: user)
         }
     }
 }
