@@ -49,8 +49,11 @@ extension ChatViewController: MessagesLayoutDelegate {
                            in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
     }
-    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        if message.sender.id.elementsEqual(UserManager.sharedInstance.auth.currentUser!.uid)  {
+    func configureAvatarView(_ avatarView: AvatarView,
+                             for message: MessageType,
+                             at indexPath: IndexPath,
+                             in messagesCollectionView: MessagesCollectionView) {
+        if message.sender.id.elementsEqual(UserManager.sharedInstance.auth.currentUser!.uid) {
             avatarView.image = UserManager.sharedInstance.profilePicture
         } else {
             avatarView.image = user.profilePicture

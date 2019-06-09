@@ -30,11 +30,13 @@ class MatchManager {
                 return
             }
             for doc in snapshot.documents {
-                let url = (doc.get("profile_picture") as? String)!
+                let url = (doc.get("image") as? String)!
                 UserManager.sharedInstance.getProfilePicture(url: url) { file in
                     let userID = doc.documentID
-                    let selfID = UserManager.sharedInstance.auth.currentUser!.uid
-                    guard let image = doc.get("profile_picture") as? String else {
+                    guard let selfID = UserManager.sharedInstance.uid else {
+                        return
+                    }
+                    guard let image = doc.get("image") as? String else {
                         return
                     }
 

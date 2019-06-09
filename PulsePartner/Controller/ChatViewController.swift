@@ -35,13 +35,13 @@ class ChatViewController: MessagesViewController {
 
     var newMessages: Int = 0 {
         didSet {
-            if(!self.view.isFocused) {
+            if !self.view.isFocused {
                 messageCounter.setTitle("\(newMessages)", for: .normal)
                 messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
             }
         }
     }
-    
+
     var user: User!
     var picture = UIImage()
     var name = ""
