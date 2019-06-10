@@ -21,6 +21,7 @@
 		BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */; };
 		BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1422AC9181008DD4DF /* UserObserver.swift */; };
 		BC42FE3322AD128F0093B763 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42FE3222AD128F0093B763 /* MatchData.swift */; };
+		BC42FE3522ADE3FC0093B763 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42FE3422ADE3FC0093B763 /* Match.swift */; };
 		BC461393229174D4008391CA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BC461392229174D3008391CA /* Podfile */; };
 		BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */; };
 		BC4B20C9227AEA9B00F7B1FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */; };
@@ -136,6 +137,7 @@
 		BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		BC31BB1422AC9181008DD4DF /* UserObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObserver.swift; sourceTree = "<group>"; };
 		BC42FE3222AD128F0093B763 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		BC42FE3422ADE3FC0093B763 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		BC461392229174D3008391CA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWIFTLINT.md; sourceTree = "<group>"; };
 		BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			children = (
 				3E02EA8F228EF0CA00464C93 /* MatchManager.swift */,
 				BC42FE3222AD128F0093B763 /* MatchData.swift */,
+				BC42FE3422ADE3FC0093B763 /* Match.swift */,
 			);
 			path = Match;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
 				BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
+				BC42FE3522ADE3FC0093B763 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
