@@ -28,6 +28,48 @@ export const removeMatchData = functions
 });
 
 
+interface MatchData {
+  username: string
+  image: string
+  age: number
+  weight: number
+  fitnessLevel: number
+  gender: string
+  preferences: string[]
+  heartrate: number
+  location: admin.firestore.GeoPoint
+  timestamp: admin.firestore.Timestamp
+}
+
+interface Match {
+  username: string
+  age: number
+  image: string
+  gender: string
+}
+
+function extract<T>(properties: Record<keyof T, true>){
+  return function<TActual extends T>(value: TActual){
+      const result = {} as T;
+      for (const property of Object.keys(properties) as Array<keyof T>) {
+          result[property] = value[property];
+      }
+      return result;
+  }
+}
+
+const extractMatch = extract<Match>({ 
+  // This object literal is guaranteed by the compiler to have no more and no less properties then ISpecific
+  username: true, age: true, image: true, gender: true
+})
+
+function calculateDistance(lat1: number, lat2: number, long1: number, long2: number) {
+  const p = 0.017453292519943295;   // Math.PI / 180
+  const a = 0.5 - Math.cos((lat1-lat2) * p) / 2 + Math.cos(lat2 * p) *Math.cos((lat1) * p) * (1 - Math.cos(((long1- long2) * p))) / 2;
+  const distance = (12742 * Math.asin(Math.sqrt(a)));   // 2 * R; R = 6371 km
+  return distance;
+}
+
 function doMatch(userA: admin.firestore.QueryDocumentSnapshot, userB: admin.firestore.QueryDocumentSnapshot): Boolean {
   const dataA: MatchData = userA.data() as MatchData
   const dataB: MatchData = userB.data() as MatchData
@@ -50,14 +92,19 @@ function doMatch(userA: admin.firestore.QueryDocumentSnapshot, userB: admin.fire
 }
 
 async function createMatch(userA: admin.firestore.QueryDocumentSnapshot, userB: admin.firestore.QueryDocumentSnapshot) {
-  const dataA: Match = userA.data() as Match
-  const dataB: Match = userB.data() as Match
+  const dataA: Match = extractMatch(userA.data() as MatchData)
+  const dataB: Match = extractMatch(userB.data() as MatchData)
 
-  const refA = firebase.firestore().collection("users").doc(userA.id).collection("matches").doc(userB.id)
-  await refA.set(dataA)
-
-  const refB = firebase.firestore().collection("users").doc(userB.id).collection("matches").doc(userA.id)
-  await refB.set(dataB)
+  try {
+    const refA = firebase.firestore().collection("users").doc(userA.id).collection("matches").doc(userB.id)
+    await refA.create(dataB)
+    
+    const refB = firebase.firestore().collection("users").doc(userB.id).collection("matches").doc(userA.id)
+    await refB.create(dataA)
+  } catch (err) {
+    console.log("Already matched.")
+  }
+  
 }
 
 export const matchUsers = functions
@@ -97,30 +144,3 @@ export const removeUser = functions
 
   return Promise.all([asyncUserDocDeletion, asyncUserImageDeletion])
 });
-
-interface MatchData {
-  username: string,
-  image: string,
-  age: number,
-  weight: number,
-  fitnessLevel: number
-  gender: string,
-  preferences: string[],
-  heartrate: number,
-  location: admin.firestore.GeoPoint,
-  timestamp: admin.firestore.Timestamp,
-}
-
-interface Match {
-  username: string
-  age: number,
-  image: string,
-  gender: string
-}
-
-function calculateDistance(lat1: number, lat2: number, long1: number, long2: number) {
-  const p = 0.017453292519943295;   // Math.PI / 180
-  const a = 0.5 - Math.cos((lat1-lat2) * p) / 2 + Math.cos(lat2 * p) *Math.cos((lat1) * p) * (1 - Math.cos(((long1- long2) * p))) / 2;
-  const distance = (12742 * Math.asin(Math.sqrt(a)));   // 2 * R; R = 6371 km
-  return distance;
-}
