@@ -56,7 +56,7 @@ extension ChatViewController: MessagesLayoutDelegate {
         if message.sender.id.elementsEqual(UserManager.sharedInstance.auth.currentUser!.uid) {
             avatarView.image = UserManager.sharedInstance.profilePicture
         } else {
-            avatarView.image = user.profilePicture
+            avatarView.image = user.image
         }
     }
 }
@@ -65,7 +65,7 @@ extension ChatViewController: MessagesDisplayDelegate {}
 
 extension ChatViewController: MessageInputBarDelegate {
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        ChatManager.sharedInstance.sendMessage(receiver: user.userID, message: text)
+        ChatManager.sharedInstance.sendMessage(receiver: user.matchData.userID, message: text)
         inputBar.inputTextView.text = ""
     }
 }

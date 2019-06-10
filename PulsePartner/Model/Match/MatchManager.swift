@@ -13,63 +13,36 @@ class MatchManager {
     static let sharedInstance = MatchManager()
     let fStore: Firestore
     let fStorage: Storage
-    var allMatches = [User]()
+    var allMatches = [MatchWithImage]()
 
     private init() {
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
     }
 
-    func loadMatches(completion: @escaping ([User]) -> Void) {
-        fStore.collection("users").getDocuments { snapshot, error in
-            print(error ?? "No error.")
+    func loadMatches(completion: @escaping ([MatchWithImage]) -> Void) {
+        guard let uid = UserManager.sharedInstance.uid else {
+            return
+        }
+
+        fStore.collection("users").document(uid).collection("matches").getModels(Match.self) { matches, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
             self.allMatches = []
-            guard let snapshot = snapshot else {
+            guard let matches = matches else {
                 completion(self.allMatches)
                 return
             }
-            for doc in snapshot.documents {
-                let url = (doc.get("image") as? String)!
+            for match in matches {
+                let url = match.image
                 UserManager.sharedInstance.getProfilePicture(url: url) { file in
-                    let userID = doc.documentID
-                    guard let selfID = UserManager.sharedInstance.uid else {
-                        return
-                    }
-                    guard let image = doc.get("image") as? String else {
-                        return
-                    }
+                    let matchWithImage = MatchWithImage(matchData: match, image: file)
+                    self.allMatches.append(matchWithImage)
 
-                    guard let name = doc.get("username") as? String else {
-                        return
-                    }
-
-                    guard let age = doc.get("age") as? Int else {
-                        return
-                    }
-
-                    guard let weight = doc.get("weight") as? Int else {
-                        return
-                    }
-                    print("UserID: \(userID)")
-                    if selfID != userID {
-                        let user = User(userID: userID,
-                                        image: image,
-                                        name: name,
-                                        age: age,
-                                        bpm: 95,
-                                        weight: weight,
-                                        profilePicture: file)
-                        self.allMatches.append(user)
-                        self.fStore
-                            .collection("users")
-                            .document(selfID)
-                            .collection("matches")
-                            .document(userID).setData([
-                            "username": name,
-                            "profile_picture": url
-                            ])
-                    }
-                    if self.allMatches.count == snapshot.documents.count-1 {
+                    if self.allMatches.count == matches.count {
                         completion(self.allMatches)
                     }
                 }

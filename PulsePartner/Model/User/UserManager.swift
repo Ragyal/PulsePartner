@@ -86,15 +86,7 @@ class UserManager {
                                 return
                             }
 
-                            let user = FullUser(userID: uid,
-                                                username: userData.username,
-                                                email: userData.email,
-                                                image: downloadURL.absoluteString,
-                                                age: userData.age,
-                                                weight: userData.weight,
-                                                fitnessLevel: userData.fitnessLevel,
-                                                gender: userData.gender,
-                                                preferences: userData.preferences)
+                            let user = FullUser(userID: uid, registerData: userData, imageURL: downloadURL)
 
                             self.fStore.collection("users").document(user.documentID).setModel(user) { err in
                                 if let err = err {

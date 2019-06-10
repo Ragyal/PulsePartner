@@ -15,7 +15,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
 
-    var allMatches = [User]()
+    var allMatches = [MatchWithImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,15 +63,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
         let user = self.allMatches[indexPath.row]
-        cell.insertContent(image: user.profilePicture,
-                            name: user.name,
-                            age: String(user.age),
-                            bpm: String(user.weight),
+        cell.insertContent(image: user.image,
+                            name: user.matchData.username,
+                            age: String(user.matchData.age),
+                            bpm: String(95),
                             navigation: self.navigationController!)
         let size = CGSize(width: 90, height: 90)
         let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        user.profilePicture.draw(in: rect)
+        user.image.draw(in: rect)
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         cell.profilePicture.image = resizedImage
