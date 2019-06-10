@@ -20,11 +20,11 @@ extension Match: FirestoreModel {
     var documentID: String! {
         return userID
     }
-    
+
     var customID: String? {
         return "userID"
     }
-    
+
     init?(modelData: FirestoreModelData) {
         try? self.init(userID: modelData.documentID,
                        username: modelData.value(forKey: "username"),

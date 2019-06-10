@@ -24,13 +24,13 @@ class MatchManager {
         guard let uid = UserManager.sharedInstance.uid else {
             return
         }
-        
+
         fStore.collection("users").document(uid).collection("matches").getModels(Match.self) { matches, error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
-            
+
             self.allMatches = []
             guard let matches = matches else {
                 completion(self.allMatches)
@@ -41,7 +41,7 @@ class MatchManager {
                 UserManager.sharedInstance.getProfilePicture(url: url) { file in
                     let matchWithImage = MatchWithImage(matchData: match, image: file)
                     self.allMatches.append(matchWithImage)
-                    
+
                     if self.allMatches.count == matches.count {
                         completion(self.allMatches)
                     }
