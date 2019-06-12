@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import Firebase
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
@@ -27,10 +27,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        MatchManager.sharedInstance.loadMatches { matches in
-            self.allMatches = matches
-            self.tableView.reloadData()
-        }
+        MatchManager.sharedInstance.addObserver(self)
 
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
@@ -51,39 +48,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allMatches.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.rowHeight = 110
-        let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
-        let user = self.allMatches[indexPath.row]
-        cell.insertContent(image: user.image,
-                            name: user.matchData.username,
-                            age: String(user.matchData.age),
-                            bpm: String(95),
-                            navigation: self.navigationController!)
-        let size = CGSize(width: 90, height: 90)
-        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        user.image.draw(in: rect)
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        cell.profilePicture.image = resizedImage
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        // Pass the indexPath as sender
-//        let user = self.allMatches[indexPath.row]
-        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = sender as? IndexPath else {
             return
@@ -99,11 +63,55 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allMatches.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.rowHeight = 110
+        let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
+        let user = self.allMatches[indexPath.row]
+        cell.insertContent(image: user.image,
+                           name: user.matchData.username,
+                           age: String(user.matchData.age),
+                           bpm: String(95),
+                           navigation: self.navigationController!)
+        let size = CGSize(width: 90, height: 90)
+        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        user.image.draw(in: rect)
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        cell.profilePicture.image = resizedImage
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        // Pass the indexPath as sender
+        //        let user = self.allMatches[indexPath.row]
+        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
+    }
+}
+
 extension MainViewController: UserObserver {
     func userData(didUpdate user: FullUser?) {
         guard let user = user else {
             return
         }
         updateImage(user: user)
+    }
+}
+
+extension MainViewController: MatchObserver {
+    func matchData(didUpdate matches: [MatchWithImage]?) {
+        if let matches = matches {
+            self.allMatches = matches
+            self.tableView.reloadData()
+        }
     }
 }
