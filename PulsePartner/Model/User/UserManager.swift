@@ -37,10 +37,11 @@ class UserManager {
         auth.addStateDidChangeListener({ (_, user) in
             guard let uid = user?.uid else {
                 self.userDataListener?.remove()
+                self.user = nil
                 return
             }
             self.userDataListener = self.fStore.collection("users").document(uid)
-                .addSnapshotListener({ (snapshot, error) in
+                .addSnapshotListener { (snapshot, error) in
                     if error != nil {
                         print(error!.localizedDescription)
                         return
@@ -50,7 +51,7 @@ class UserManager {
                     }
 
                     self.user = FullUser(modelData: FirestoreModelData(snapshot: snapshot))
-                })
+                }
         })
     }
 
@@ -201,6 +202,7 @@ extension UserManager {
     func addObserver(_ observer: UserObserver) {
         let oid = ObjectIdentifier(observer)
         observations[oid] = Observation(observer: observer)
+        observer.userData(didUpdate: user)
     }
 
     func removeObserver(_ observer: UserObserver) {
