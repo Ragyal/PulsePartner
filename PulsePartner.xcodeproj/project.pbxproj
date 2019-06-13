@@ -12,12 +12,13 @@
 		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
 		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
+		3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ADF4322B1A61E00E770B6 /* Chat.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
 		3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7422709A07000434B6 /* ChatViewController.swift */; };
+		3ED600AA22B1AAF000091788 /* Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ED600A822B1AAF000091788 /* Chat.xcdatamodeld */; };
+		3ED600AC22B2593A00091788 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED600AB22B2593A00091788 /* HealthKit.framework */; };
 		3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF79E6B22612B5800AC1C45 /* PermissionsViewController.swift */; };
-		3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */; };
-		6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */; };
 		BC008ABF22AEEB4E0083EC6C /* MatchObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC008ABE22AEEB4E0083EC6C /* MatchObserver.swift */; };
 		BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1222AC6FC4008DD4DF /* FirestoreModel.swift */; };
 		BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31BB1422AC9181008DD4DF /* UserObserver.swift */; };
@@ -123,14 +124,14 @@
 		3E02EA9222A92A8900464C93 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3E1ADF4322B1A61E00E770B6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		3E243A7422709A07000434B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3ED600A922B1AAF000091788 /* Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chat.xcdatamodel; sourceTree = "<group>"; };
+		3ED600AB22B2593A00091788 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3EF79E6B22612B5800AC1C45 /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
-		3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePartner.entitlements; sourceTree = "<group>"; };
-		43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit Extension/Pods-PulsePartner WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit Extension/Pods-PulsePartner WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +186,6 @@
 		BCFF5FFE227A2690005848CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.release.xcconfig"; sourceTree = "<group>"; };
-		E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartner_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.debug.xcconfig"; sourceTree = "<group>"; };
 		FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF79E6F226DE4F100AC1C45 /* HealthKit.framework in Frameworks */,
 				E701EC6527032AACC9D5FE87 /* Pods_PulsePartner.framework in Frameworks */,
+				3ED600AC22B2593A00091788 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +221,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B42D74EA8173D0BBCC9F608 /* Pods_PulsePartner_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				3E02EA9222A92A8900464C93 /* ChatManager.swift */,
+				3E1ADF4322B1A61E00E770B6 /* Chat.swift */,
+				3ED600A822B1AAF000091788 /* Chat.xcdatamodeld */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -258,10 +259,9 @@
 		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3EF79E6E226DE4F100AC1C45 /* HealthKit.framework */,
+				3ED600AB22B2593A00091788 /* HealthKit.framework */,
 				02D57652DE0A5BF8B744149D /* Pods_PulsePartner.framework */,
 				3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */,
-				E0866902DF7AC622FCE373D9 /* Pods_PulsePartner_WatchKit_Extension.framework */,
 				BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */,
 				6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */,
 			);
@@ -275,8 +275,6 @@
 				DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */,
 				FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */,
 				5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */,
-				43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */,
-				476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */,
 				E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */,
 				699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */,
 				D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */,
@@ -539,7 +537,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCECF1782256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit Extension" */;
 			buildPhases = (
-				175A7E952CB2B56E3048BA5E /* [CP] Check Pods Manifest.lock */,
 				BCECF1632256241F00AFA163 /* Sources */,
 				BCECF1642256241F00AFA163 /* Frameworks */,
 				BCECF1652256241F00AFA163 /* Resources */,
@@ -667,28 +664,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		175A7E952CB2B56E3048BA5E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PulsePartner WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		290B218413973798BED60970 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -840,10 +815,12 @@
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */,
 				3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */,
+				3ED600AA22B1AAF000091788 /* Chat.xcdatamodeld in Sources */,
 				BC42FE3322AD128F0093B763 /* MatchData.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
+				3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */,
 				3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
@@ -1059,18 +1036,17 @@
 		};
 		BCECF1792256241F00AFA163 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43026324621F3F74DADD5F95 /* Pods-PulsePartner WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				INFOPLIST_FILE = "PulsePartner WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1082,18 +1058,17 @@
 		};
 		BCECF17A2256241F00AFA163 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 476D6D360EF35B020C1AE65D /* Pods-PulsePartner WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				INFOPLIST_FILE = "PulsePartner WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1110,10 +1085,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				IBSC_MODULE = PulsePartner_WatchKit_Extension;
 				INFOPLIST_FILE = "PulsePartner WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1130,10 +1105,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				IBSC_MODULE = PulsePartner_WatchKit_Extension;
 				INFOPLIST_FILE = "PulsePartner WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1150,13 +1125,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				INFOPLIST_FILE = PulsePartner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1170,13 +1145,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PulsePartner/PulsePartner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BLFEEYE58;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
 				INFOPLIST_FILE = PulsePartner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepartner.PulsePartner;
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1323,6 +1298,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3ED600A822B1AAF000091788 /* Chat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3ED600A922B1AAF000091788 /* Chat.xcdatamodel */,
+			);
+			currentVersion = 3ED600A922B1AAF000091788 /* Chat.xcdatamodel */;
+			path = Chat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BCECF1282256241D00AFA163 /* Project object */;
 }
