@@ -22,12 +22,12 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>PulsePartners möchte auf deine Kamera zugreifen</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>PulsePartner möchte auf deine Bilder zugreifen</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>PulsePartners möchte auf deine GPS Daten zugreifen</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>PulsePartners möchte auf deine GPS Daten zugreifen</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>PulsePartner möchte auf deine Bilder zugreifen</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
