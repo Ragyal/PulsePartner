@@ -24,11 +24,11 @@ class MainViewController: UIViewController {
             updateImage(user: user)
         }
         UserManager.sharedInstance.addObserver(self)
-        
+
         self.tableView.delegate = self
         self.tableView.dataSource = self
         MatchManager.sharedInstance.addObserver(self)
-        
+
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
@@ -43,9 +43,13 @@ class MainViewController: UIViewController {
     }
 
     func updateImage(user: FullUser) {
-        UserManager.sharedInstance.getProfilePicture(url: user.image) { image in
-            self.profilePicture.setImage(image, for: .normal)
+        var placeholder = self.profilePicture.image(for: .normal)
+        if placeholder == nil {
+            placeholder = user.gender == "m" ?
+                UIImage(named: "PlaceholderImageMale") :
+                UIImage(named: "PlaceholderImageFemale")
         }
+        self.profilePicture.kf.setImage(with: URL(string: user.image), for: .normal, placeholder: placeholder)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

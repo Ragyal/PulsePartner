@@ -91,6 +91,7 @@ extension MatchManager: UserObserver {
     func userData(didUpdate user: FullUser?) {
         guard let user = user else {
             matchDataListener?.remove()
+            matches = nil
             return
         }
         self.matchDataListener = fStore.collection("users").document(user.documentID).collection("matches")
