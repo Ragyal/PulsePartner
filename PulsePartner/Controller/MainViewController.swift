@@ -43,9 +43,13 @@ class MainViewController: UIViewController {
     }
 
     func updateImage(user: FullUser) {
-        UserManager.sharedInstance.getProfilePicture(url: user.image) { image in
-            self.profilePicture.setImage(image, for: .normal)
+        var placeholder = self.profilePicture.image(for: .normal)
+        if placeholder == nil {
+            placeholder = user.gender == "m" ?
+                UIImage(named: "PlaceholderImageMale") :
+                UIImage(named: "PlaceholderImageFemale")
         }
+        self.profilePicture.kf.setImage(with: URL(string: user.image), for: .normal, placeholder: placeholder)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
