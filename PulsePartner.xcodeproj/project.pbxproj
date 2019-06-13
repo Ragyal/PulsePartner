@@ -34,6 +34,7 @@
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
+		BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8227322B2492E00FF1B01 /* ImageManager.swift */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
 		BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1352256241D00AFA163 /* LoginViewController.swift */; };
 		BCECF1392256241D00AFA163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1372256241D00AFA163 /* Main.storyboard */; };
@@ -147,6 +148,7 @@
 		BC4B20CC22844C0600F7B1FF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCE8227322B2492E00FF1B01 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1332256241D00AFA163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCECF1352256241D00AFA163 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		BCE8227522B2493400FF1B01 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8227322B2492E00FF1B01 /* ImageManager.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		BCECF1272256241D00AFA163 = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +401,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8227522B2493400FF1B01 /* Image */,
 				3E02EA9122A92A7700464C93 /* Chat */,
 				BC31BB1122AC6F56008DD4DF /* Firebase */,
 				3E02EA8E228EF0A700464C93 /* Match */,
@@ -827,6 +838,7 @@
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
+				BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */,
 				3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */,
 				BC42FE3322AD128F0093B763 /* MatchData.swift in Sources */,
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
