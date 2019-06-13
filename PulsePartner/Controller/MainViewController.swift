@@ -24,11 +24,11 @@ class MainViewController: UIViewController {
             updateImage(user: user)
         }
         UserManager.sharedInstance.addObserver(self)
-
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         MatchManager.sharedInstance.addObserver(self)
-
+        
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
