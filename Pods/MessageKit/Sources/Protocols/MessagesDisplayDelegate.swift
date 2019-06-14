@@ -71,7 +71,7 @@ public protocol MessagesDisplayDelegate: AnyObject {
     ///   - indexPath: The `IndexPath` of the footer.
     ///   - messagesCollectionView: The `MessagesCollectionView` in which this footer will be displayed.
     func messageFooterView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView
-    
+
     /// Used to configure the `AvatarView`‘s image in a `MessageContentCell` class.
     ///
     /// - Parameters:
@@ -193,7 +193,7 @@ public extension MessagesDisplayDelegate {
             return dataSource.isFromCurrentSender(message: message) ? .outgoingGreen : .incomingGray
         }
     }
-    
+
     func messageHeaderView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView {
         return messagesCollectionView.dequeueReusableHeaderView(MessageReusableView.self, for: indexPath)
     }
@@ -201,7 +201,7 @@ public extension MessagesDisplayDelegate {
     func messageFooterView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView {
         return messagesCollectionView.dequeueReusableFooterView(MessageReusableView.self, for: indexPath)
     }
-    
+
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         avatarView.initials = "?"
     }

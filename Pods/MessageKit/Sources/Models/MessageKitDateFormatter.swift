@@ -62,5 +62,5 @@ open class MessageKitDateFormatter {
             formatter.dateFormat = "MMM d, yyyy, h:mm a"
         }
     }
-    
+
 }

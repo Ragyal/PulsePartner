@@ -50,7 +50,7 @@ open class MessageLabel: UILabel {
     }()
 
     private lazy var rangesForDetectors: [DetectorType: [(NSRange, MessageTextCheckingType)]] = [:]
-    
+
     private var isConfiguring: Bool = false
 
     // MARK: - Public Properties
@@ -119,7 +119,7 @@ open class MessageLabel: UILabel {
         size.height += textInsets.vertical
         return size
     }
-    
+
     internal var messageLabelFont: UIFont?
 
     private var attributesNeedUpdate = false
@@ -139,7 +139,7 @@ open class MessageLabel: UILabel {
     open internal(set) var phoneNumberAttributes: [NSAttributedString.Key: Any] = defaultAttributes
 
     open internal(set) var urlAttributes: [NSAttributedString.Key: Any] = defaultAttributes
-    
+
     open internal(set) var transitInformationAttributes: [NSAttributedString.Key: Any] = defaultAttributes
 
     public func setAttributes(_ attributes: [NSAttributedString.Key: Any], detector: DetectorType) {
@@ -189,7 +189,7 @@ open class MessageLabel: UILabel {
     }
 
     // MARK: - Public Methods
-    
+
     public func configure(block: () -> Void) {
         isConfiguring = true
         block()
@@ -210,19 +210,19 @@ open class MessageLabel: UILabel {
             setNeedsDisplay()
             return
         }
-        
+
         let style = paragraphStyle(for: newText)
         let range = NSRange(location: 0, length: newText.length)
-        
+
         let mutableText = NSMutableAttributedString(attributedString: newText)
         mutableText.addAttribute(.paragraphStyle, value: style, range: range)
-        
+
         if shouldParse {
             rangesForDetectors.removeAll()
             let results = parse(text: mutableText)
             setRangesForDetectors(in: results)
         }
-        
+
         for (detector, rangeTuples) in rangesForDetectors {
             if enabledDetectors.contains(detector) {
                 let attributes = detectorAttributes(for: detector)
@@ -238,17 +238,17 @@ open class MessageLabel: UILabel {
         if !isConfiguring { setNeedsDisplay() }
 
     }
-    
+
     private func paragraphStyle(for text: NSAttributedString) -> NSParagraphStyle {
         guard text.length > 0 else { return NSParagraphStyle() }
-        
+
         var range = NSRange(location: 0, length: text.length)
         let existingStyle = text.attribute(.paragraphStyle, at: 0, effectiveRange: &range) as? NSMutableParagraphStyle
         let style = existingStyle ?? NSMutableParagraphStyle()
-        
+
         style.lineBreakMode = lineBreakMode
         style.alignment = textAlignment
-        
+
         return style
     }
 
@@ -303,7 +303,7 @@ open class MessageLabel: UILabel {
             fatalError(MessageKitError.unrecognizedCheckingResult)
         }
     }
-    
+
     private func setupView() {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
@@ -337,7 +337,7 @@ open class MessageLabel: UILabel {
     private func setRangesForDetectors(in checkingResults: [NSTextCheckingResult]) {
 
         guard checkingResults.isEmpty == false else { return }
-        
+
         for result in checkingResults {
 
             switch result.resultType {
@@ -388,13 +388,13 @@ open class MessageLabel: UILabel {
         let index = layoutManager.glyphIndex(for: location, in: textContainer)
 
         let lineRect = layoutManager.lineFragmentUsedRect(forGlyphAt: index, effectiveRange: nil)
-        
+
         var characterIndex: Int?
-        
+
         if lineRect.contains(location) {
             characterIndex = layoutManager.characterIndexForGlyph(at: index)
         }
-        
+
         return characterIndex
 
     }
@@ -415,7 +415,7 @@ open class MessageLabel: UILabel {
     }
 
     private func handleGesture(for detectorType: DetectorType, value: MessageTextCheckingType) {
-        
+
         switch value {
         case let .addressComponents(addressComponents):
             var transformedAddressComponents = [String: String]()
@@ -442,27 +442,27 @@ open class MessageLabel: UILabel {
             handleTransitInformation(transformedTransitInformation)
         }
     }
-    
+
     private func handleAddress(_ addressComponents: [String: String]) {
         delegate?.didSelectAddress(addressComponents)
     }
-    
+
     private func handleDate(_ date: Date) {
         delegate?.didSelectDate(date)
     }
-    
+
     private func handleURL(_ url: URL) {
         delegate?.didSelectURL(url)
     }
-    
+
     private func handlePhoneNumber(_ phoneNumber: String) {
         delegate?.didSelectPhoneNumber(phoneNumber)
     }
-    
+
     private func handleTransitInformation(_ components: [String: String]) {
         delegate?.didSelectTransitInformation(components)
     }
-    
+
 }
 
 private enum MessageTextCheckingType {

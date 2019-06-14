@@ -45,20 +45,20 @@ open class PlayButtonView: UIView {
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+
         setupSubviews()
         setupConstraints()
         setupView()
     }
 
     // MARK: - Methods
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         guard !cacheFrame.equalTo(frame) else { return }
         cacheFrame = frame
-        
+
         updateTriangleConstraints()
         applyCornerRadius()
         applyTriangleMask()
@@ -67,11 +67,11 @@ open class PlayButtonView: UIView {
     private func setupSubviews() {
         addSubview(triangleView)
     }
-    
+
     private func setupView() {
         triangleView.clipsToBounds = true
         triangleView.backgroundColor = .black
-        
+
         backgroundColor = .playButtonLightGray
     }
 
@@ -118,5 +118,5 @@ open class PlayButtonView: UIView {
     private func applyCornerRadius() {
         layer.cornerRadius = frame.width / 2
     }
-    
+
 }
