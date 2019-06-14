@@ -569,6 +569,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					BCECF1432256241E00AFA163 = {
