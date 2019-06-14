@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
 
-    var allMatches = [MatchWithImage]()
+    var allMatches = [Match]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +85,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
-        let user = self.allMatches[indexPath.row]
-        cell.insertContent(match: user)
+        let match = self.allMatches[indexPath.row]
+        cell.insertContent(match: match)
 
 //        cell.profilePicture.image = resizedImage
         return cell
@@ -138,7 +138,7 @@ extension MainViewController: UserObserver {
 }
 
 extension MainViewController: MatchObserver {
-    func matchData(didUpdate matches: [MatchWithImage]?) {
+    func matchData(didUpdate matches: [Match]?) {
         if let matches = matches {
             self.allMatches = matches
             self.tableView.reloadData()

@@ -17,11 +17,10 @@ class MatchManager {
     let fStorage: Storage
 
     var matchDataListener: ListenerRegistration?
-    var matches: [MatchWithImage]? {
+    var matches: [Match]? {
         didSet { stateDidChange() }
     }
     private var observations = [ObjectIdentifier: Observation]()
-    var allMatches = [MatchWithImage]()
 
     private init() {
         fStore = Firestore.firestore()
@@ -36,7 +35,7 @@ class MatchManager {
             return
         }
 
-        var matches: [MatchWithImage] = []
+        var matches: [Match] = []
         guard let snapshot = snapshot else {
             return
         }
@@ -46,46 +45,9 @@ class MatchManager {
                     print("Critical error mapping data to Match obejcts!")
                     return
             }
-            let url = match.image
-            UserManager.shared.getProfilePicture(url: url) { file in
-                let matchWithImage = MatchWithImage(matchData: match, image: file)
-                matches.append(matchWithImage)
-
-                if matches.count == snapshot.documents.count {
-                    self.matches = matches
-                }
-            }
+            matches.append(match)
         }
-    }
-
-    func loadMatches(completion: @escaping ([MatchWithImage]) -> Void) {
-        guard let uid = UserManager.shared.uid else {
-            return
-        }
-
-        fStore.collection("users").document(uid).collection("matches").getModels(Match.self) { matches, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-
-            self.allMatches = []
-            guard let matches = matches else {
-                completion(self.allMatches)
-                return
-            }
-            for match in matches {
-                let url = match.image
-                UserManager.shared.getProfilePicture(url: url) { file in
-                    let matchWithImage = MatchWithImage(matchData: match, image: file)
-                    self.allMatches.append(matchWithImage)
-
-                    if self.allMatches.count == matches.count {
-                        completion(self.allMatches)
-                    }
-                }
-            }
-        }
+        self.matches = matches
     }
 }
 

@@ -17,7 +17,6 @@ class UserManager {
     let auth: Auth
     let fStore: Firestore
     let fStorage: Storage
-    var profilePicture = UIImage()
 
     var userDataListener: ListenerRegistration?
 
@@ -204,20 +203,6 @@ class UserManager {
                 }
             }
         }
-    }
-
-    func getProfilePicture(url: String, completion: @escaping (UIImage) -> Void) {
-            let imageRef = self.fStorage.reference(forURL: url)
-            imageRef.getData(maxSize: 10 * 1024 * 1024, completion: {( data, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                } else {
-                    if let imageData = data {
-                        self.profilePicture = UIImage(data: imageData)!
-                        completion(UIImage(data: imageData)!)
-                    }
-                }
-            })
     }
 
     func updateMatchData(coordinates: CLLocationCoordinate2D) {
