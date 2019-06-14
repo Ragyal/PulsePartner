@@ -18,9 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
         -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
-        return true
+            // Override point for customization after application launch.
+            FirebaseApp.configure()
+
+            UNUserNotificationCenter.current().delegate = NotificationManager.sharedInstance
+
+            return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

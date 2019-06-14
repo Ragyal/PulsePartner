@@ -457,7 +457,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="askForPermission:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="YHg-vg-Iaw"/>
+                                    <action selector="askForGPS:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="YHg-vg-Iaw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPS Zugriff zulassen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZZ-3G-dqf">
@@ -474,7 +474,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="askForPermission:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="b93-Dh-Hvn"/>
+                                    <action selector="askForPushNotification:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="Zw0-mb-Dei"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pushnachrichten zulassen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOp-Le-2Ww">
@@ -491,7 +491,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="askForPermission:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="oIp-Og-Zr8"/>
+                                    <action selector="askForHealthKit:" destination="Xqz-JX-oI1" eventType="touchUpInside" id="eMI-WC-j8H"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HealthKit Zugriff zulassen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-Me-vGM">
@@ -578,6 +578,6 @@
         <image name="HeartbeatIcon" width="1867" height="995"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dau-wV-aPO"/>
+        <segue reference="tJP-Jn-cdH"/>
     </inferredMetricsTieBreakers>
 </document>
