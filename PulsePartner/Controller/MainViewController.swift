@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
     @IBAction func onChangePicture(_ sender: UIButton) {
         ImageManager.handleImageSelection(self)
     }
-    
+
     @IBAction func onLogout(_ sender: Any) {
         LocationManager.shared.stopUpdatingLocation()
         UserManager.shared.logout()
@@ -116,7 +116,7 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
         }
         presentCropViewController(withImage: image)
     }
-    
+
     func presentCropViewController(withImage image: UIImage) {
         let cropViewController = CropViewController(croppingStyle: .circular, image: image)
         cropViewController.delegate = self
