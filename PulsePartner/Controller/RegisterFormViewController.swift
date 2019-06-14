@@ -44,14 +44,19 @@ class RegisterFormViewController: UIViewController {
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
             if image == nil {
-                image = UIImage(named: "PlaceholderImage")
+                image = data.gender == "m" ?
+                    UIImage(named: "PlaceholderImageMale") :
+                    UIImage(named: "PlaceholderImageFemale")
             }
+
             let size = CGSize(width: 128, height: 128)
             let rect = CGRect(x: 0, y: 0, width: 128, height: 128)
+
             UIGraphicsBeginImageContextWithOptions(size, false, 0)
             image!.draw(in: rect)
             let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
+
             UserManager.shared.createUser(withUserData: data,
                                           image: resizedImage!,
                                           sender: self) { success in
