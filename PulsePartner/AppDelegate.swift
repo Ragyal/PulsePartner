@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FirebaseApp.configure()
 
             UNUserNotificationCenter.current().delegate = NotificationManager.shared
+            Messaging.messaging().delegate = NotificationManager.shared
 
             return true
     }
