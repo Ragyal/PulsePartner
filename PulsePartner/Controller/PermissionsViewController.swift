@@ -52,9 +52,13 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
             let notificationStatus = settings.authorizationStatus
             switch notificationStatus {
             case .notDetermined, .provisional, .denied:
-                self.pushCheckbox.isSelected = false
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = false
+                }
             case .authorized:
-                self.pushCheckbox.isSelected = true
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = true
+                }
             default:
                 break
             }
@@ -88,10 +92,14 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { success, error in
             if error != nil {
-                self.pushCheckbox.isSelected = false
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = false
+                }
                 return
             }
-            self.pushCheckbox.isSelected = success
+            DispatchQueue.main.async {
+                self.pushCheckbox.isSelected = success
+            }
         }
         UIApplication.shared.registerForRemoteNotifications()
     }

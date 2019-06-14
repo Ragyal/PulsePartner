@@ -121,6 +121,7 @@ class UserManager {
                        completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
             if error == nil {
+                UIApplication.shared.registerForRemoteNotifications()
                 completion(true)
             } else {
                 let alertController = UIAlertController(title: "Error",
@@ -141,6 +142,8 @@ class UserManager {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
+
+        UIApplication.shared.unregisterForRemoteNotifications()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
