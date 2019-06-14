@@ -52,7 +52,7 @@ class RegisterFormViewController: UIViewController {
             image!.draw(in: rect)
             let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            UserManager.sharedInstance.createUser(withUserData: data,
+            UserManager.shared.createUser(withUserData: data,
                                                   image: resizedImage!,
                                                   sender: self) { success in
                                                     if success {

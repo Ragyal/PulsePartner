@@ -12,6 +12,6 @@ import UserNotifications
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
 
     // Singleton
-    static let sharedInstance = NotificationManager()
+    static let shared = NotificationManager()
 
 }

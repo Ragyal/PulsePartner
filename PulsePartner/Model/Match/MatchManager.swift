@@ -10,7 +10,9 @@ import Firebase
 
 class MatchManager {
 
-    static let sharedInstance = MatchManager()
+    // Singleton
+    static let shared = MatchManager()
+
     let fStore: Firestore
     let fStorage: Storage
 
@@ -25,7 +27,7 @@ class MatchManager {
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
 
-        UserManager.sharedInstance.addObserver(self)
+        UserManager.shared.addObserver(self)
     }
 
     func matchesListener(snapshot: QuerySnapshot?, error: Error?) {
@@ -45,7 +47,7 @@ class MatchManager {
                     return
             }
             let url = match.image
-            UserManager.sharedInstance.getProfilePicture(url: url) { file in
+            UserManager.shared.getProfilePicture(url: url) { file in
                 let matchWithImage = MatchWithImage(matchData: match, image: file)
                 matches.append(matchWithImage)
 
@@ -57,7 +59,7 @@ class MatchManager {
     }
 
     func loadMatches(completion: @escaping ([MatchWithImage]) -> Void) {
-        guard let uid = UserManager.sharedInstance.uid else {
+        guard let uid = UserManager.shared.uid else {
             return
         }
 
@@ -74,7 +76,7 @@ class MatchManager {
             }
             for match in matches {
                 let url = match.image
-                UserManager.sharedInstance.getProfilePicture(url: url) { file in
+                UserManager.shared.getProfilePicture(url: url) { file in
                     let matchWithImage = MatchWithImage(matchData: match, image: file)
                     self.allMatches.append(matchWithImage)
 

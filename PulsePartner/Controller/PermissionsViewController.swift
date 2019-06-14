@@ -68,7 +68,7 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         case .authorizedAlways, .authorizedWhenInUse:
             self.gpsCheckbox.isSelected = true
         case .notDetermined:
-            LocationManager.sharedInstance.manager.requestAlwaysAuthorization()
+            LocationManager.shared.manager.requestAlwaysAuthorization()
             self.gpsCheckbox.isSelected = true
         case .denied, .restricted:
             let alert = UIAlertController(title: "Location Services disabled",

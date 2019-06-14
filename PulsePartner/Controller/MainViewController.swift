@@ -20,26 +20,26 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let user = UserManager.sharedInstance.user {
+        if let user = UserManager.shared.user {
             updateImage(user: user)
         }
-        UserManager.sharedInstance.addObserver(self)
+        UserManager.shared.addObserver(self)
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        MatchManager.sharedInstance.addObserver(self)
+        MatchManager.shared.addObserver(self)
 
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
 
-        LocationManager.sharedInstance.startUpdatingLocation()
+        LocationManager.shared.startUpdatingLocation()
     }
 
     @IBAction func onLogout(_ sender: Any) {
-        LocationManager.sharedInstance.stopUpdatingLocation()
-        UserManager.sharedInstance.logout()
+        LocationManager.shared.stopUpdatingLocation()
+        UserManager.shared.logout()
     }
 
     func updateImage(user: FullUser) {

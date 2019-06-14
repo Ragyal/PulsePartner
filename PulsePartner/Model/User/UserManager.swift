@@ -12,7 +12,7 @@ import CoreLocation
 class UserManager {
 
     // Singleton
-    static let sharedInstance = UserManager()
+    static let shared = UserManager()
 
     let auth: Auth
     let fStore: Firestore
