@@ -51,9 +51,9 @@ interface Match {
   gender: string;
 }
 
-function extract<T>(
-  properties: Record<keyof T, true>
-): <TActual extends T>(value: TActual) => T {
+const extract = <T>(
+  properties: Record<keyof T, true>,
+): (<TActual extends T>(value: TActual) => T) => {
   return <TActual extends T>(value: TActual) => {
     const result = {} as T;
     for (const property of Object.keys(properties) as Array<keyof T>) {
@@ -61,21 +61,21 @@ function extract<T>(
     }
     return result;
   };
-}
+};
 
 const extractMatch = extract<Match>({
   // This object literal is guaranteed by the compiler to have no more and no less properties then ISpecific
   age: true,
   gender: true,
   image: true,
-  username: true
+  username: true,
 });
 
 const calculateDistance = (
   lat1: number,
   lat2: number,
   long1: number,
-  long2: number
+  long2: number,
 ): number => {
   const p = 0.017453292519943295; // Math.PI / 180
   const a =
@@ -111,7 +111,7 @@ const doMatch = (
     dataA.location.latitude,
     dataB.location.latitude,
     dataA.location.longitude,
-    dataB.location.longitude
+    dataB.location.longitude,
   );
   console.log("Distanze: " + distance + "km");
   if (distance > 0.3) {
@@ -123,7 +123,7 @@ const doMatch = (
 
 const createMatch = async (
   userA: admin.firestore.QueryDocumentSnapshot,
-  userB: admin.firestore.QueryDocumentSnapshot
+  userB: admin.firestore.QueryDocumentSnapshot,
 ): Promise<void> => {
   const dataA: Match = extractMatch(userA.data() as MatchData);
   const dataB: Match = extractMatch(userB.data() as MatchData);
@@ -184,7 +184,7 @@ export const removeUser = functions
     const bucket = firebase.storage().bucket();
 
     const asyncUserImageDeletion = bucket.deleteFiles({
-      prefix: `profilePictures/${user.uid}.png`
+      prefix: `profilePictures/${user.uid}.png`,
     });
     const asyncUserDocDeletion = firebase
       .firestore()
