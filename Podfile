@@ -10,15 +10,12 @@ target 'PulsePartner' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
   pod 'Firebase/Analytics'
 
   pod 'FirebaseUI/Storage'
-
   pod 'CropViewController'
-  
   pod 'MessageKit'
-  pod 'Firebase/Messaging'
-  
   pod 'Kingfisher', '~> 5.0'
 
   target 'PulsePartnerTests' do
@@ -32,19 +29,3 @@ target 'PulsePartner' do
   end
 
 end
-
-target 'PulsePartner WatchKit App' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for PulsePartner WatchKit App
-
-end
-
-#target 'PulsePartner WatchKit Extension' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-#use_frameworks!
-  
-  # Pods for PulsePartner WatchKit Extension
-
-#end

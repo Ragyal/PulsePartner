@@ -19,9 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
         -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
-        return true
+            // Override point for customization after application launch.
+            FirebaseApp.configure()
+
+            UNUserNotificationCenter.current().delegate = NotificationManager.shared
+            Messaging.messaging().delegate = NotificationManager.shared
+
+            return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -98,4 +102,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // This function is added here only for debugging purposes, and can be removed if swizzling is enabled.
+    // If swizzling is disabled then this function must be implemented so that the APNs token can be paired to
+    // the FCM registration token.
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("APNs token retrieved: \(deviceToken.hexString)")
+
+        // With swizzling disabled you must set the APNs token here.
+        // Messaging.messaging().apnsToken = deviceToken
+    }
 }

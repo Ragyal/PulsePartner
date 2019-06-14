@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import Firebase
+import CropViewController
 import CoreData
 
 class MainViewController: UIViewController {
@@ -20,26 +21,31 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = UserManager.sharedInstance.user {
+
+        if let user = UserManager.shared.user {
             updateImage(user: user)
         }
-        UserManager.sharedInstance.addObserver(self)
+        UserManager.shared.addObserver(self)
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        MatchManager.sharedInstance.addObserver(self)
+        MatchManager.shared.addObserver(self)
 
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
 //        self.navigationController?.isNavigationBarHidden = true
 
-        LocationManager.sharedInstance.startUpdatingLocation()
+        LocationManager.shared.startUpdatingLocation()
+    }
+
+    @IBAction func onChangePicture(_ sender: UIButton) {
+        ImageManager.handleImageSelection(self)
     }
 
     @IBAction func onLogout(_ sender: Any) {
-        LocationManager.sharedInstance.stopUpdatingLocation()
-        UserManager.sharedInstance.logout()
+        LocationManager.shared.stopUpdatingLocation()
+        UserManager.shared.logout()
     }
 
     func updateImage(user: FullUser) {
@@ -90,6 +96,35 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         // Pass the indexPath as sender
         //        let user = self.allMatches[indexPath.row]
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
+    }
+}
+
+extension MainViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image: UIImage = info[.originalImage] as? UIImage else {
+            return
+        }
+        presentCropViewController(withImage: image)
+    }
+
+    func presentCropViewController(withImage image: UIImage) {
+        let cropViewController = CropViewController(croppingStyle: .circular, image: image)
+        cropViewController.delegate = self
+        self.present(cropViewController, animated: true, completion: nil)
+    }
+}
+
+extension MainViewController: CropViewControllerDelegate {
+    @objc func cropViewController(_ cropViewController: CropViewController,
+                                  didCropToCircularImage image: UIImage,
+                                  withRect cropRect: CGRect,
+                                  angle: Int) {
+        // 'image' is the newly cropped, circular version of the original image
+        cropViewController.dismiss(animated: true, completion: nil)
+        self.profilePicture.setImage(image, for: .normal)
+        UserManager.shared.updateProfilePicture(image: image)
     }
 }
 

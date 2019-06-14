@@ -24,13 +24,13 @@ class LoginViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserManager.sharedInstance.authenticated {
+        if UserManager.shared.authenticated {
             self.performSegue(withIdentifier: "MainNavigationSegue", sender: self)
         }
     }
 
     @IBAction func onLoginButtonClick(_ sender: UIButton) {
-        UserManager.sharedInstance.signIn(withEmail: emailInput.text ?? "",
+        UserManager.shared.signIn(withEmail: emailInput.text ?? "",
                                           password: passwordInput.text ?? "",
                                           sender: self) { result in
             if result {

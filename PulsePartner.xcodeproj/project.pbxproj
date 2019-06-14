@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3529DD0141D76A67B6F5D880 /* libPods-PulsePartner WatchKit App.a */; };
 		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
 		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
 		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
@@ -30,11 +29,12 @@
 		BC4B20CB227B48D400F7B1FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CA227B48D400F7B1FF /* String.swift */; };
 		BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CC22844C0600F7B1FF /* UITextField.swift */; };
 		BC4B20CF2284603D00F7B1FF /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */; };
+		BC7E91B522B3264700BE0E23 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = BC7E91B422B3264700BE0E23 /* Podfile.lock */; };
+		BC7E91B822B33A2200BE0E23 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E91B722B33A2200BE0E23 /* NotificationManager.swift */; };
+		BC7E91BA22B40FBE00BE0E23 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E91B922B40FBE00BE0E23 /* Data.swift */; };
 		BCAE20EE2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20EF2271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
-		BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
-		BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */; };
 		BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8227322B2492E00FF1B01 /* ImageManager.swift */; };
 		BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1332256241D00AFA163 /* AppDelegate.swift */; };
 		BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1352256241D00AFA163 /* LoginViewController.swift */; };
@@ -43,14 +43,6 @@
 		BCECF13E2256241E00AFA163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF13C2256241E00AFA163 /* LaunchScreen.storyboard */; };
 		BCECF1492256241E00AFA163 /* PulsePartnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1482256241E00AFA163 /* PulsePartnerTests.swift */; };
 		BCECF1542256241E00AFA163 /* PulsePartnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1532256241E00AFA163 /* PulsePartnerUITests.swift */; };
-		BCECF1592256241E00AFA163 /* PulsePartner WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BCECF1582256241E00AFA163 /* PulsePartner WatchKit App.app */; };
-		BCECF15F2256241E00AFA163 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCECF15D2256241E00AFA163 /* Interface.storyboard */; };
-		BCECF1612256241F00AFA163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1602256241F00AFA163 /* Assets.xcassets */; };
-		BCECF1682256241F00AFA163 /* PulsePartner WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BCECF1672256241F00AFA163 /* PulsePartner WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BCECF16D2256241F00AFA163 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF16C2256241F00AFA163 /* InterfaceController.swift */; };
-		BCECF16F2256241F00AFA163 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF16E2256241F00AFA163 /* ExtensionDelegate.swift */; };
-		BCECF1712256241F00AFA163 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECF1702256241F00AFA163 /* NotificationController.swift */; };
-		BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCECF1722256241F00AFA163 /* Assets.xcassets */; };
 		BCECF18B22562AAA00AFA163 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BCECF18A22562AAA00AFA163 /* .gitignore */; };
 		BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF5FF322736566005848CE /* RegisterFormViewController.swift */; };
 		BCFF5FF92279C864005848CE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF5FF82279C864005848CE /* UserManager.swift */; };
@@ -76,41 +68,15 @@
 			remoteGlobalIDString = BCECF12F2256241D00AFA163;
 			remoteInfo = PulsePartner;
 		};
-		BCECF15A2256241E00AFA163 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BCECF1282256241D00AFA163 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BCECF1572256241E00AFA163;
-			remoteInfo = "PulsePartner WatchKit App";
-		};
-		BCECF1692256241F00AFA163 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BCECF1282256241D00AFA163 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BCECF1662256241F00AFA163;
-			remoteInfo = "PulsePartner WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BCECF17B2256241F00AFA163 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				BCECF1682256241F00AFA163 /* PulsePartner WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BCECF17F2256241F00AFA163 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				BCECF1592256241E00AFA163 /* PulsePartner WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +99,6 @@
 		3EF79E6B22612B5800AC1C45 /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
 		3EF79E70226DE4F100AC1C45 /* PulsePartner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePartner.entitlements; sourceTree = "<group>"; };
 		521E5B26CE99A294A436CED8 /* Pods-PulsePartnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerUITests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerUITests/Pods-PulsePartnerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		6320775AFB976426CC5CD114 /* Pods_PulsePartnerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.release.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA456C1C5AA43A3C9786449B /* Pods_PulsePartnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsePartnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +113,9 @@
 		BC4B20CA227B48D400F7B1FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BC4B20CC22844C0600F7B1FF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BC4B20CE2284603D00F7B1FF /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		BC7E91B422B3264700BE0E23 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		BC7E91B722B33A2200BE0E23 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		BC7E91B922B40FBE00BE0E23 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BCAE20ED2271F9EC00898553 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE8227322B2492E00FF1B01 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		BCECF1302256241D00AFA163 /* PulsePartner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePartner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,23 +131,11 @@
 		BCECF14F2256241E00AFA163 /* PulsePartnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsePartnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCECF1532256241E00AFA163 /* PulsePartnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsePartnerUITests.swift; sourceTree = "<group>"; };
 		BCECF1552256241E00AFA163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCECF1582256241E00AFA163 /* PulsePartner WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PulsePartner WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCECF15E2256241E00AFA163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		BCECF1602256241F00AFA163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BCECF1622256241F00AFA163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCECF1672256241F00AFA163 /* PulsePartner WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PulsePartner WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCECF16C2256241F00AFA163 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		BCECF16E2256241F00AFA163 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		BCECF1702256241F00AFA163 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		BCECF1722256241F00AFA163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BCECF1742256241F00AFA163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCECF1752256241F00AFA163 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		BCECF1892256265B00AFA163 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = net.daringfireball.markdown; lineEnding = 0; path = README.md; sourceTree = "<group>"; };
 		BCECF18A22562AAA00AFA163 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BCF1646F2271E1050064708B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		BCF164702271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		BCF164712271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		BCF164722271E4340064708B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		BCFF5FF322736566005848CE /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		BCFF5FF82279C864005848CE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		BCFF5FFB227A2474005848CE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -188,7 +144,6 @@
 		DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.release.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.release.xcconfig"; sourceTree = "<group>"; };
 		E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartnerTests.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartnerTests/Pods-PulsePartnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner/Pods-PulsePartner.debug.xcconfig"; sourceTree = "<group>"; };
-		FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsePartner WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PulsePartner WatchKit App/Pods-PulsePartner WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,21 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D3F3480B60CD910CA98205 /* Pods_PulsePartnerUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BCECF1642256241F00AFA163 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0479D8BC07F475359ED0E88 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D4ABEEB704C2BA1F3E59546 /* libPods-PulsePartner WatchKit App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +213,6 @@
 			children = (
 				FAD7872A5D86250EAC5FFEA6 /* Pods-PulsePartner.debug.xcconfig */,
 				DF7317337C9BCDEB7B5FAC06 /* Pods-PulsePartner.release.xcconfig */,
-				FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */,
-				5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */,
 				E9C5A07D0F5FD05B1283AD5D /* Pods-PulsePartnerTests.debug.xcconfig */,
 				699A620A752994092CD703F5 /* Pods-PulsePartnerTests.release.xcconfig */,
 				D93DFCE98E97034D9FE02EB3 /* Pods-PulsePartnerUITests.debug.xcconfig */,
@@ -299,6 +237,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		BC7E91B622B33A0500BE0E23 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E91B722B33A2200BE0E23 /* NotificationManager.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		BCE8227522B2493400FF1B01 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +256,7 @@
 		BCECF1272256241D00AFA163 = {
 			isa = PBXGroup;
 			children = (
+				BC7E91B422B3264700BE0E23 /* Podfile.lock */,
 				BC461392229174D3008391CA /* Podfile */,
 				BC4B20C8227AEA9A00F7B1FF /* .swiftlint.yml */,
 				BC4B20C6227AEA4C00F7B1FF /* SWIFTLINT.md */,
@@ -318,8 +265,6 @@
 				BCECF1322256241D00AFA163 /* PulsePartner */,
 				BCECF1472256241E00AFA163 /* PulsePartnerTests */,
 				BCECF1522256241E00AFA163 /* PulsePartnerUITests */,
-				BCECF15C2256241E00AFA163 /* PulsePartner WatchKit App */,
-				BCECF16B2256241F00AFA163 /* PulsePartner WatchKit Extension */,
 				BCECF1312256241D00AFA163 /* Products */,
 				3EF79E6D226DE4F100AC1C45 /* Frameworks */,
 				4DB7407350F1504AFB1E4576 /* Pods */,
@@ -332,8 +277,6 @@
 				BCECF1302256241D00AFA163 /* PulsePartner.app */,
 				BCECF1442256241E00AFA163 /* PulsePartnerTests.xctest */,
 				BCECF14F2256241E00AFA163 /* PulsePartnerUITests.xctest */,
-				BCECF1582256241E00AFA163 /* PulsePartner WatchKit App.app */,
-				BCECF1672256241F00AFA163 /* PulsePartner WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,32 +316,10 @@
 			path = PulsePartnerUITests;
 			sourceTree = "<group>";
 		};
-		BCECF15C2256241E00AFA163 /* PulsePartner WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				BCECF15D2256241E00AFA163 /* Interface.storyboard */,
-				BCECF1602256241F00AFA163 /* Assets.xcassets */,
-				BCECF1622256241F00AFA163 /* Info.plist */,
-			);
-			path = "PulsePartner WatchKit App";
-			sourceTree = "<group>";
-		};
-		BCECF16B2256241F00AFA163 /* PulsePartner WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				BCECF16C2256241F00AFA163 /* InterfaceController.swift */,
-				BCECF16E2256241F00AFA163 /* ExtensionDelegate.swift */,
-				BCECF1702256241F00AFA163 /* NotificationController.swift */,
-				BCECF1722256241F00AFA163 /* Assets.xcassets */,
-				BCECF1742256241F00AFA163 /* Info.plist */,
-				BCECF1752256241F00AFA163 /* PushNotificationPayload.apns */,
-			);
-			path = "PulsePartner WatchKit Extension";
-			sourceTree = "<group>";
-		};
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC7E91B622B33A0500BE0E23 /* Notification */,
 				BCE8227522B2493400FF1B01 /* Image */,
 				3E02EA9122A92A7700464C93 /* Chat */,
 				BC31BB1122AC6F56008DD4DF /* Firebase */,
@@ -438,6 +359,7 @@
 				BC4B20CA227B48D400F7B1FF /* String.swift */,
 				BC4B20CC22844C0600F7B1FF /* UITextField.swift */,
 				3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */,
+				BC7E91B922B40FBE00BE0E23 /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,7 +391,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BCECF15B2256241E00AFA163 /* PBXTargetDependency */,
 			);
 			name = PulsePartner;
 			productName = PulsePartner;
@@ -514,42 +435,6 @@
 			productReference = BCECF14F2256241E00AFA163 /* PulsePartnerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		BCECF1572256241E00AFA163 /* PulsePartner WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BCECF17C2256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit App" */;
-			buildPhases = (
-				DA82A3BDF01D183FD49C1019 /* [CP] Check Pods Manifest.lock */,
-				BCECF1562256241E00AFA163 /* Resources */,
-				BCECF17B2256241F00AFA163 /* Embed App Extensions */,
-				D0479D8BC07F475359ED0E88 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BCECF16A2256241F00AFA163 /* PBXTargetDependency */,
-			);
-			name = "PulsePartner WatchKit App";
-			productName = "PulsePartner WatchKit App";
-			productReference = BCECF1582256241E00AFA163 /* PulsePartner WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		BCECF1662256241F00AFA163 /* PulsePartner WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BCECF1782256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit Extension" */;
-			buildPhases = (
-				BCECF1632256241F00AFA163 /* Sources */,
-				BCECF1642256241F00AFA163 /* Frameworks */,
-				BCECF1652256241F00AFA163 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PulsePartner WatchKit Extension";
-			productName = "PulsePartner WatchKit Extension";
-			productReference = BCECF1672256241F00AFA163 /* PulsePartner WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -569,6 +454,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					BCECF1432256241E00AFA163 = {
@@ -578,12 +466,6 @@
 					BCECF14E2256241E00AFA163 = {
 						CreatedOnToolsVersion = 10.2;
 						TestTargetID = BCECF12F2256241D00AFA163;
-					};
-					BCECF1572256241E00AFA163 = {
-						CreatedOnToolsVersion = 10.2;
-					};
-					BCECF1662256241F00AFA163 = {
-						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
@@ -604,8 +486,6 @@
 				BCECF12F2256241D00AFA163 /* PulsePartner */,
 				BCECF1432256241E00AFA163 /* PulsePartnerTests */,
 				BCECF14E2256241E00AFA163 /* PulsePartnerUITests */,
-				BCECF1572256241E00AFA163 /* PulsePartner WatchKit App */,
-				BCECF1662256241F00AFA163 /* PulsePartner WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -615,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7E91B522B3264700BE0E23 /* Podfile.lock in Resources */,
 				BCECF18B22562AAA00AFA163 /* .gitignore in Resources */,
 				BC4B20C7227AEA4D00F7B1FF /* SWIFTLINT.md in Resources */,
 				BC461393229174D4008391CA /* Podfile in Resources */,
@@ -639,25 +520,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCAE20F02271F9EC00898553 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BCECF1562256241E00AFA163 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BCECF1612256241F00AFA163 /* Assets.xcassets in Resources */,
-				BCECF15F2256241E00AFA163 /* Interface.storyboard in Resources */,
-				BCAE20F12271F9EC00898553 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BCECF1652256241F00AFA163 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BCECF1732256241F00AFA163 /* Assets.xcassets in Resources */,
-				BCAE20F22271F9EC00898553 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,28 +616,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PulsePartner/Pods-PulsePartner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA82A3BDF01D183FD49C1019 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PulsePartner WatchKit App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FC433D4CFC7164A017319743 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -811,6 +651,7 @@
 				BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */,
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
+				BC7E91B822B33A2200BE0E23 /* NotificationManager.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */,
@@ -829,6 +670,7 @@
 				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
 				BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
+				BC7E91BA22B40FBE00BE0E23 /* Data.swift in Sources */,
 				BC42FE3522ADE3FC0093B763 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -849,16 +691,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCECF1632256241F00AFA163 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BCECF1712256241F00AFA163 /* NotificationController.swift in Sources */,
-				BCECF16F2256241F00AFA163 /* ExtensionDelegate.swift in Sources */,
-				BCECF16D2256241F00AFA163 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -871,16 +703,6 @@
 			isa = PBXTargetDependency;
 			target = BCECF12F2256241D00AFA163 /* PulsePartner */;
 			targetProxy = BCECF1502256241E00AFA163 /* PBXContainerItemProxy */;
-		};
-		BCECF15B2256241E00AFA163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BCECF1572256241E00AFA163 /* PulsePartner WatchKit App */;
-			targetProxy = BCECF15A2256241E00AFA163 /* PBXContainerItemProxy */;
-		};
-		BCECF16A2256241F00AFA163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BCECF1662256241F00AFA163 /* PulsePartner WatchKit Extension */;
-			targetProxy = BCECF1692256241F00AFA163 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -902,15 +724,6 @@
 				BCF164712271E4340064708B /* de */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		BCECF15D2256241E00AFA163 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCECF15E2256241E00AFA163 /* Base */,
-				BCF164722271E4340064708B /* de */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1031,90 +844,6 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BCECF1792256241F00AFA163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PETS3Y3UCQ;
-				INFOPLIST_FILE = "PulsePartner WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Debug;
-		};
-		BCECF17A2256241F00AFA163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PETS3Y3UCQ;
-				INFOPLIST_FILE = "PulsePartner WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Release;
-		};
-		BCECF17D2256241F00AFA163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDC2B9246CBAD35F7C64D087 /* Pods-PulsePartner WatchKit App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PETS3Y3UCQ;
-				IBSC_MODULE = PulsePartner_WatchKit_Extension;
-				INFOPLIST_FILE = "PulsePartner WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Debug;
-		};
-		BCECF17E2256241F00AFA163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C5AC9DE09B4CAD12C1F7A7F /* Pods-PulsePartner WatchKit App.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PETS3Y3UCQ;
-				IBSC_MODULE = PulsePartner_WatchKit_Extension;
-				INFOPLIST_FILE = "PulsePartner WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = de.hsbremen.mc.pulsepartner.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
 			};
 			name = Release;
 		};
@@ -1248,24 +977,6 @@
 			buildConfigurations = (
 				BCECF1762256241F00AFA163 /* Debug */,
 				BCECF1772256241F00AFA163 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BCECF1782256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BCECF1792256241F00AFA163 /* Debug */,
-				BCECF17A2256241F00AFA163 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BCECF17C2256241F00AFA163 /* Build configuration list for PBXNativeTarget "PulsePartner WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BCECF17D2256241F00AFA163 /* Debug */,
-				BCECF17E2256241F00AFA163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

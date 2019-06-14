@@ -33,7 +33,7 @@ import UIKit
  3. The distribution property needs to be based on its arranged subviews intrinsicContentSize so it is not recommended to change it
  */
 open class InputStackView: UIStackView {
-    
+
     /// The stack view position in the MessageInputBar
     ///
     /// - left: Left Stack View
@@ -43,26 +43,26 @@ open class InputStackView: UIStackView {
     public enum Position {
         case left, right, bottom, top
     }
-    
+
     // MARK: Initialization
-    
+
     public convenience init(axis: NSLayoutConstraint.Axis, spacing: CGFloat) {
         self.init(frame: .zero)
         self.axis = axis
         self.spacing = spacing
     }
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-    
+
     required public init(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+
     // MARK: - Setup
-    
+
     /// Sets up the default properties
     open func setup() {
         translatesAutoresizingMaskIntoConstraints = false

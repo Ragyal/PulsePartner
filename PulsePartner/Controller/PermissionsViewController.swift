@@ -9,10 +9,10 @@
 import UIKit
 import CoreLocation
 import HealthKit
+import UserNotifications
 
 class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
 
-    let locationManager = CLLocationManager()
     let healthManager = HKHealthStore()
 
     @IBOutlet weak var gpsCheckbox: UIButton!
@@ -31,51 +31,80 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
             checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
             checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
         }
+
+        setupLocationCheckbox()
+    }
+
+    private func setupLocationCheckbox() {
         let locationStatus = CLLocationManager.authorizationStatus()
         switch locationStatus {
         case .notDetermined, .denied, .restricted:
-            gpsCheckbox.isSelected = false
+            self.gpsCheckbox.isSelected = false
         case .authorizedAlways, .authorizedWhenInUse:
-            gpsCheckbox.isSelected = true
+            self.gpsCheckbox.isSelected = true
         default:
             break
         }
     }
 
-    /**
-     Function to ask for access for
-     `Location`, `HealthKit` and `PushNotification`
-     - ToDo: Add request for HealthKit and PushNotification
-     */
-    @IBAction func askForPermission (_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            let status = CLLocationManager.authorizationStatus()
-
-            switch status {
-            case .notDetermined:
-                locationManager.requestAlwaysAuthorization()
-                gpsCheckbox.isSelected = true
-            case .denied, .restricted:
-                let alert = UIAlertController(title: "Location Services disabled",
-                                              message: "Bitte erlaube den Zugriff auf deine GPS Daten.",
-                                              preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(okAction)
-
-                present(alert, animated: true, completion: nil)
-                return
+    private func setupNotificationCheckbox() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            let notificationStatus = settings.authorizationStatus
+            switch notificationStatus {
+            case .notDetermined, .provisional, .denied:
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = false
+                }
+            case .authorized:
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = true
+                }
             default:
                 break
             }
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation()
-        case 2:
-            pushCheckbox.isSelected = true
-        case 3:
-            healthKitCheckbox.isSelected = true
+        }
+    }
+
+    @IBAction func askForGPS(_ sender: UIButton) {
+        let status = CLLocationManager.authorizationStatus()
+
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            self.gpsCheckbox.isSelected = true
+        case .notDetermined:
+            LocationManager.shared.manager.requestAlwaysAuthorization()
+            self.gpsCheckbox.isSelected = true
+        case .denied, .restricted:
+            let alert = UIAlertController(title: "Location Services disabled",
+                                          message: "Bitte erlaube den Zugriff auf deine GPS Daten.",
+                                          preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+
+            present(alert, animated: true, completion: nil)
+            return
         default:
             break
         }
+    }
+
+    @IBAction func askForPushNotification(_ sender: UIButton) {
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { success, error in
+            if error != nil {
+                DispatchQueue.main.async {
+                    self.pushCheckbox.isSelected = false
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                self.pushCheckbox.isSelected = success
+            }
+        }
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+
+    @IBAction func askForHealthKit(_ sender: UIButton) {
+        self.healthKitCheckbox.isSelected = true
     }
 }

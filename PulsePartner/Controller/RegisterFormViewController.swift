@@ -33,7 +33,7 @@ class RegisterFormViewController: UIViewController {
     }
 
     @IBAction func onPictureButtonClick(_ sender: Any) {
-        ImageManager.handleImageUpload(self)
+        ImageManager.handleImageSelection(self)
     }
 
     @IBAction func setFitnessLevel(_ sender: UISlider) {
@@ -44,21 +44,26 @@ class RegisterFormViewController: UIViewController {
     @IBAction func onRegisterButtonClick(_ sender: UIButton) {
         validateInput(completion: { data in
             if image == nil {
-                image = UIImage(named: "PlaceholderImage")
+                image = data.gender == "m" ?
+                    UIImage(named: "PlaceholderImageMale") :
+                    UIImage(named: "PlaceholderImageFemale")
             }
+
             let size = CGSize(width: 128, height: 128)
             let rect = CGRect(x: 0, y: 0, width: 128, height: 128)
+
             UIGraphicsBeginImageContextWithOptions(size, false, 0)
             image!.draw(in: rect)
             let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            UserManager.sharedInstance.createUser(withUserData: data,
-                                                  image: resizedImage!,
-                                                  sender: self) { success in
-                                                    if success {
-                                                        self.performSegue(withIdentifier: "showPermissionsSegue",
-                                                                          sender: self)
-                                                    }
+
+            UserManager.shared.createUser(withUserData: data,
+                                          image: resizedImage!,
+                                          sender: self) { success in
+                                            if success {
+                                                self.performSegue(withIdentifier: "showPermissionsSegue",
+                                                                  sender: self)
+                                            }
             }
         })
     }

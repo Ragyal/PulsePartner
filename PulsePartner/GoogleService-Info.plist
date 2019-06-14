@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>210756693141-ieggs3fod5tr1ju53hnkm79c5md41t6l.apps.googleusercontent.com</string>
+	<string>210756693141-jarmkl2b2oj9qdci78vdt5td0q8g1490.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.210756693141-ieggs3fod5tr1ju53hnkm79c5md41t6l</string>
+	<string>com.googleusercontent.apps.210756693141-jarmkl2b2oj9qdci78vdt5td0q8g1490</string>
 	<key>API_KEY</key>
 	<string>AIzaSyA43vHoCkY2AcHMcjEI4GpEftC_vmoszMw</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.pulsepartner.PulsePartner</string>
+	<string>de.hsbremen.mc.pulsepartner</string>
 	<key>PROJECT_ID</key>
 	<string>pulsepartner-ca85d</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:210756693141:ios:330606fe461ba455</string>
+	<string>1:210756693141:ios:4102b352f6436315</string>
 	<key>DATABASE_URL</key>
 	<string>https://pulsepartner-ca85d.firebaseio.com</string>
 </dict>

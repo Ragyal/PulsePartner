@@ -31,6 +31,6 @@ extension NSAttributedString {
         let constraintBox = CGSize(width: .greatestFiniteMagnitude, height: height)
         let rect = self.boundingRect(with: constraintBox, options: [.usesLineFragmentOrigin, .usesFontLeading], context: nil)
         return rect.width
-        
+
     }
 }

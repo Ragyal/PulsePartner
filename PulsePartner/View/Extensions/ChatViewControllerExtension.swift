@@ -21,7 +21,7 @@ extension ChatViewController: MessagesDataSource {
         return messages.count
     }
     func currentSender() -> Sender {
-        return Sender(id: UserManager.sharedInstance.auth.currentUser!.uid, displayName: "")
+        return Sender(id: UserManager.shared.auth.currentUser!.uid, displayName: "")
     }
     func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName
@@ -53,8 +53,8 @@ extension ChatViewController: MessagesLayoutDelegate {
                              for message: MessageType,
                              at indexPath: IndexPath,
                              in messagesCollectionView: MessagesCollectionView) {
-        if message.sender.id.elementsEqual(UserManager.sharedInstance.auth.currentUser!.uid) {
-            avatarView.image = UserManager.sharedInstance.profilePicture
+        if message.sender.id.elementsEqual(UserManager.shared.auth.currentUser!.uid) {
+            avatarView.image = UserManager.shared.profilePicture
         } else {
             avatarView.image = user.image
         }
@@ -65,7 +65,7 @@ extension ChatViewController: MessagesDisplayDelegate {}
 
 extension ChatViewController: MessageInputBarDelegate {
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        ChatManager.sharedInstance.sendMessage(receiver: user.matchData.userID, message: text)
+        ChatManager.shared.sendMessage(receiver: user.matchData.userID, message: text)
         inputBar.inputTextView.text = ""
         ChatManager.sharedInstance.fetchMessages(matchID: user.matchData.userID, view: self)
     }

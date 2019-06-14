@@ -12,7 +12,10 @@ import MessageKit
 import CoreData
 
 class ChatManager {
-    static let sharedInstance = ChatManager()
+
+    // Singleton
+    static let shared = ChatManager()
+
     let fStore: Firestore
     let fStorage: Storage
     var messages: [NSManagedObject] = []
