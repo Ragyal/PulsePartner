@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import Firebase
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -19,7 +20,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if let user = UserManager.sharedInstance.user {
             updateImage(user: user)
         }
@@ -80,18 +80,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
         let user = self.allMatches[indexPath.row]
-        cell.insertContent(image: user.image,
-                           name: user.matchData.username,
-                           age: String(user.matchData.age),
-                           bpm: String(95),
-                           navigation: self.navigationController!)
-        let size = CGSize(width: 90, height: 90)
-        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        user.image.draw(in: rect)
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        cell.profilePicture.image = resizedImage
+        cell.insertContent(match: user)
+        
+//        cell.profilePicture.image = resizedImage
         return cell
     }
 

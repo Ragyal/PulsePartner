@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MessageEntitie+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:MessageEntitie+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:PulsePartner.xcodeproj">
    </FileRef>
    <FileRef
