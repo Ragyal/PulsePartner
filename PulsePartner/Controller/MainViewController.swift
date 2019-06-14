@@ -87,7 +87,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
         let user = self.allMatches[indexPath.row]
         cell.insertContent(match: user)
-        
+
 //        cell.profilePicture.image = resizedImage
         return cell
     }

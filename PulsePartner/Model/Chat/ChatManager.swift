@@ -19,26 +19,22 @@ class ChatManager {
     let fStore: Firestore
     let fStorage: Storage
     var messages: [NSManagedObject] = []
-    
+
     private init() {
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
     }
-    
+
     func fetchMessages(matchID: String, view: ChatViewController) {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
-        
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
-        //2
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "MessageEntitie")
-        
-        //3
+        fetchRequest.predicate = NSPredicate(format: "matchID = %@", "\(matchID)")
         do {
             messages = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
@@ -46,20 +42,22 @@ class ChatManager {
         }
         view.messages.removeAll()
         for message in messages {
-            view.insertMessage(MockMessage(sender: Sender(id: message.value(forKey: "ownerID") as! String,
+            message.setValue(true, forKey: "read")
+            view.insertMessage(MockMessage(sender: Sender(id: (message.value(forKey: "ownerID") as? String)!,
                                                           displayName: ""),
-            messageId: message.value(forKey: "chatID") as! String,
-                kind: MessageKind.text(message.value(forKey: "message") as! String)))
+                                           messageId: (message.value(forKey: "chatID") as? String)!,
+                                           kind: MessageKind.text((message.value(forKey: "message") as? String)!))
+            )
         }
 
     }
-    
+
     func sendMessage(receiver: String, message: String) {
         guard let ownID = UserManager.shared.auth.currentUser?.uid else {
             print("User ID not found")
             return
         }
-        let chatID = NSDate.timeIntervalSinceReferenceDate;
+        let chatID = NSDate.timeIntervalSinceReferenceDate
         fStore.collection("users")
             .document(receiver)
             .collection("matches")
@@ -88,20 +86,15 @@ class ChatManager {
                 ])
         saveMessage(chatID: "\(chatID)",
                     date: Date(),
-                    receiver: receiver,
+                    matchID: receiver,
                     message: message,
-                    ownID: ownID,
+                    ownerID: ownID,
                     read: true)
     }
-    func activateObserver(matchID: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    func activateObserver(matchID: String, view: ChatViewController) {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
-        guard let entity =
-            NSEntityDescription.entity(forEntityName: "MessageEntitie",
-                                       in: managedContext) else {
-                                        print("Entitie not found")
-                                        return
-        }
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
                 fStore
                     .collection("users")
@@ -114,32 +107,34 @@ class ChatManager {
                             print("ERROR!: \(error.debugDescription)")
                             return
                         }
-                        for (index, message) in documents.enumerated() {
+                        for message in documents {
                             request.predicate = NSPredicate(format: "chatID = %@", "\(message.documentID)")
                             do {
                                 let result = try managedContext.fetch(request)
                                 if result.count == 0 {
-                                    
+                                    self.saveMessage(chatID: message.documentID,
+                                                date: Date(),
+                                                matchID: (message.get("owner") as? String)!,
+                                                message: (message.get("message") as? String)!,
+                                                ownerID: (message.get("owner") as? String)!,
+                                                read: (message.get("read") as? Bool)!)
+                                    view.fetchMessages()
                                 }
-                                
+
                             } catch {
-                                
                                 print("Failed")
                             }
-                            message.documentID
-                            message.get("message")
-
                         }
                 }
     }
-    
+
     func saveMessage(chatID: String,
                      date: Date,
-                     receiver: String,
+                     matchID: String,
                      message: String,
-                     ownID: String,
+                     ownerID: String,
                      read: Bool) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         guard let entity =
             NSEntityDescription.entity(forEntityName: "MessageEntitie",
@@ -151,11 +146,11 @@ class ChatManager {
                                          insertInto: managedContext)
         newMessage.setValue("\(chatID)", forKeyPath: "chatID")
         newMessage.setValue(Date(), forKeyPath: "date")
-        newMessage.setValue(receiver, forKeyPath: "matchID")
+        newMessage.setValue(matchID, forKeyPath: "matchID")
         newMessage.setValue(message, forKeyPath: "message")
-        newMessage.setValue(ownID, forKeyPath: "ownerID")
+        newMessage.setValue(ownerID, forKeyPath: "ownerID")
         newMessage.setValue(read, forKeyPath: "read")
-        
+
         do {
             try managedContext.save()
             messages.append(newMessage)
