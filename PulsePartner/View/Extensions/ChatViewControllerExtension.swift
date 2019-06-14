@@ -67,6 +67,6 @@ extension ChatViewController: MessageInputBarDelegate {
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         ChatManager.shared.sendMessage(receiver: user.matchData.userID, message: text)
         inputBar.inputTextView.text = ""
-        ChatManager.sharedInstance.fetchMessages(matchID: user.matchData.userID, view: self)
+        ChatManager.shared.fetchMessages(matchID: user.matchData.userID, view: self)
     }
 }

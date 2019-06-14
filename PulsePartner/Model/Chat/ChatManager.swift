@@ -55,7 +55,7 @@ class ChatManager {
     }
     
     func sendMessage(receiver: String, message: String) {
-        guard let ownID = UserManager.sharedInstance.auth.currentUser?.uid else {
+        guard let ownID = UserManager.shared.auth.currentUser?.uid else {
             print("User ID not found")
             return
         }
@@ -105,7 +105,7 @@ class ChatManager {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
                 fStore
                     .collection("users")
-                    .document(UserManager.sharedInstance.auth.currentUser!.uid)
+                    .document(UserManager.shared.auth.currentUser!.uid)
                     .collection("matches")
                     .document(matchID)
                     .collection("chat").whereField("type", isEqualTo: "message")

@@ -55,7 +55,7 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        ChatManager.shared.fetchMessages(userID: user.matchData.userID, view: self)
+        ChatManager.shared.fetchMessages(matchID: user.matchData.userID, view: self)
         self.hideKeyboardWhenTappedAround()
         self.navigationController?
             .navigationBar
