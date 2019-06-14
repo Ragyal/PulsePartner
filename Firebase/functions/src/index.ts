@@ -91,7 +91,7 @@ const calculateDistance = (
 
 const doMatch = (
   userA: admin.firestore.QueryDocumentSnapshot,
-  userB: admin.firestore.QueryDocumentSnapshot
+  userB: admin.firestore.QueryDocumentSnapshot,
 ): Boolean => {
   const dataA: MatchData = userA.data() as MatchData;
   const dataB: MatchData = userB.data() as MatchData;
