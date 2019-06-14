@@ -163,6 +163,48 @@ class UserManager {
             completion(document?.get(dbInfo))
         }
     }
+    
+    func updateProfilePicture(image: UIImage) {
+        guard var user: FullUser = self.user else {
+            return
+        }
+        guard let uid = user.documentID else {
+            return
+        }
+        // Data in memory
+        if let data = image.pngData() {
+            // Create a reference to the file you want to upload
+            let pictureRef = self.fStorage.reference().child("profilePictures/\(uid).png")
+            
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/png"
+            
+            // Upload the file to the path "profilePictures/UID.png"
+            _ = pictureRef.putData(data, metadata: metadata) { (metadata, err) in
+                guard metadata != nil else {
+                    print(err?.localizedDescription ?? "Error occured during upload.")
+                    return
+                }
+                // You can also access to download URL after upload.
+                pictureRef.downloadURL { (url, err) in
+                    guard let downloadURL = url else {
+                        print(err?.localizedDescription ?? "Error occured while catching image URL.")
+                        return
+                    }
+                    
+                    user.image = downloadURL.absoluteString
+                    
+                    self.fStore.collection("users").document(user.documentID).setModel(user) { err in
+                        if let err = err {
+                            print("Error writing document: \(err.localizedDescription)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     func getProfilePicture(url: String, completion: @escaping (UIImage) -> Void) {
             let imageRef = self.fStorage.reference(forURL: url)

@@ -11,7 +11,10 @@ import Photos
 import CropViewController
 
 class ImageManager {
-    static func handleImageUpload(_ sender: RegisterFormViewController) {
+    static func handleImageSelection(_ sender: UIViewController &
+        UINavigationControllerDelegate &
+        UIImagePickerControllerDelegate) {
+
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = sender
 

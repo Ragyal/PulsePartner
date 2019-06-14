@@ -181,6 +181,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E85-8y-Ile">
                                 <rect key="frame" x="16" y="9" width="111" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onChangePicture:" destination="dQ6-HA-ygr" eventType="touchUpInside" id="Nfb-Ax-SJ4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

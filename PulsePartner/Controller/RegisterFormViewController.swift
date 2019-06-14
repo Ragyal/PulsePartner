@@ -33,7 +33,7 @@ class RegisterFormViewController: UIViewController {
     }
 
     @IBAction func onPictureButtonClick(_ sender: Any) {
-        ImageManager.handleImageUpload(self)
+        ImageManager.handleImageSelection(self)
     }
 
     @IBAction func setFitnessLevel(_ sender: UISlider) {
@@ -53,12 +53,12 @@ class RegisterFormViewController: UIViewController {
             let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             UserManager.shared.createUser(withUserData: data,
-                                                  image: resizedImage!,
-                                                  sender: self) { success in
-                                                    if success {
-                                                        self.performSegue(withIdentifier: "showPermissionsSegue",
-                                                                          sender: self)
-                                                    }
+                                          image: resizedImage!,
+                                          sender: self) { success in
+                                            if success {
+                                                self.performSegue(withIdentifier: "showPermissionsSegue",
+                                                                  sender: self)
+                                            }
             }
         })
     }
