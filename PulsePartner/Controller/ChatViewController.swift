@@ -55,7 +55,8 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        ChatManager.shared.fetchMessages(matchID: user.matchData.userID, view: self)
+        fetchMessages()
+        ChatManager.shared.activateObserver(matchID: user.matchData.userID, view: self)
         self.hideKeyboardWhenTappedAround()
         self.navigationController?
             .navigationBar
@@ -81,6 +82,10 @@ class ChatViewController: MessagesViewController {
             messagesCollectionView.reloadData()
             messagesCollectionView.scrollToBottom(animated: true)
         }
+    }
+
+    func fetchMessages() {
+        ChatManager.shared.fetchMessages(matchID: user.matchData.userID, view: self)
     }
 
 }
