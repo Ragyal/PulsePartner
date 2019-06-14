@@ -57,7 +57,7 @@ public protocol MessageCellDelegate: MessageLabelDelegate {
     /// `indexPath(for: cell)` method. Then using the returned `IndexPath` with the `MessagesDataSource`
     /// method `messageForItem(at:indexPath:messagesCollectionView)`.
     func didTapCellTopLabel(in cell: MessageCollectionViewCell)
-    
+
     /// Triggered when a tap occurs in the messageTopLabel.
     ///
     /// - Parameters:
@@ -77,7 +77,7 @@ public protocol MessageCellDelegate: MessageLabelDelegate {
     /// `indexPath(for: cell)` method. Then using the returned `IndexPath` with the `MessagesDataSource`
     /// method `messageForItem(at:indexPath:messagesCollectionView)`.
     func didTapMessageBottomLabel(in cell: MessageCollectionViewCell)
-    
+
     /// Triggered when a tap occurs in the accessoryView.
     ///
     /// - Parameters:
@@ -101,6 +101,6 @@ public extension MessageCellDelegate {
     func didTapMessageTopLabel(in cell: MessageCollectionViewCell) {}
 
     func didTapMessageBottomLabel(in cell: MessageCollectionViewCell) {}
-    
+
     func didTapAccessoryView(in cell: MessageCollectionViewCell) {}
 }

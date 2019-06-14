@@ -74,7 +74,7 @@ public enum MessageStyle {
     // MARK: - Public
 
     public var image: UIImage? {
-        
+
         guard let imageCacheKey = imageCacheKey, let path = imagePath else { return nil }
 
         let cache = MessageStyle.bubbleImageCache
@@ -83,7 +83,7 @@ public enum MessageStyle {
             return cachedImage
         }
         guard var image = UIImage(contentsOfFile: path) else { return nil }
-        
+
         switch self {
         case .none, .custom:
             return nil
@@ -93,25 +93,25 @@ public enum MessageStyle {
             guard let cgImage = image.cgImage else { return nil }
             image = UIImage(cgImage: cgImage, scale: image.scale, orientation: corner.imageOrientation)
         }
-        
+
         let stretchedImage = stretch(image)
         cache.setObject(stretchedImage, forKey: imageCacheKey as NSString)
         return stretchedImage
     }
 
     // MARK: - Internal
-    
+
     internal static let bubbleImageCache: NSCache<NSString, UIImage> = {
         let cache = NSCache<NSString, UIImage>()
         cache.name = "com.messagekit.MessageKit.bubbleImageCache"
         return cache
     }()
-    
+
     // MARK: - Private
-    
+
     private var imageCacheKey: String? {
         guard let imageName = imageName else { return nil }
-        
+
         switch self {
         case .bubble, .bubbleOutline:
             return imageName

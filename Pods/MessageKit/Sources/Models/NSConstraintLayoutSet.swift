@@ -25,7 +25,7 @@
 import UIKit
 
 internal class NSLayoutConstraintSet {
-    
+
     internal var top: NSLayoutConstraint?
     internal var bottom: NSLayoutConstraint?
     internal var left: NSLayoutConstraint?
@@ -34,7 +34,7 @@ internal class NSLayoutConstraintSet {
     internal var centerY: NSLayoutConstraint?
     internal var width: NSLayoutConstraint?
     internal var height: NSLayoutConstraint?
-    
+
     internal init(top: NSLayoutConstraint? = nil, bottom: NSLayoutConstraint? = nil,
                   left: NSLayoutConstraint? = nil, right: NSLayoutConstraint? = nil,
                   centerX: NSLayoutConstraint? = nil, centerY: NSLayoutConstraint? = nil,
@@ -60,7 +60,7 @@ internal class NSLayoutConstraintSet {
         }
         return available
     }
-    
+
     /// Activates all of the non-nil constraints
     ///
     /// - Returns: Self
@@ -69,7 +69,7 @@ internal class NSLayoutConstraintSet {
         NSLayoutConstraint.activate(availableConstraints)
         return self
     }
-    
+
     /// Deactivates all of the non-nil constraints
     ///
     /// - Returns: Self

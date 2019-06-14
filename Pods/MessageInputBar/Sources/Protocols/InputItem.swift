@@ -26,19 +26,19 @@ import UIKit
 
 /// InputItem is a protocol that links elements to the MessageInputBar to make them reactive
 public protocol InputItem: AnyObject {
-    
+
     /// A reference to the MessageInputBar. Set automatically when inserted into an InputStackView
     var messageInputBar: MessageInputBar? { get set }
-    
+
     /// A reference to the InputStackView that the InputItem is contained in. Set when inserted into an InputStackView
     var parentStackViewPosition: InputStackView.Position? { get set }
-    
+
     /// A hook that is called when the InputTextView's text is changed
     func textViewDidChangeAction(with textView: InputTextView)
-    
+
     /// A hook that is called when the InputTextView is resigned as the first responder
     func keyboardEditingEndsAction()
-    
+
     /// A hook that is called when the InputTextView is made the first responder
     func keyboardEditingBeginsAction()
 }

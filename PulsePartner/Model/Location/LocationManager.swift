@@ -13,7 +13,7 @@ import UIKit
 class LocationManager: NSObject, CLLocationManagerDelegate {
 
     // Singleton
-    static let sharedInstance = LocationManager()
+    static let shared = LocationManager()
 
     let manager = CLLocationManager()
     private var lastUpdate: Date = Date()
@@ -46,7 +46,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             return
         }
 
-        UserManager.sharedInstance.updateMatchData(coordinates: mostRecentLocation.coordinate)
+        UserManager.shared.updateMatchData(coordinates: mostRecentLocation.coordinate)
         lastUpdate = Date()
     }
 }

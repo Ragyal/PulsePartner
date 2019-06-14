@@ -45,7 +45,7 @@ open class MessageContentCell: MessageCollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-    
+
     /// The top label of the messageBubble.
     open var messageTopLabel: InsetLabel = {
         let label = InsetLabel()
@@ -252,7 +252,7 @@ open class MessageContentCell: MessageCollectionViewCell {
     open func layoutCellTopLabel(with attributes: MessagesCollectionViewLayoutAttributes) {
         cellTopLabel.frame = CGRect(origin: .zero, size: attributes.cellTopLabelSize)
     }
-    
+
     /// Positions the message bubble's top label.
     /// - attributes: The `MessagesCollectionViewLayoutAttributes` for the cell.
     open func layoutMessageTopLabel(with attributes: MessagesCollectionViewLayoutAttributes) {
@@ -261,7 +261,7 @@ open class MessageContentCell: MessageCollectionViewCell {
 
         let y = messageContainerView.frame.minY - attributes.messageContainerPadding.top - attributes.messageTopLabelSize.height
         let origin = CGPoint(x: 0, y: y)
-        
+
         messageTopLabel.frame = CGRect(origin: origin, size: attributes.messageTopLabelSize)
     }
 
@@ -280,7 +280,7 @@ open class MessageContentCell: MessageCollectionViewCell {
     /// Positions the cell's accessory view.
     /// - attributes: The `MessagesCollectionViewLayoutAttributes` for the cell.
     open func layoutAccessoryView(with attributes: MessagesCollectionViewLayoutAttributes) {
-        
+
         // Accessory view aligned to the middle of the messageContainerView
         let y = messageContainerView.frame.midY - (attributes.accessoryViewSize.height / 2)
 

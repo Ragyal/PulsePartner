@@ -33,7 +33,7 @@ open class LocationMessageCell: MessageContentCell {
 
     /// The image view holding the map image.
     open var imageView = UIImageView()
-    
+
     private weak var snapShotter: MKMapSnapshotter?
 
     open override func setupSubviews() {
@@ -49,7 +49,7 @@ open class LocationMessageCell: MessageContentCell {
         imageView.fillSuperview()
         activityIndicator.centerInSuperview()
     }
-    
+
     open override func prepareForReuse() {
         super.prepareForReuse()
         snapShotter?.cancel()

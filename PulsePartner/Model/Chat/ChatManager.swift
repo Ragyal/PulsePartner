@@ -11,7 +11,10 @@ import Firebase
 import MessageKit
 
 class ChatManager {
-    static let sharedInstance = ChatManager()
+
+    // Singleton
+    static let shared = ChatManager()
+
     let fStore: Firestore
     let fStorage: Storage
 
@@ -23,7 +26,7 @@ class ChatManager {
     func fetchMessages(userID: String, view: ChatViewController) {
         fStore
             .collection("users")
-            .document(UserManager.sharedInstance.auth.currentUser!.uid)
+            .document(UserManager.shared.auth.currentUser!.uid)
             .collection("matches")
             .document(userID)
             .collection("chat").whereField("type", isEqualTo: "message")
@@ -46,23 +49,23 @@ class ChatManager {
         fStore.collection("users")
             .document(receiver)
             .collection("matches")
-            .document(UserManager.sharedInstance.auth.currentUser!.uid).collection("chat")
+            .document(UserManager.shared.auth.currentUser!.uid).collection("chat")
             .document("\(NSDate.timeIntervalSinceReferenceDate)")
             .setData([
                 "type": "message",
                 "message": message,
-                "owner": UserManager.sharedInstance.auth.currentUser!.uid,
+                "owner": UserManager.shared.auth.currentUser!.uid,
                 "date": Date()
             ])
          fStore.collection("users")
-            .document(UserManager.sharedInstance.auth.currentUser!.uid)
+            .document(UserManager.shared.auth.currentUser!.uid)
             .collection("matches")
             .document(receiver)
             .collection("chat")
             .document("\(NSDate.timeIntervalSinceReferenceDate)").setData([
                 "type": "message",
                 "message": message,
-                "owner": UserManager.sharedInstance.auth.currentUser!.uid,
+                "owner": UserManager.shared.auth.currentUser!.uid,
                 "date": Date()
             ])
         }

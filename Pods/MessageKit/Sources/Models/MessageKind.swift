@@ -35,7 +35,7 @@ public enum MessageKind {
     /// Using `MessageKind.attributedText(NSAttributedString)` doesn't require you
     /// to set this property and results in higher performance.
     case text(String)
-    
+
     /// A message with attributed text.
     case attributedText(NSAttributedString)
 

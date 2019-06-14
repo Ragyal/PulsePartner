@@ -91,7 +91,7 @@ open class TextMessageCell: MessageContentCell {
             }
         }
     }
-    
+
     /// Used to handle the cell's contentView's tap gesture.
     /// Return false when the contentView does not need to handle the gesture.
     open override func cellContentView(canHandle touchPoint: CGPoint) -> Bool {

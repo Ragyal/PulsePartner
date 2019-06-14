@@ -28,7 +28,7 @@ open class MessageSizeCalculator: CellSizeCalculator {
 
     public init(layout: MessagesCollectionViewFlowLayout? = nil) {
         super.init()
-        
+
         self.layout = layout
     }
 
@@ -166,16 +166,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
         let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
         return isFromCurrentSender ? outgoingCellTopLabelAlignment : incomingCellTopLabelAlignment
     }
-    
+
     // MARK: - Top message Label
-    
+
     open func messageTopLabelSize(for message: MessageType, at indexPath: IndexPath) -> CGSize {
         let layoutDelegate = messagesLayout.messagesLayoutDelegate
         let collectionView = messagesLayout.messagesCollectionView
         let height = layoutDelegate.messageTopLabelHeight(for: message, at: indexPath, in: collectionView)
         return CGSize(width: messagesLayout.itemWidth, height: height)
     }
-    
+
     open func messageTopLabelAlignment(for message: MessageType) -> LabelAlignment {
         let dataSource = messagesLayout.messagesDataSource
         let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
