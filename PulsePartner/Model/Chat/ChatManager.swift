@@ -28,16 +28,6 @@ class ChatManager {
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
     }
-//
-//    func messagesListener(snapshot: QuerySnapshot?, error: Error?) {
-//        if error != nil {
-//            print(error!.localizedDescription)
-//            return
-//        }
-//
-//        var messages: [NSManagedObject] = []
-//        guard let message = Message
-//    }
 
     func fetchMessages(matchID: String) -> [MockMessage] {
         var newMessages: [NSManagedObject] = []
@@ -50,6 +40,8 @@ class ChatManager {
             appDelegate.persistentContainer.viewContext
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "MessageEntitie")
+        let sort = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sort]
         fetchRequest.predicate = NSPredicate(format: "matchID = %@", "\(matchID)")
         do {
             newMessages = try managedContext.fetch(fetchRequest)
@@ -108,7 +100,7 @@ class ChatManager {
                     read: true)
     }
 
-    func countUnreadMessages(matchID: String) -> Int{
+    func countUnreadMessages(matchID: String) -> Int {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
@@ -140,27 +132,17 @@ class ChatManager {
                             return
                         }
                         for message in documents {
+                            let date = (message.get("date") as? Timestamp)!
                             request.predicate = NSPredicate(format: "chatID = %@", "\(message.documentID)")
                             do {
                                 let result = try managedContext.fetch(request)
                                 if result.count == 0 {
                                     self.saveMessage(chatID: message.documentID,
-                                                     date: Date(),
+                                                     date: date.dateValue(),
                                                      matchID: (message.get("owner") as? String)!,
                                                      message: (message.get("message") as? String)!,
                                                      ownerID: (message.get("owner") as? String)!,
                                                      read: (message.get("read") as? Bool)!)
-//                                    if view is ChatViewController {
-//                                        let chatView = (view as? ChatViewController)!
-//                                        print("--->New Message in Chatview<---")
-//                                        chatView.fetchMessages()
-//                                    } else if view is MatchCell {
-//                                        print("--->New Message in MatchCell<---")
-//                                        let cellView = (view as? MatchCell)!
-//                                        cellView.getNewMessageCount()
-//                                    } else {
-//                                        print("--->wrong View<---")
-//                                    }
                                 }
 
                             } catch {
@@ -201,12 +183,6 @@ class ChatManager {
         }
     }
 }
-//extension ChatManager: ChatObserver {
-//    func messageData(didUpdate messages: [NSManagedObject]?, matchID: String) {
-//        self.messageDataListener = fStore.collection("users").document(UserManager.shared.auth.currentUser!.uid).collection("matches").document(matchID).collection("chat").whereField("type", isEqualTo: "message").addSnapshotListener()
-//
-//    }
-//}
 
 extension ChatManager {
     struct Observation {
@@ -236,7 +212,7 @@ private extension ChatManager {
                 observations.removeValue(forKey: oid)
                 continue
             }
-            
+
             observer.messageData(didUpdate: messages)
         }
     }
