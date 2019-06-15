@@ -85,10 +85,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
-        
+
         let match = self.allMatches[indexPath.row]
         cell.insertContent(match: match)
-        
+
         return cell
     }
 
@@ -96,7 +96,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         // Pass the indexPath as sender
 //        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
