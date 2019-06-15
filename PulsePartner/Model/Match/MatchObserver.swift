@@ -9,9 +9,9 @@
 import Foundation
 
 protocol MatchObserver: class {
-    func matchData(didUpdate matches: [MatchWithImage]?)
+    func matchData(didUpdate matches: [Match]?)
 }
 
 extension MatchObserver {
-    func matchData(didUpdate matches: [MatchWithImage]?) {}
+    func matchData(didUpdate matches: [Match]?) {}
 }

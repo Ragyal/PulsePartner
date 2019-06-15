@@ -8,16 +8,6 @@
 
 import FirebaseFirestore
 
-struct User {
-    var userID: String
-    var image: String
-    var name: String
-    var age: Int
-    var bpm: Int
-    var weight: Int
-    var profilePicture: UIImage
-}
-
 struct UserRegisterData {
     var username: String
     var email: String
@@ -44,6 +34,7 @@ struct FullUser {
     var fitnessLevel: Int
     var gender: String
     var preferences: [String]
+    var fcmToken: String?
 }
 
 extension FullUser: FirestoreModel {
@@ -64,7 +55,8 @@ extension FullUser: FirestoreModel {
                        weight: modelData.value(forKey: "weight"),
                        fitnessLevel: modelData.value(forKey: "fitnessLevel"),
                        gender: modelData.value(forKey: "gender"),
-                       preferences: modelData.value(forKey: "preferences")
+                       preferences: modelData.value(forKey: "preferences"),
+                       fcmToken: modelData.value(forKey: "fcmToken")
         )
     }
 
@@ -77,7 +69,8 @@ extension FullUser: FirestoreModel {
                   weight: registerData.weight,
                   fitnessLevel: registerData.fitnessLevel,
                   gender: registerData.gender,
-                  preferences: registerData.preferences
+                  preferences: registerData.preferences,
+                  fcmToken: nil
         )
     }
 }

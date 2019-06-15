@@ -14,9 +14,8 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var bpmLabel: UILabel!
+    var matchImage: UIImage!
     var navController = UINavigationController()
-    var user: User!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,28 +23,24 @@ class MatchCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+//        super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
 
-    func insertContent(image: UIImage,
-                       name: String,
-                       age: String,
-                       bpm: String,
-                       navigation: UINavigationController) {
-            self.profilePicture.image = image
-            self.nameLabel.text = name
-            self.ageLabel.text = "Age: \(age)"
-            self.bpmLabel.text = "Weight: \(bpm)"
-            self.navController = navigation
-    }
+    func insertContent(match: Match) {
+        self.profilePicture.kf.setImage(with: URL(string: match.image))
 
-    @IBAction func openChat(_ sender: UIButton) {
-        let viewController = UIStoryboard.init(name: "Main",
-                                               bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: "ChatPage") as? ChatViewController
-        viewController?.setProfile(image: profilePicture.image!, name: nameLabel.text!)
-        navController.pushViewController(viewController!, animated: true)
+        let size = CGSize(width: 90, height: 90)
+        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
+
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        profilePicture.image?.draw(in: rect)
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        self.profilePicture.image = resizedImage
+        self.nameLabel.text = match.username
+        self.ageLabel.text = "\(match.age)"
+//        ChatManager.sharedInstance.fetchMessages(matchID: match.matchData.documentID, view: self)
     }
 }

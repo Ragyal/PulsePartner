@@ -42,7 +42,7 @@ class ChatViewController: MessagesViewController {
         }
     }
 
-    var user: MatchWithImage!
+    var user: Match!
     var picture = UIImage()
     var name = ""
     var messages: [MockMessage] = []
@@ -55,12 +55,13 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        ChatManager.shared.fetchMessages(userID: user.matchData.userID, view: self)
+        fetchMessages()
+        ChatManager.shared.activateObserver(matchID: user.userID, view: self)
         self.hideKeyboardWhenTappedAround()
         self.navigationController?
             .navigationBar
             .titleTextAttributes = [.foregroundColor: UIColor.white]
-        self.navigationItem.title = user.matchData.username
+        self.navigationItem.title = user.username
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -81,6 +82,10 @@ class ChatViewController: MessagesViewController {
             messagesCollectionView.reloadData()
             messagesCollectionView.scrollToBottom(animated: true)
         }
+    }
+
+    func fetchMessages() {
+        ChatManager.shared.fetchMessages(matchID: user.userID, view: self)
     }
 
 }

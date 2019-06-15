@@ -10,13 +10,14 @@ import UIKit
 import CoreLocation
 import Firebase
 import CropViewController
+import CoreData
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
 
-    var allMatches = [MatchWithImage]()
+    var allMatches = [Match]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,25 +85,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
-        let user = self.allMatches[indexPath.row]
-        cell.insertContent(image: user.image,
-                           name: user.matchData.username,
-                           age: String(user.matchData.age),
-                           bpm: String(95),
-                           navigation: self.navigationController!)
-        let size = CGSize(width: 90, height: 90)
-        let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        user.image.draw(in: rect)
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        cell.profilePicture.image = resizedImage
+
+        let match = self.allMatches[indexPath.row]
+        cell.insertContent(match: match)
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         // Pass the indexPath as sender
-        //        let user = self.allMatches[indexPath.row]
+//        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 }
@@ -146,7 +141,7 @@ extension MainViewController: UserObserver {
 }
 
 extension MainViewController: MatchObserver {
-    func matchData(didUpdate matches: [MatchWithImage]?) {
+    func matchData(didUpdate matches: [Match]?) {
         if let matches = matches {
             self.allMatches = matches
             self.tableView.reloadData()
