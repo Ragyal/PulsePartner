@@ -134,7 +134,7 @@ const createMatch = async (
       .collection("users")
       .doc(idA)
       .collection("matches")
-      .doc(idA);
+      .doc(idB);
     await refA.create(dataB);
 
     if (userA.fcmToken) {
