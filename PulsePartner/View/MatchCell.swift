@@ -52,4 +52,3 @@ extension MatchCell: ChatObserver {
         messageCounter.setTitle("\(unreadMessages)", for: .normal)
     }
 }
-
