@@ -140,9 +140,9 @@ const createMatch = async (
     if (userA.fcmToken) {
       const payload: admin.messaging.MessagingPayload = {
         notification: {
+          body: `${userB.username} (${userB.gender}, ${userB.age}) ist ganz in deiner Nähe.`,
           title: "Match!",
-          body: `${userB.username} (${userB.gender}, ${userB.age}) ist ganz in deiner Nähe.`
-        }
+        },
       }
       await admin.messaging().sendToDevice(userA.fcmToken, payload)
     }
@@ -158,9 +158,9 @@ const createMatch = async (
     if (userB.fcmToken) {
       const payload: admin.messaging.MessagingPayload = {
         notification: {
+          body: `${userA.username} (${userA.gender}, ${userA.age}) ist ganz in deiner Nähe.`,
           title: "Match!",
-          body: `${userA.username} (${userA.gender}, ${userA.age}) ist ganz in deiner Nähe.`
-        }
+        },
       }
       await admin.messaging().sendToDevice(userB.fcmToken, payload)
     }
