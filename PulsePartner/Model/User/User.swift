@@ -56,7 +56,7 @@ extension FullUser: FirestoreModel {
                        fitnessLevel: modelData.value(forKey: "fitnessLevel"),
                        gender: modelData.value(forKey: "gender"),
                        preferences: modelData.value(forKey: "preferences"),
-                       fcmToken: modelData.value(forKey: "fcmToken")
+                       fcmToken: modelData.optionalValue(forKey: "fcmToken")
         )
     }
 

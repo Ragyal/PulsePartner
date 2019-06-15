@@ -30,17 +30,9 @@ import MessageKit
 import MessageInputBar
 import Messages
 import MessageUI
+import CoreData
 
 class ChatViewController: MessagesViewController {
-
-    var newMessages: Int = 0 {
-        didSet {
-            if !self.view.isFocused {
-                messageCounter.setTitle("\(newMessages)", for: .normal)
-                messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
-            }
-        }
-    }
 
     var user: Match!
     var picture = UIImage()
@@ -50,13 +42,12 @@ class ChatViewController: MessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        newMessages = 0
         messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        fetchMessages()
-        ChatManager.shared.activateObserver(matchID: user.userID, view: self)
+        ChatManager.shared.addObserver(self)
+        insertMessages()
         self.hideKeyboardWhenTappedAround()
         self.navigationController?
             .navigationBar
@@ -65,7 +56,6 @@ class ChatViewController: MessagesViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        newMessages = 0
         messageCounter.setTitle("", for: .normal)
         messageCounter.setBackgroundImage(UIImage(), for: .normal)
     }
@@ -75,17 +65,16 @@ class ChatViewController: MessagesViewController {
         self.name = name
     }
 
-    func insertMessage(_ message: MockMessage) {
-        if !messages.contains(where: {$0.messageId == message.messageId}) {
-            newMessages += 1
-            messages.append(message)
-            messagesCollectionView.reloadData()
-            messagesCollectionView.scrollToBottom(animated: true)
-        }
+    func insertMessages() {
+        messages = ChatManager.shared.fetchMessages(matchID: user.userID)
+        messagesCollectionView.reloadDataAndKeepOffset()
+        messagesCollectionView.scrollToBottom(animated: true)
     }
 
-    func fetchMessages() {
-        ChatManager.shared.fetchMessages(matchID: user.userID, view: self)
-    }
+}
 
+extension ChatViewController: ChatObserver {
+    func messageData(didUpdate messages: [NSManagedObject]?) {
+        self.insertMessages()
+    }
 }

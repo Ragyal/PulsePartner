@@ -18,6 +18,7 @@ struct MatchData {
     var fitnessLevel: Int
     var gender: String
     var preferences: [String]
+    var fcmToken: String?
     var heartrate: Int
     var location: GeoPoint
     var timestamp: Timestamp
@@ -41,6 +42,7 @@ extension MatchData: FirestoreModel {
                        fitnessLevel: modelData.value(forKey: "fitnessLevel"),
                        gender: modelData.value(forKey: "gender"),
                        preferences: modelData.value(forKey: "preferences"),
+                       fcmToken: modelData.optionalValue(forKey: "fcmToken"),
                        heartrate: modelData.value(forKey: "heartrate"),
                        location: modelData.value(forKey: "location"),
                        timestamp: modelData.value(forKey: "timestamp")
@@ -60,6 +62,7 @@ extension MatchData: FirestoreModel {
                   fitnessLevel: user.fitnessLevel,
                   gender: user.gender,
                   preferences: user.preferences,
+                  fcmToken: user.fcmToken,
                   heartrate: heartrate,
                   location: GeoPoint(latitude: coordinates.latitude,
                                      longitude: coordinates.longitude),

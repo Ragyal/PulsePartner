@@ -11,6 +11,7 @@
 		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
 		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
+		3E19377F22B4E7BB00A309A9 /* ChatObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */; };
 		3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ADF4322B1A61E00E770B6 /* Chat.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -90,6 +91,7 @@
 		3E02EA9222A92A8900464C93 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatObserver.swift; sourceTree = "<group>"; };
 		3E1ADF4322B1A61E00E770B6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				3E02EA9222A92A8900464C93 /* ChatManager.swift */,
 				3E1ADF4322B1A61E00E770B6 /* Chat.swift */,
 				3ED600A822B1AAF000091788 /* Chat.xcdatamodeld */,
+				3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */,
 				BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */,
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
+				3E19377F22B4E7BB00A309A9 /* ChatObserver.swift in Sources */,
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
 				BC7E91B822B33A2200BE0E23 /* NotificationManager.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,

@@ -160,6 +160,20 @@ class UserManager {
     }
 
     public func logout() {
+        if user?.fcmToken != nil {
+            if var user = user {
+                user.fcmToken = nil
+
+                self.fStore.collection("users").document(user.documentID).setModel(user) { err in
+                    if let err = err {
+                        print("Error removing token from document: \(err.localizedDescription)")
+                    } else {
+                        print("Token successfully removed from document!")
+                    }
+                }
+            }
+        }
+
         do {
             try Auth.auth().signOut()
         } catch let signOutError as NSError {

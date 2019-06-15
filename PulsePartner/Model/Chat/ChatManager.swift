@@ -18,38 +18,46 @@ class ChatManager {
 
     let fStore: Firestore
     let fStorage: Storage
-    var messages: [NSManagedObject] = []
+    var messageDataListener: ListenerRegistration?
+    var messages: [NSManagedObject] = [] {
+        didSet { stateDidChange() }
+    }
+    private var observations = [ObjectIdentifier: Observation]()
 
     private init() {
         fStore = Firestore.firestore()
         fStorage = Storage.storage()
     }
 
-    func fetchMessages(matchID: String, view: ChatViewController) {
+    func fetchMessages(matchID: String) -> [MockMessage] {
+        var newMessages: [NSManagedObject] = []
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
-                return
+                let emptyMessages: [MockMessage] = []
+                return emptyMessages
         }
         let managedContext =
             appDelegate.persistentContainer.viewContext
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "MessageEntitie")
+        let sort = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sort]
         fetchRequest.predicate = NSPredicate(format: "matchID = %@", "\(matchID)")
         do {
-            messages = try managedContext.fetch(fetchRequest)
+            newMessages = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-        view.messages.removeAll()
-        for message in messages {
+        var mockMessages: [MockMessage] = []
+        for message in newMessages {
             message.setValue(true, forKey: "read")
-            view.insertMessage(MockMessage(sender: Sender(id: (message.value(forKey: "ownerID") as? String)!,
-                                                          displayName: ""),
-                                           messageId: (message.value(forKey: "chatID") as? String)!,
-                                           kind: MessageKind.text((message.value(forKey: "message") as? String)!))
+            mockMessages.append(MockMessage(sender: Sender(id: (message.value(forKey: "ownerID") as? String)!,
+                                                           displayName: ""),
+                                            messageId: (message.value(forKey: "chatID") as? String)!,
+                                            kind: MessageKind.text((message.value(forKey: "message") as? String)!))
             )
         }
-
+        return mockMessages
     }
 
     func sendMessage(receiver: String, message: String) {
@@ -92,7 +100,23 @@ class ChatManager {
                     read: true)
     }
 
-    func activateObserver(matchID: String, view: ChatViewController) {
+    func countUnreadMessages(matchID: String) -> Int {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
+        let matchPredicate = NSPredicate(format: "ownerID == %@", matchID)
+        let readPredicate = NSPredicate(format: "read == false")
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [matchPredicate, readPredicate])
+        do {
+            let result = try managedContext.fetch(request)
+            return result.count
+        } catch {
+            print("faild to count unread messages")
+            return 0
+        }
+    }
+
+    func activateObserver(matchID: String) {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
@@ -108,17 +132,17 @@ class ChatManager {
                             return
                         }
                         for message in documents {
+                            let date = (message.get("date") as? Timestamp)!
                             request.predicate = NSPredicate(format: "chatID = %@", "\(message.documentID)")
                             do {
                                 let result = try managedContext.fetch(request)
                                 if result.count == 0 {
                                     self.saveMessage(chatID: message.documentID,
-                                                date: Date(),
-                                                matchID: (message.get("owner") as? String)!,
-                                                message: (message.get("message") as? String)!,
-                                                ownerID: (message.get("owner") as? String)!,
-                                                read: (message.get("read") as? Bool)!)
-                                    view.fetchMessages()
+                                                     date: date.dateValue(),
+                                                     matchID: (message.get("owner") as? String)!,
+                                                     message: (message.get("message") as? String)!,
+                                                     ownerID: (message.get("owner") as? String)!,
+                                                     read: (message.get("read") as? Bool)!)
                                 }
 
                             } catch {
@@ -156,6 +180,40 @@ class ChatManager {
             messages.append(newMessage)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+}
+
+extension ChatManager {
+    struct Observation {
+        weak var observer: ChatObserver?
+    }
+}
+
+extension ChatManager {
+    func addObserver(_ observer: ChatObserver) {
+        let oid = ObjectIdentifier(observer)
+        observations[oid] = Observation(observer: observer)
+        observer.messageData(didUpdate: messages)
+    }
+
+    func removeObserver(_ observer: ChatObserver) {
+        let oid = ObjectIdentifier(observer)
+        observations.removeValue(forKey: oid)
+    }
+}
+
+private extension ChatManager {
+    func stateDidChange() {
+        for (oid, observation) in observations {
+            // If the observer is no longer in memory, we
+            // can clean up the observation for its ID
+            guard let observer = observation.observer else {
+                observations.removeValue(forKey: oid)
+                continue
+            }
+
+            observer.messageData(didUpdate: messages)
         }
     }
 }
