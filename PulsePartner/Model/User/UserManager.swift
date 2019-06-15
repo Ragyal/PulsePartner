@@ -25,6 +25,9 @@ class UserManager {
     var user: FullUser? {
         didSet { stateDidChange() }
     }
+    var fcmToken: String? {
+        didSet { updateUserFCMToken() }
+    }
 
     private var observations = [ObjectIdentifier: Observation]()
 
@@ -50,6 +53,27 @@ class UserManager {
                     }
 
                     self.user = FullUser(modelData: FirestoreModelData(snapshot: snapshot))
+
+                    guard var user = self.user else {
+                        return
+                    }
+                    guard let token = self.fcmToken else {
+                        return
+                    }
+
+                    if user.fcmToken == token {
+                        return
+                    }
+
+                    user.fcmToken = token
+
+                    self.fStore.collection("users").document(user.documentID).setModel(user) { err in
+                        if let err = err {
+                            print("Error writing token in document: \(err.localizedDescription)")
+                        } else {
+                            print("Token in document successfully written!")
+                        }
+                    }
                 }
         })
     }
@@ -149,20 +173,6 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
-    func getUserInformation(dbInfo: String, completion: @escaping (Any?) -> Void) {
-        guard let uid = self.uid else {
-            return
-        }
-
-        let userRef = fStore.collection("users").document(uid)
-        userRef.getDocument { (document, error) in
-            if let error = error {
-                print("Error: \(error)")
-            }
-            completion(document?.get(dbInfo))
-        }
-    }
-
     func updateProfilePicture(image: UIImage) {
         guard var user: FullUser = self.user else {
             return
@@ -252,6 +262,25 @@ private extension UserManager {
             }
 
             observer.userData(didUpdate: user)
+        }
+    }
+
+    func updateUserFCMToken() {
+        guard var user = self.user else {
+            return
+        }
+        if user.fcmToken == self.fcmToken {
+            return
+        }
+
+        user.fcmToken = self.fcmToken
+
+        self.fStore.collection("users").document(user.documentID).setModel(user) { err in
+            if let err = err {
+                print("Error writing token in document: \(err.localizedDescription)")
+            } else {
+                print("Token in document successfully written!")
+            }
         }
     }
 }
