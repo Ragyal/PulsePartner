@@ -93,7 +93,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        // Pass the indexPath as sender
 //        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 

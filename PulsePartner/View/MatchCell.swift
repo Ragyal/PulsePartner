@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MatchCell: UITableViewCell {
 
@@ -16,20 +17,15 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     var matchImage: UIImage!
     var navController = UINavigationController()
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    var matchID: String!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
 
     func insertContent(match: Match) {
+        matchID = match.userID
         self.profilePicture.kf.setImage(with: URL(string: match.image))
-
         let size = CGSize(width: 90, height: 90)
         let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
 
@@ -41,6 +37,19 @@ class MatchCell: UITableViewCell {
         self.profilePicture.image = resizedImage
         self.nameLabel.text = match.username
         self.ageLabel.text = "\(match.age)"
-//        ChatManager.sharedInstance.fetchMessages(matchID: match.matchData.documentID, view: self)
+        ChatManager.shared.addObserver(self)
+        ChatManager.shared.activateObserver(matchID: match.userID)
+    }
+}
+
+extension MatchCell: ChatObserver {
+    func messageData(didUpdate messages: [NSManagedObject]?) {
+        let unreadMessages = ChatManager.shared.countUnreadMessages(matchID: matchID)
+        if unreadMessages == 0 {
+            messageCounter.setBackgroundImage(UIImage(), for: .normal)
+        } else {
+            messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
+        }
+        messageCounter.setTitle("\(unreadMessages)", for: .normal)
     }
 }
