@@ -105,6 +105,23 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func askForHealthKit(_ sender: UIButton) {
-        self.healthKitCheckbox.isSelected = true
+        guard HKHealthStore.isHealthDataAvailable() else {
+            print("Error! --> Healthkit isn't available on this Device! <--")
+            return
+        }
+
+        guard let bpm = HKObjectType.quantityType(forIdentifier: .heartRate) else {
+            print("Error! --> Wrong datatype (Heart rate) <--")
+            return
+        }
+
+        let healthKitTypesToRead: Set<HKObjectType> = [bpm]
+
+        HKHealthStore().requestAuthorization(toShare: Set<HKSampleType>(), read: healthKitTypesToRead) { (_, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+        }
     }
 }
