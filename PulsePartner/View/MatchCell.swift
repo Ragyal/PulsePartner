@@ -24,7 +24,7 @@ class MatchCell: UITableViewCell {
     }
 
     func insertContent(match: Match) {
-        matchID = match.userID
+        self.matchID = match.userID
         self.profilePicture.kf.setImage(with: URL(string: match.image))
         let size = CGSize(width: 90, height: 90)
         let rect = CGRect(x: 0, y: 0, width: 90, height: 90)
