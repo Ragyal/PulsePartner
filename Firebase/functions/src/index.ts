@@ -39,6 +39,7 @@ interface MatchData {
   fitnessLevel: number;
   gender: string;
   preferences: string[];
+  fcmToken?: string;
   heartrate: number;
   location: admin.firestore.GeoPoint;
   timestamp: admin.firestore.Timestamp;
@@ -90,28 +91,25 @@ const calculateDistance = (
 };
 
 const doMatch = (
-  userA: admin.firestore.QueryDocumentSnapshot,
-  userB: admin.firestore.QueryDocumentSnapshot,
+  userA: MatchData,
+  userB: MatchData,
 ): Boolean => {
-  const dataA: MatchData = userA.data() as MatchData;
-  const dataB: MatchData = userB.data() as MatchData;
-
   if (
-    !dataB.preferences.includes(dataA.gender) ||
-    !dataA.preferences.includes(dataB.gender)
+    !userB.preferences.includes(userA.gender) ||
+    !userA.preferences.includes(userB.gender)
   ) {
     return false;
   }
 
-  if (Math.abs(dataA.heartrate - dataB.heartrate) > 5) {
+  if (Math.abs(userA.heartrate - userB.heartrate) > 5) {
     return false;
   }
 
   const distance = calculateDistance(
-    dataA.location.latitude,
-    dataB.location.latitude,
-    dataA.location.longitude,
-    dataB.location.longitude,
+    userA.location.latitude,
+    userB.location.latitude,
+    userA.location.longitude,
+    userB.location.longitude,
   );
   console.log("Distanze: " + distance + "km");
   if (distance > 0.3) {
@@ -122,28 +120,50 @@ const doMatch = (
 };
 
 const createMatch = async (
-  userA: admin.firestore.QueryDocumentSnapshot,
-  userB: admin.firestore.QueryDocumentSnapshot,
+  idA: string,
+  userA: MatchData,
+  idB: string,
+  userB: MatchData,
 ): Promise<void> => {
-  const dataA: Match = extractMatch(userA.data() as MatchData);
-  const dataB: Match = extractMatch(userB.data() as MatchData);
+  const dataA: Match = extractMatch(userA);
+  const dataB: Match = extractMatch(userB);
 
   try {
     const refA = firebase
       .firestore()
       .collection("users")
-      .doc(userA.id)
+      .doc(idA)
       .collection("matches")
-      .doc(userB.id);
+      .doc(idA);
     await refA.create(dataB);
+
+    if (userA.fcmToken) {
+      const payload: admin.messaging.MessagingPayload = {
+        notification: {
+          title: "Match!",
+          body: `${userB.username} (${userB.gender}, ${userB.age}) ist ganz in deiner Nähe.`
+        }
+      }
+      await admin.messaging().sendToDevice(userA.fcmToken, payload)
+    }
 
     const refB = firebase
       .firestore()
       .collection("users")
-      .doc(userB.id)
+      .doc(idB)
       .collection("matches")
-      .doc(userA.id);
+      .doc(idA);
     await refB.create(dataA);
+
+    if (userB.fcmToken) {
+      const payload: admin.messaging.MessagingPayload = {
+        notification: {
+          title: "Match!",
+          body: `${userA.username} (${userA.gender}, ${userA.age}) ist ganz in deiner Nähe.`
+        }
+      }
+      await admin.messaging().sendToDevice(userB.fcmToken, payload)
+    }
   } catch (err) {
     console.log("Already matched.");
   }
@@ -168,9 +188,12 @@ export const matchUsers = functions
 
         docs.forEach(async (doc, index, array) => {
           for (let i = index + 1; i < docs.length; i++) {
-            if (doMatch(doc, docs[i])) {
+            const userDataA: MatchData = doc.data() as MatchData;
+            const userDataB: MatchData = docs[i].data() as MatchData;
+
+            if (doMatch(userDataA, userDataB)) {
               console.log("Match!");
-              await createMatch(doc, docs[i]);
+              await createMatch(doc.id, userDataA, docs[i].id, userDataB);
             }
           }
         });
