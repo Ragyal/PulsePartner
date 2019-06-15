@@ -8,16 +8,6 @@
 
 import FirebaseFirestore
 
-struct User {
-    var userID: String
-    var image: String
-    var name: String
-    var age: Int
-    var bpm: Int
-    var weight: Int
-    var profilePicture: UIImage
-}
-
 struct UserRegisterData {
     var username: String
     var email: String

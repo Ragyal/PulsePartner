@@ -16,7 +16,6 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     var matchImage: UIImage!
     var navController = UINavigationController()
-    var user: User!
 
     override func awakeFromNib() {
         super.awakeFromNib()
