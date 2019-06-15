@@ -87,14 +87,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
         let user = self.allMatches[indexPath.row]
         cell.insertContent(match: user)
-
-//        cell.profilePicture.image = resizedImage
         return cell
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        // Pass the indexPath as sender
-        //        let user = self.allMatches[indexPath.row]
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 }
