@@ -200,6 +200,19 @@ export const matchUsers = functions
       });
   });
 
+export const removeToken = functions
+  .region("europe-west1")
+  .firestore
+  .document('users/{userId}')
+  .onUpdate((snap, context) => {
+    const userData: MatchData = snap.after.data() as MatchData;
+    if (!userData.fcmToken) {
+      return firebase.firestore().doc(`matchData/${snap.after.id}`).delete();
+    } else {
+      return
+    }
+  })
+
 export const removeUser = functions
   .region("europe-west1")
   .auth.user()
