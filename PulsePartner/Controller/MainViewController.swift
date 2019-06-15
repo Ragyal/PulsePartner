@@ -85,16 +85,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.rowHeight = 110
         let cell = ( self.tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell )!
+        
         let match = self.allMatches[indexPath.row]
         cell.insertContent(match: match)
-
-//        cell.profilePicture.image = resizedImage
+        
         return cell
     }
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         // Pass the indexPath as sender
-        //        let user = self.allMatches[indexPath.row]
+//        self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ChatSegue", sender: indexPath)
     }
 }

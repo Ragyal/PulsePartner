@@ -100,7 +100,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wn6-da-7fl">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wn6-da-7fl">
                                 <rect key="frame" x="16" y="153" width="343" height="539"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -108,7 +108,7 @@
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 <color key="separatorColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="0.0" reuseIdentifier="MatchCell" rowHeight="90" id="6LH-Gl-u8Q" customClass="MatchCell" customModule="PulsePartner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="0.0" reuseIdentifier="MatchCell" rowHeight="90" id="6LH-Gl-u8Q" customClass="MatchCell" customModule="PulsePartner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6LH-Gl-u8Q" id="6ec-rP-SNx">
@@ -160,7 +160,6 @@
                                             <outlet property="messageCounter" destination="Jph-c9-kn3" id="eTR-IY-S2P"/>
                                             <outlet property="nameLabel" destination="rIL-dR-BGa" id="Mgp-TB-Pgi"/>
                                             <outlet property="profilePicture" destination="DNU-pd-xPN" id="Unb-14-ndd"/>
-                                            <outletCollection property="gestureRecognizers" destination="N43-FN-zqr" appends="YES" id="b1z-SR-Ok5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -195,7 +194,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vo-H3-ij7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="N43-FN-zqr"/>
             </objects>
             <point key="canvasLocation" x="1397.5999999999999" y="533.49753694581284"/>
         </scene>
