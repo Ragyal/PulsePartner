@@ -209,7 +209,7 @@ export const removeToken = functions
     if (!userData.fcmToken) {
       return firebase.firestore().doc(`matchData/${snap.after.id}`).delete();
     } else {
-      return
+      return false;
     }
   })
 
