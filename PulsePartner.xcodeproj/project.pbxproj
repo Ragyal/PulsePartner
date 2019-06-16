@@ -12,6 +12,7 @@
 		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E19377F22B4E7BB00A309A9 /* ChatObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */; };
+		3E19378822B6BF3E00A309A9 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19378722B6BF3E00A309A9 /* HealthKitManager.swift */; };
 		3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ADF4322B1A61E00E770B6 /* Chat.swift */; };
 		3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A6E226F7541000434B6 /* MainViewController.swift */; };
 		3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E243A7222708FCE000434B6 /* MatchCell.swift */; };
@@ -92,6 +93,7 @@
 		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatObserver.swift; sourceTree = "<group>"; };
+		3E19378722B6BF3E00A309A9 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		3E1ADF4322B1A61E00E770B6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		3E243A6E226F7541000434B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E243A7222708FCE000434B6 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -197,6 +199,14 @@
 				3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		3E19378622B6BF2D00A309A9 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				3E19378722B6BF3E00A309A9 /* HealthKitManager.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		3EF79E6D226DE4F100AC1C45 /* Frameworks */ = {
@@ -322,6 +332,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E19378622B6BF2D00A309A9 /* HealthKit */,
 				BC7E91B622B33A0500BE0E23 /* Notification */,
 				BCE8227522B2493400FF1B01 /* Image */,
 				3E02EA9122A92A7700464C93 /* Chat */,
@@ -665,6 +676,7 @@
 				BCECF1342256241D00AFA163 /* AppDelegate.swift in Sources */,
 				3E243A7522709A07000434B6 /* ChatViewController.swift in Sources */,
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
+				3E19378822B6BF3E00A309A9 /* HealthKitManager.swift in Sources */,
 				3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */,
 				3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,

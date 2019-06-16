@@ -16,7 +16,9 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
+    @IBOutlet weak var bpmLabel: UILabel!
 
+    static let shared = MainViewController()
     var allMatches = [Match]()
 
     override func viewDidLoad() {
@@ -26,16 +28,17 @@ class MainViewController: UIViewController {
             updateImage(user: user)
         }
         UserManager.shared.addObserver(self)
-
         self.tableView.delegate = self
         self.tableView.dataSource = self
         MatchManager.shared.addObserver(self)
-
+        _ = Timer.scheduledTimer(timeInterval: 5,
+                                 target: self,
+                                 selector: #selector(setHeartRate),
+                                 userInfo: nil,
+                                 repeats: true)
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
-//        self.navigationController?.isNavigationBarHidden = true
-
         LocationManager.shared.startUpdatingLocation()
     }
 
@@ -71,6 +74,15 @@ class MainViewController: UIViewController {
         }
         destinationVC.messageCounter = cell.messageCounter
     }
+
+    @objc func setHeartRate() {
+        HealthKitManager.shared.readHeartRateData { file in
+            DispatchQueue.main.async {
+                self.bpmLabel.text! = "\(Int(file)) BPM"
+            }
+        }
+    }
+
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -142,6 +154,7 @@ extension MainViewController: UserObserver {
 extension MainViewController: MatchObserver {
     func matchData(didUpdate matches: [Match]?) {
         if let matches = matches {
+
             self.allMatches = matches
             self.tableView.reloadData()
         }
