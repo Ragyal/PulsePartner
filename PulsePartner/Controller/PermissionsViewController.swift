@@ -31,7 +31,8 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
             checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
             checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
         }
-
+        setupHealthKitCheckbox()
+        setupNotificationCheckbox()
         setupLocationCheckbox()
     }
 
@@ -62,6 +63,22 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
             default:
                 break
             }
+        }
+    }
+
+    private func setupHealthKitCheckbox() {
+        let hkStatus = HKHealthStore().authorizationStatus(for: HKQuantityType.quantityType(forIdentifier: .heartRate)!)
+        switch hkStatus.rawValue {
+        case 1:
+            DispatchQueue.main.async {
+                self.healthKitCheckbox.isSelected = false
+            }
+        case 2:
+            DispatchQueue.main.async {
+                self.healthKitCheckbox.isSelected = true
+            }
+        default:
+            break
         }
     }
 
@@ -105,23 +122,21 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func askForHealthKit(_ sender: UIButton) {
-        guard HKHealthStore.isHealthDataAvailable() else {
-            print("Error! --> Healthkit isn't available on this Device! <--")
-            return
-        }
-
-        guard let bpm = HKObjectType.quantityType(forIdentifier: .heartRate) else {
-            print("Error! --> Wrong datatype (Heart rate) <--")
-            return
-        }
-
-        let healthKitTypesToRead: Set<HKObjectType> = [bpm]
-
-        HKHealthStore().requestAuthorization(toShare: Set<HKSampleType>(), read: healthKitTypesToRead) { (_, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-                return
-            }
+        let healthStore = HKHealthStore()
+        var readableHKQuantityTypes: Set<HKQuantityType>?
+        var writeableHKQuantityTypes: Set<HKQuantityType>?
+        readableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+        writeableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+        if HKHealthStore.isHealthDataAvailable() {
+            healthStore.requestAuthorization(toShare: writeableHKQuantityTypes,
+                                              read: readableHKQuantityTypes,
+                                              completion: { (success, error) -> Void in
+                                                if success {
+                                                    print("Successful authorized.")
+                                                } else {
+                                                    print(error.debugDescription)
+                                                }
+            })
         }
     }
 }

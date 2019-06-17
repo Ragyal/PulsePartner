@@ -12,28 +12,17 @@ import HealthKit
 class HealthKitManager {
 
     static let shared = HealthKitManager()
-    let healthStore: HKHealthStore?
+    var healthStore: HKHealthStore?
 
-    let readableHKQuantityTypes: Set<HKQuantityType>?
-    let writeableHKQuantityTypes: Set<HKQuantityType>?
+    var readableHKQuantityTypes: Set<HKQuantityType>?
+    var writeableHKQuantityTypes: Set<HKQuantityType>?
 
     init() {
-        if HKHealthStore.isHealthDataAvailable() {
-            self.healthStore = HKHealthStore()
-
-            readableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
-            writeableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
-
-            healthStore?.requestAuthorization(toShare: writeableHKQuantityTypes,
-                                              read: readableHKQuantityTypes,
-                                              completion: { (success, error) -> Void in
-                                                if success {
-                                                    print("Successful authorized.")
-                                                } else {
-                                                    print(error.debugDescription)
-                                                }
-            })
-        } else {
+        self.healthStore = HKHealthStore()
+        
+        readableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+        writeableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+        if !HKHealthStore.isHealthDataAvailable() {
             self.healthStore = nil
             self.readableHKQuantityTypes = nil
             self.writeableHKQuantityTypes = nil

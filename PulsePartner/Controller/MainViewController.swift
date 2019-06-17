@@ -11,6 +11,7 @@ import CoreLocation
 import Firebase
 import CropViewController
 import CoreData
+import HealthKit
 
 class MainViewController: UIViewController {
 
