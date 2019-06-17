@@ -140,8 +140,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wn6-da-7fl">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wn6-da-7fl">
                                 <rect key="frame" x="0.0" y="153" width="375" height="539"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
@@ -225,11 +226,8 @@
                         <color key="backgroundColor" red="0.82483571767807007" green="0.17459526658058167" blue="0.12149900943040848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="3bO-aX-Ih6" firstAttribute="trailing" secondItem="Fra-Nv-1g6" secondAttribute="trailing" constant="10" id="Csr-3v-RT2"/>
-                            <constraint firstItem="wn6-da-7fl" firstAttribute="leading" secondItem="QpJ-ef-snn" secondAttribute="leading" id="GkF-BM-6Lz"/>
                             <constraint firstItem="E85-8y-Ile" firstAttribute="leading" secondItem="3bO-aX-Ih6" secondAttribute="leading" constant="9" id="LHj-zx-FRc"/>
-                            <constraint firstAttribute="trailing" secondItem="wn6-da-7fl" secondAttribute="trailing" id="N0I-ib-H0b"/>
                             <constraint firstItem="io1-Af-RQ7" firstAttribute="top" secondItem="3bO-aX-Ih6" secondAttribute="top" constant="46" id="QTb-jp-9Wc"/>
-                            <constraint firstItem="wn6-da-7fl" firstAttribute="centerX" secondItem="QpJ-ef-snn" secondAttribute="centerX" id="aL9-1h-zzM"/>
                             <constraint firstItem="io1-Af-RQ7" firstAttribute="leading" secondItem="E85-8y-Ile" secondAttribute="trailing" constant="15" id="gj6-ce-oYZ"/>
                             <constraint firstItem="Fra-Nv-1g6" firstAttribute="top" secondItem="3bO-aX-Ih6" secondAttribute="top" constant="44" id="j8e-3b-8hW"/>
                             <constraint firstItem="Fra-Nv-1g6" firstAttribute="leading" secondItem="io1-Af-RQ7" secondAttribute="trailing" constant="10" id="qbY-Pu-mId"/>
