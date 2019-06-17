@@ -31,12 +31,14 @@ class MainViewController: UIViewController {
         UserManager.shared.addObserver(self)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        if HKHealthStore.isHealthDataAvailable() {
+            _ = Timer.scheduledTimer(timeInterval: 5,
+                                     target: self,
+                                     selector: #selector(setHeartRate),
+                                     userInfo: nil,
+                                     repeats: true)
+        }
         MatchManager.shared.addObserver(self)
-        _ = Timer.scheduledTimer(timeInterval: 5,
-                                 target: self,
-                                 selector: #selector(setHeartRate),
-                                 userInfo: nil,
-                                 repeats: true)
         let img = UIImage()
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)

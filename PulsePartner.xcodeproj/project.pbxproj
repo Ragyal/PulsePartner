@@ -10,6 +10,12 @@
 		3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA8F228EF0CA00464C93 /* MatchManager.swift */; };
 		3E02EA9322A92A8900464C93 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9222A92A8900464C93 /* ChatManager.swift */; };
 		3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */; };
+		3E0F4FDD22B810D40040418C /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FD722B810D40040418C /* NSLayoutHelper.swift */; };
+		3E0F4FDE22B810D40040418C /* UIButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FD822B810D40040418C /* UIButtonHelper.swift */; };
+		3E0F4FDF22B810D40040418C /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FD922B810D40040418C /* DeviceHelper.swift */; };
+		3E0F4FE022B810D40040418C /* UILabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FDA22B810D40040418C /* UILabelHelper.swift */; };
+		3E0F4FE122B810D40040418C /* UITextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FDB22B810D40040418C /* UITextFieldHelper.swift */; };
+		3E0F4FE222B810D40040418C /* UITextViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F4FDC22B810D40040418C /* UITextViewHelper.swift */; };
 		3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14BBA2227C7DB700714E2E /* LocationManager.swift */; };
 		3E19377F22B4E7BB00A309A9 /* ChatObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */; };
 		3E19378822B6BF3E00A309A9 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19378722B6BF3E00A309A9 /* HealthKitManager.swift */; };
@@ -91,6 +97,12 @@
 		3E02EA8F228EF0CA00464C93 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		3E02EA9222A92A8900464C93 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
+		3E0F4FD722B810D40040418C /* NSLayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
+		3E0F4FD822B810D40040418C /* UIButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonHelper.swift; sourceTree = "<group>"; };
+		3E0F4FD922B810D40040418C /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		3E0F4FDA22B810D40040418C /* UILabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelHelper.swift; sourceTree = "<group>"; };
+		3E0F4FDB22B810D40040418C /* UITextFieldHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
+		3E0F4FDC22B810D40040418C /* UITextViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
 		3E14BBA2227C7DB700714E2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatObserver.swift; sourceTree = "<group>"; };
 		3E19378722B6BF3E00A309A9 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
@@ -199,6 +211,19 @@
 				3E19377E22B4E7BB00A309A9 /* ChatObserver.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		3E0F4FD622B810A60040418C /* LayoutHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3E0F4FD922B810D40040418C /* DeviceHelper.swift */,
+				3E0F4FD722B810D40040418C /* NSLayoutHelper.swift */,
+				3E0F4FD822B810D40040418C /* UIButtonHelper.swift */,
+				3E0F4FDA22B810D40040418C /* UILabelHelper.swift */,
+				3E0F4FDB22B810D40040418C /* UITextFieldHelper.swift */,
+				3E0F4FDC22B810D40040418C /* UITextViewHelper.swift */,
+			);
+			path = LayoutHelper;
 			sourceTree = "<group>";
 		};
 		3E19378622B6BF2D00A309A9 /* HealthKit */ = {
@@ -360,6 +385,7 @@
 		BCFF5FF722737F40005848CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E0F4FD622B810A60040418C /* LayoutHelper */,
 				BCFF5FFA227A2458005848CE /* Extensions */,
 				3E243A7222708FCE000434B6 /* MatchCell.swift */,
 			);
@@ -660,13 +686,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E243A7322708FCE000434B6 /* MatchCell.swift in Sources */,
+				3E0F4FDE22B810D40040418C /* UIButtonHelper.swift in Sources */,
 				BC4B20CB227B48D400F7B1FF /* String.swift in Sources */,
 				BCFF5FF422736566005848CE /* RegisterFormViewController.swift in Sources */,
 				BC31BB1322AC6FC4008DD4DF /* FirestoreModel.swift in Sources */,
 				BCFF5FFC227A2474005848CE /* UIViewController.swift in Sources */,
+				3E0F4FE222B810D40040418C /* UITextViewHelper.swift in Sources */,
 				3E19377F22B4E7BB00A309A9 /* ChatObserver.swift in Sources */,
 				3E14BBA3227C7DB700714E2E /* LocationManager.swift in Sources */,
 				BC7E91B822B33A2200BE0E23 /* NotificationManager.swift in Sources */,
+				3E0F4FDD22B810D40040418C /* NSLayoutHelper.swift in Sources */,
 				3EF79E6C22612B5800AC1C45 /* PermissionsViewController.swift in Sources */,
 				BCECF1362256241D00AFA163 /* LoginViewController.swift in Sources */,
 				BCE8227422B2492E00FF1B01 /* ImageManager.swift in Sources */,
@@ -678,6 +707,7 @@
 				BCFF5FF92279C864005848CE /* UserManager.swift in Sources */,
 				3E19378822B6BF3E00A309A9 /* HealthKitManager.swift in Sources */,
 				3E1ADF4422B1A61E00E770B6 /* Chat.swift in Sources */,
+				3E0F4FE122B810D40040418C /* UITextFieldHelper.swift in Sources */,
 				3E02EA9522AA8B6000464C93 /* ChatViewControllerExtension.swift in Sources */,
 				BCFF5FFF227A2690005848CE /* User.swift in Sources */,
 				3E243A6F226F7541000434B6 /* MainViewController.swift in Sources */,
@@ -686,6 +716,8 @@
 				3E02EA90228EF0CA00464C93 /* MatchManager.swift in Sources */,
 				BC31BB1522AC9181008DD4DF /* UserObserver.swift in Sources */,
 				BC4B20CD22844C0600F7B1FF /* UITextField.swift in Sources */,
+				3E0F4FE022B810D40040418C /* UILabelHelper.swift in Sources */,
+				3E0F4FDF22B810D40040418C /* DeviceHelper.swift in Sources */,
 				BC7E91BA22B40FBE00BE0E23 /* Data.swift in Sources */,
 				BC42FE3522ADE3FC0093B763 /* Match.swift in Sources */,
 			);
