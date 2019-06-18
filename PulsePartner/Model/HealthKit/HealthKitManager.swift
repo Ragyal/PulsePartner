@@ -19,7 +19,7 @@ class HealthKitManager {
 
     init() {
         self.healthStore = HKHealthStore()
-        
+
         readableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
         writeableHKQuantityTypes = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
         if !HKHealthStore.isHealthDataAvailable() {
@@ -35,8 +35,7 @@ class HealthKitManager {
         let query = HKAnchoredObjectQuery(type: heartRateType,
                                           predicate: nil,
                                           anchor: myAnchor,
-                                          limit: HKObjectQueryNoLimit) {
-                                            (_, sampleOrNil, _, newAnchor, _) in
+                                          limit: HKObjectQueryNoLimit) { (_, sampleOrNil, _, newAnchor, _) in
                                             myAnchor = newAnchor
                                             if let samples = sampleOrNil {
                                                 if samples.count > 0 {
