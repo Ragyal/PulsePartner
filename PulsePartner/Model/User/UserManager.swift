@@ -233,16 +233,18 @@ class UserManager {
         guard let user = self.user else {
             return
         }
+        HealthKitManager.shared.readHeartRateData { file in
+            let matchData: MatchData = MatchData(user: user, heartrate: Int(file), coordinates: coordinates)
 
-        let matchData: MatchData = MatchData(user: user, coordinates: coordinates)
-
-        self.fStore.collection("matchData").document(user.documentID).setModel(matchData) { err in
-            if let err = err {
-                print("Error writing MatchData: \(err)")
-            } else {
-                print("MatchData successfully written!")
+            self.fStore.collection("matchData").document(user.documentID).setModel(matchData) { err in
+                if let err = err {
+                    print("Error writing MatchData: \(err)")
+                } else {
+                    print("MatchData successfully written!")
+                }
             }
         }
+
     }
 }
 

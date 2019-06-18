@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>PulsePartners möchte auf deine Kamera zugreifen</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>PulsePartner möchte auf deinen Puls zugreifen</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>PulsePartner möchte auf deinen Puls zugreifen</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>PulsePartners möchte auf deine GPS Daten zugreifen</string>
 	<key>NSLocationAlwaysUsageDescription</key>
