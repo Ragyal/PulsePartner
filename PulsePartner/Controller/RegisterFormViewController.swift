@@ -103,6 +103,35 @@ class RegisterFormViewController: UIViewController {
                                             preferences: genderSettings.preferences)
         completion(registerData)
     }
+
+    @IBAction func emailEditingDidBegin(_ sender: UITextField) {
+        animateViewMoving(moveUp: true, moveValue: 50)
+    }
+    @IBAction func emailEditingDidEnd(_ sender: UITextField) {
+        animateViewMoving(moveUp: false, moveValue: 50)
+    }
+    @IBAction func ageEditingDidBegin(_ sender: UITextField) {
+        animateViewMoving(moveUp: true, moveValue: 100)
+    }
+    @IBAction func ageEditingDidEnd(_ sender: UITextField) {
+        animateViewMoving(moveUp: false, moveValue: 100)
+    }
+    @IBAction func weightEditingDidBegin(_ sender: UITextField) {
+        animateViewMoving(moveUp: true, moveValue: 150)
+    }
+    @IBAction func weightEditingDidEnd(_ sender: UITextField) {
+        animateViewMoving(moveUp: false, moveValue: 150)
+    }
+    
+    func animateViewMoving (moveUp: Bool, moveValue: CGFloat) {
+        let movementDuration: TimeInterval = 0.3
+        let movement: CGFloat = ( moveUp ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
 }
 
 extension RegisterFormViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {

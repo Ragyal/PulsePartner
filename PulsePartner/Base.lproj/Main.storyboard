@@ -609,6 +609,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <action selector="emailEditingDidBegin:" destination="6zg-te-bER" eventType="editingDidBegin" id="IZ6-en-SaK"/>
+                                    <action selector="emailEditingDidEnd:" destination="6zg-te-bER" eventType="editingDidEnd" id="mwA-XA-JD0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOY-Ol-RSf">
                                 <rect key="frame" x="67" y="592" width="241" height="48"/>
@@ -659,6 +663,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="ageEditingDidBegin:" destination="6zg-te-bER" eventType="editingDidBegin" id="D6l-qQ-pO2"/>
+                                    <action selector="ageEditingDidEnd:" destination="6zg-te-bER" eventType="editingDidEnd" id="g4A-f4-wFQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L79-gE-N9C">
                                 <rect key="frame" x="58" y="422" width="257" height="40"/>
@@ -677,6 +685,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="weightEditingDidBegin:" destination="6zg-te-bER" eventType="editingDidBegin" id="W5b-Zl-89k"/>
+                                    <action selector="weightEditingDidEnd:" destination="6zg-te-bER" eventType="editingDidEnd" id="YA0-uK-wQg"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-Qw-stE" customClass="UILabelHelper" customModule="PulsePartner" customModuleProvider="target">
                                 <rect key="frame" x="60" y="482" width="167" height="36"/>

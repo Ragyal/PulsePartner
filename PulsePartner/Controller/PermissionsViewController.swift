@@ -132,6 +132,7 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
                                               read: readableHKQuantityTypes,
                                               completion: { (success, error) -> Void in
                                                 if success {
+                                                    self.healthKitCheckbox.isSelected = true
                                                     print("Successful authorized.")
                                                 } else {
                                                     print(error.debugDescription)
