@@ -47,9 +47,10 @@ extension MatchCell: ChatObserver {
         let unreadMessages = ChatManager.shared.countUnreadMessages(matchID: matchID)
         if unreadMessages == 0 {
             messageCounter.setBackgroundImage(UIImage(), for: .normal)
+            messageCounter.setTitle("", for: .normal)
         } else {
             messageCounter.setBackgroundImage(UIImage(named: "newMessageIcon"), for: .normal)
+            messageCounter.setTitle("\(unreadMessages)", for: .normal)
         }
-        messageCounter.setTitle("\(unreadMessages)", for: .normal)
     }
 }
