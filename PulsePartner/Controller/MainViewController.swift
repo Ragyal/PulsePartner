@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIButton!
     @IBOutlet weak var bpmLabel: UILabel!
     @IBOutlet weak var noMatchesLabel: UILabel!
-    
+
     static let shared = MainViewController()
     var allMatches = [Match]()
 

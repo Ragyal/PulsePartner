@@ -40,21 +40,21 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func mailEditingDidBegin(_ sender: UITextField) {
-        animateViewMoving(up: true, moveValue: 140)
+        animateViewMoving(moveUp: true, moveValue: 140)
     }
     @IBAction func mailEditingDidEnd(_ sender: UITextField) {
-        animateViewMoving(up: false, moveValue: 140)
+        animateViewMoving(moveUp: false, moveValue: 140)
     }
     @IBAction func passwordEditingDidBegin(_ sender: UITextField) {
-        animateViewMoving(up: true, moveValue: 220)
+        animateViewMoving(moveUp: true, moveValue: 220)
     }
     @IBAction func passwordEditingDidEnd(_ sender: UITextField) {
-        animateViewMoving(up: false, moveValue: 220)
+        animateViewMoving(moveUp: false, moveValue: 220)
     }
 
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:TimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
+    func animateViewMoving (moveUp: Bool, moveValue: CGFloat) {
+        let movementDuration: TimeInterval = 0.3
+        let movement: CGFloat = ( up ? -moveValue : moveValue)
         UIView.beginAnimations( "animateView", context: nil)
         UIView.setAnimationBeginsFromCurrentState(true)
         UIView.setAnimationDuration(movementDuration )
