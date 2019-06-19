@@ -6,9 +6,10 @@
         <attribute name="matchID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ownerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="read" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MessageEntitie" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="MessageEntitie" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

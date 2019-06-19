@@ -42,7 +42,8 @@ class ChatManager {
             NSFetchRequest<NSManagedObject>(entityName: "MessageEntitie")
         let sort = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [sort]
-        fetchRequest.predicate = NSPredicate(format: "matchID = %@", "\(matchID)")
+        fetchRequest.predicate = NSPredicate(format: "matchID = %@ AND ownID = %@",
+                                             "\(matchID)", UserManager.shared.auth.currentUser!.uid)
         do {
             newMessages = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
@@ -97,7 +98,8 @@ class ChatManager {
                     matchID: receiver,
                     message: message,
                     ownerID: ownID,
-                    read: true)
+                    read: true,
+                    ownID: ownID)
     }
 
     func countUnreadMessages(matchID: String) -> Int {
@@ -117,12 +119,13 @@ class ChatManager {
     }
 
     func activateObserver(matchID: String) {
+        let ownID = UserManager.shared.auth.currentUser!.uid
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MessageEntitie")
                 fStore
                     .collection("users")
-                    .document(UserManager.shared.auth.currentUser!.uid)
+                    .document(ownID)
                     .collection("matches")
                     .document(matchID)
                     .collection("chat").whereField("type", isEqualTo: "message")
@@ -142,7 +145,8 @@ class ChatManager {
                                                      matchID: (message.get("owner") as? String)!,
                                                      message: (message.get("message") as? String)!,
                                                      ownerID: (message.get("owner") as? String)!,
-                                                     read: (message.get("read") as? Bool)!)
+                                                     read: (message.get("read") as? Bool)!,
+                                                     ownID: ownID)
                                 }
 
                             } catch {
@@ -157,7 +161,8 @@ class ChatManager {
                      matchID: String,
                      message: String,
                      ownerID: String,
-                     read: Bool) {
+                     read: Bool,
+                     ownID: String) {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         guard let entity =
@@ -174,6 +179,7 @@ class ChatManager {
         newMessage.setValue(message, forKeyPath: "message")
         newMessage.setValue(ownerID, forKeyPath: "ownerID")
         newMessage.setValue(read, forKeyPath: "read")
+        newMessage.setValue(ownID, forKey: "ownID")
 
         do {
             try managedContext.save()

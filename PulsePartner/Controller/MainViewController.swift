@@ -24,7 +24,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if let user = UserManager.shared.user {
             updateImage(user: user)
         }
