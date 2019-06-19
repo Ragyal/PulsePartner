@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
 
     func animateViewMoving (moveUp: Bool, moveValue: CGFloat) {
         let movementDuration: TimeInterval = 0.3
-        let movement: CGFloat = ( up ? -moveValue : moveValue)
+        let movement: CGFloat = ( moveUp ? -moveValue : moveValue)
         UIView.beginAnimations( "animateView", context: nil)
         UIView.setAnimationBeginsFromCurrentState(true)
         UIView.setAnimationDuration(movementDuration )
