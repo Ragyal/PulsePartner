@@ -30,7 +30,7 @@
 "E85-8y-Ile.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "95 BPM"; ObjectID = "Fra-Nv-1g6"; */
-"Fra-Nv-1g6.text" = "Waiting...";
+"Fra-Nv-1g6.text" = "Warten...";
 
 /* Class = "UILabel"; text = "Male"; ObjectID = "Jcy-TL-T0V"; */
 "Jcy-TL-T0V.text" = "Männlich";
@@ -57,7 +57,7 @@
 "UiO-EW-Sph.placeholder" = "  Type something";
 
 /* Class = "UIButton"; normalTitle = "register"; ObjectID = "Uzq-Ci-8LD"; */
-"Uzq-Ci-8LD.normalTitle" = "register";
+"Uzq-Ci-8LD.normalTitle" = "Registrieren";
 
 /* Class = "UILabel"; text = "Female"; ObjectID = "VWp-Kk-Pyf"; */
 "VWp-Kk-Pyf.text" = "Weiblich";
@@ -81,13 +81,13 @@
 "dQ6-HA-ygr.title" = "MainPage";
 
 /* Class = "UITextField"; placeholder = "Last name"; ObjectID = "gzR-yk-A6g"; */
-"gzR-yk-A6g.placeholder" = "Nachname";
+"gzR-yk-A6g.placeholder" = "Benutzername";
 
 /* Class = "UILabel"; text = "BPMLab"; ObjectID = "hBH-mu-Tc5"; */
 "hBH-mu-Tc5.text" = "BPMLab";
 
 /* Class = "UITextField"; placeholder = "Mail address"; ObjectID = "kqt-ye-tEo"; */
-"kqt-ye-tEo.placeholder" = "Mail Adresse";
+"kqt-ye-tEo.placeholder" = "Email";
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "lOY-Ol-RSf"; */
 "lOY-Ol-RSf.normalTitle" = "Weiter";
@@ -108,7 +108,7 @@
 "rIL-dR-BGa.text" = "NameLab";
 
 /* Class = "UITextField"; placeholder = "Username"; ObjectID = "tFS-tt-ioZ"; */
-"tFS-tt-ioZ.placeholder" = "Username";
+"tFS-tt-ioZ.placeholder" = "Email";
 
 /* Class = "UINavigationItem"; title = "Back"; ObjectID = "uMg-ea-Grp"; */
 "uMg-ea-Grp.title" = "Zurück";

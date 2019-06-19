@@ -67,7 +67,7 @@ class ChatViewController: MessagesViewController {
 
     func insertMessages() {
         messages = ChatManager.shared.fetchMessages(matchID: user.userID)
-        messagesCollectionView.reloadDataAndKeepOffset()
+        messagesCollectionView.reloadData()
         messagesCollectionView.scrollToBottom(animated: true)
     }
 
