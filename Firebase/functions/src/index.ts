@@ -101,7 +101,7 @@ const doMatch = (
     return false;
   }
 
-  if (Math.abs(userA.heartrate - userB.heartrate) > 5) {
+  if (Math.abs(userA.heartrate - userB.heartrate) > 500) {
     return false;
   }
 
@@ -112,7 +112,7 @@ const doMatch = (
     userB.location.longitude,
   );
   console.log("Distanze: " + distance + "km");
-  if (distance > 0.3) {
+  if (distance > 10000000000) {
     return false;
   }
 
@@ -208,6 +208,24 @@ export const removeToken = functions
     const userData: MatchData = snap.after.data() as MatchData;
     if (!userData.fcmToken) {
       return firebase.firestore().doc(`matchData/${snap.after.id}`).delete();
+    } else {
+      return false;
+    }
+  })
+
+export const updateProfilePic = functions
+  .region("europe-west1")
+  .firestore
+  .document('users/{userId}')
+  .onUpdate((snap, context) => {
+    const oldData: MatchData = snap.before.data() as MatchData
+    const newData: MatchData = snap.after.data() as MatchData
+    if (oldData.image !== newData.image) {
+      return firebase.firestore().collection(`users/${snap.after.id}/matches`).listDocuments().then(refs => {
+        refs.forEach(async ref => {
+          await firebase.firestore().doc(`users/${ref.id}/matches/${snap.after.id}`).update({image: newData.image});
+        })
+      })
     } else {
       return false;
     }
