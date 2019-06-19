@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
     static let shared = MainViewController()
     var allMatches = [Match]()
 
+    /**
+     Checks if health kit data is available and starts the timer schedule for setHeartRate function.
+     Add the user, match and location observer.
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         if let user = UserManager.shared.user {
@@ -45,16 +49,32 @@ class MainViewController: UIViewController {
         LocationManager.shared.startUpdatingLocation()
     }
 
+    /**
+     Called if the profilePicture button has been clicked. Calls the function handleImageSelection
+     to open the image selection
+     - Parameters:
+        - sender: Specifies Button that was clicked
+     */
     @IBAction func onChangePicture(_ sender: UIButton) {
         ImageManager.handleImageSelection(self)
     }
 
+    /**
+     Called if the logout button has been clicked. Stops location updates, remove the match listener in MatchManager and call the logout function in UserManager
+     - Parameters:
+        - sender: Specifies Button that was clicked
+     */
     @IBAction func onLogout(_ sender: Any) {
         LocationManager.shared.stopUpdatingLocation()
         MatchManager.shared.matchDataListener?.remove()
         UserManager.shared.logout()
     }
 
+    /**
+     Updates the image in profilePicture button. If the image is nil, a placeholder image is set
+     - Parameters:
+        - user: FullUser with the profile picture
+     */
     func updateImage(user: FullUser) {
         var placeholder = self.profilePicture.image(for: .normal)
         if placeholder == nil {
@@ -65,6 +85,12 @@ class MainViewController: UIViewController {
         self.profilePicture.kf.setImage(with: URL(string: user.image), for: .normal, placeholder: placeholder)
     }
 
+    /**
+     Creates the matchcells and sets the segue to the ChatViewController. Hide the noMatchesLabel if the count of cells is greater than zero
+     - Parameters:
+        - segue: The connection between the cell and the ChatViewController
+        - sender: Specifies cell that was clicked
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = sender as? IndexPath else {
             return
@@ -82,6 +108,9 @@ class MainViewController: UIViewController {
         destinationVC.messageCounter = cell.messageCounter
     }
 
+    /**
+    Calls the readHeartRateData function and sets the returned value in bpmLabel
+     */
     @objc func setHeartRate() {
         HealthKitManager.shared.readHeartRateData { file in
             DispatchQueue.main.async {
@@ -121,6 +150,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MainViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    /**
+     Shows the image selection and call the presentCropViewController with the selected image
+     - Parameters:
+        - picker: UIImagePickerController
+     */
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
@@ -130,6 +164,11 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
         presentCropViewController(withImage: image)
     }
 
+    /**
+     Shows the image crop view to crop the image
+     - Parameters:
+        - image: The selected image from the imagePickerController function
+     */
     func presentCropViewController(withImage image: UIImage) {
         let cropViewController = CropViewController(croppingStyle: .circular, image: image)
         cropViewController.delegate = self
@@ -138,6 +177,14 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
 }
 
 extension MainViewController: CropViewControllerDelegate {
+    /**
+     Crop the image and calls the updateProfilePicture function to set the new image
+     - Parameters:
+        - cropViewController: The CropViewController
+        - image: The new image
+        - cropRect: The CGRect for the new image
+        - angle: The angle for the new circular version of the image
+     */
     @objc func cropViewController(_ cropViewController: CropViewController,
                                   didCropToCircularImage image: UIImage,
                                   withRect cropRect: CGRect,
@@ -150,6 +197,11 @@ extension MainViewController: CropViewControllerDelegate {
 }
 
 extension MainViewController: UserObserver {
+    /**
+     Will be execudet when the user data is called in the UserManager
+     - Parameters:
+     - user: The full user with all informations
+     */
     func userData(didUpdate user: FullUser?) {
         guard let user = user else {
             return
@@ -159,6 +211,11 @@ extension MainViewController: UserObserver {
 }
 
 extension MainViewController: MatchObserver {
+    /**
+     Will be execudet when the match data is called in the MatchManager
+     - Parameters:
+     - matches: All matches to fill the table view
+     */
     func matchData(didUpdate matches: [Match]?) {
         if let matches = matches {
             if matches.count > 0 {

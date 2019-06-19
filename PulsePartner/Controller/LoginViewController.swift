@@ -23,11 +23,6 @@ class LoginViewController: UIViewController {
             self.hideKeyboardWhenTappedAround()
     }
 
-    /**
-        Checks if the user is already logged in after the view has appeared
-     - Parameters:
-        - Animated: Specifies whether the change between views is animated
-     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if UserManager.shared.authenticated {
@@ -38,7 +33,7 @@ class LoginViewController: UIViewController {
     /**
      Call the signIn method in the UserManager to authenticate the user
      - Parameters:
-        - Sender: Button that was pressed
+        - sender: Button that was pressed
      */
     @IBAction func onLoginButtonClick(_ sender: UIButton) {
         UserManager.shared.signIn(withEmail: emailInput.text ?? "",
@@ -49,10 +44,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
+
     /**
      Called when the text field is selected. Calls the function animateViewMoving
      - Parameters:
-        - Sender: Specifies TextField that was slected
+        - sender: Specifies TextField that was selected
      */
     @IBAction func mailEditingDidBegin(_ sender: UITextField) {
         animateViewMoving(moveUp: true, moveValue: 140)
@@ -60,7 +56,7 @@ class LoginViewController: UIViewController {
     /**
      Called if the text field is no longer selected. Calls the function animateViewMoving
      - Parameters:
-        - Sender: Specifies TextField that was slected
+        - sender: Specifies TextField that was selected
      */
     @IBAction func mailEditingDidEnd(_ sender: UITextField) {
         animateViewMoving(moveUp: false, moveValue: 140)
@@ -75,8 +71,8 @@ class LoginViewController: UIViewController {
     /**
      Moves the view up or down to show the content behind the keyboard
      - Parameters:
-        - MoveUp: Specifies if the view move up or down.
-        - MoveValue: Specifies how far the view shifts
+        - moveUp: Specifies whether the view should move up or down.
+        - moveValue: Specifies how far the view shifts
      */
     func animateViewMoving (moveUp: Bool, moveValue: CGFloat) {
         let movementDuration: TimeInterval = 0.3
