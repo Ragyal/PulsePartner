@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
 
     @IBAction func onLogout(_ sender: Any) {
         LocationManager.shared.stopUpdatingLocation()
+        MatchManager.shared.matchDataListener?.remove()
         UserManager.shared.logout()
     }
 
