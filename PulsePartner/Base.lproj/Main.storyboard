@@ -26,6 +26,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <action selector="mailEditingDidBegin:" destination="2sH-JL-KWV" eventType="editingDidBegin" id="D8D-Vh-vKq"/>
+                                    <action selector="mailEditingDidEnd:" destination="2sH-JL-KWV" eventType="editingDidEnd" id="t9N-az-iuI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mz-b0-apL">
                                 <rect key="frame" x="50" y="482" width="275" height="40"/>
@@ -35,6 +39,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="passwordEditingDidBegin:" destination="2sH-JL-KWV" eventType="editingDidBegin" id="yEc-2x-nx8"/>
+                                    <action selector="passwordEditingDidEnd:" destination="2sH-JL-KWV" eventType="editingDidEnd" id="6Ie-Oj-Tpe"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVa-tm-LfZ">
                                 <rect key="frame" x="50" y="596" width="275" height="30"/>
@@ -116,6 +124,7 @@
                     <connections>
                         <outlet property="emailInput" destination="tFS-tt-ioZ" id="OLZ-t9-Bez"/>
                         <outlet property="passwordInput" destination="3mz-b0-apL" id="tnv-wv-xp9"/>
+                        <outlet property="registerHeightContraint" destination="8cU-Kq-SV2" id="wJL-Vn-Ahs"/>
                         <segue destination="RwN-U1-tXw" kind="show" identifier="MainNavigationSegue" id="Dau-wV-aPO"/>
                     </connections>
                 </viewController>
@@ -147,6 +156,13 @@
                                 <color key="tintColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 <color key="separatorColor" red="0.82483571769999997" green="0.17459526659999999" blue="0.1214990094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No matches 😔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eF3-h2-mrI">
+                                    <rect key="frame" x="0.0" y="118" width="375" height="400"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                    <color key="textColor" red="0.92157477140426636" green="0.92155748605728149" blue="0.92156922817230225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="0.0" reuseIdentifier="MatchCell" rowHeight="90" id="6LH-Gl-u8Q" customClass="MatchCell" customModule="PulsePartner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
@@ -244,6 +260,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bpmLabel" destination="Fra-Nv-1g6" id="sCU-83-kMd"/>
+                        <outlet property="noMatchesLabel" destination="eF3-h2-mrI" id="tCi-fd-v5k"/>
                         <outlet property="profilePicture" destination="E85-8y-Ile" id="CMK-lx-MQv"/>
                         <outlet property="tableView" destination="wn6-da-7fl" id="w4h-H1-RzF"/>
                         <segue destination="26G-yr-T1q" kind="show" identifier="ChatSegue" id="fOO-IK-uec"/>
@@ -299,7 +316,7 @@
                                 <rect key="frame" x="67" y="186" width="241" height="36"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-xe-n31">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="C0S-Jd-siw"/>
                                             <constraint firstAttribute="height" constant="36" id="RD1-1W-dB1"/>
@@ -312,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-TL-T0V">
-                                        <rect key="frame" x="80" y="0.0" width="161" height="36"/>
+                                        <rect key="frame" x="50" y="0.0" width="191" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="oj7-YI-jR5"/>
                                         </constraints>
@@ -334,7 +351,7 @@
                                 <rect key="frame" x="67" y="247" width="241" height="36"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euP-Pr-Tt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="Hl7-de-SwC"/>
                                             <constraint firstAttribute="width" constant="36" id="fMR-zr-Kmm"/>
@@ -347,7 +364,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBa-8i-qti">
-                                        <rect key="frame" x="80" y="0.0" width="161" height="36"/>
+                                        <rect key="frame" x="50" y="0.0" width="191" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="8BO-fa-Cry"/>
                                         </constraints>
@@ -369,7 +386,7 @@
                                 <rect key="frame" x="67" y="381" width="241" height="36"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-6S-U4M">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="BLX-aA-SfT"/>
                                             <constraint firstAttribute="width" constant="36" id="ZPg-BK-ef4"/>
@@ -382,7 +399,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vb-ds-RVd">
-                                        <rect key="frame" x="80" y="0.0" width="161" height="36"/>
+                                        <rect key="frame" x="50" y="0.0" width="191" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="l4x-Xo-8Lm"/>
                                         </constraints>
@@ -417,7 +434,7 @@
                                 <rect key="frame" x="67" y="442" width="241" height="36"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-EA-YFi">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="BzB-S7-9Ax"/>
                                             <constraint firstAttribute="height" constant="36" id="we9-5m-AR4"/>
@@ -430,7 +447,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWp-Kk-Pyf">
-                                        <rect key="frame" x="80" y="0.0" width="161" height="36"/>
+                                        <rect key="frame" x="50" y="0.0" width="191" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="0JE-1Z-dvF"/>
                                         </constraints>
@@ -985,6 +1002,6 @@
         <image name="HeartbeatIcon" width="1867" height="995"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tJP-Jn-cdH"/>
+        <segue reference="Dau-wV-aPO"/>
     </inferredMetricsTieBreakers>
 </document>

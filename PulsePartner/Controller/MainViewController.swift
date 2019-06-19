@@ -18,7 +18,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profilePicture: UIButton!
     @IBOutlet weak var bpmLabel: UILabel!
-
+    @IBOutlet weak var noMatchesLabel: UILabel!
+    
     static let shared = MainViewController()
     var allMatches = [Match]()
 
@@ -72,6 +73,9 @@ class MainViewController: UIViewController {
             return
         }
         destinationVC.user = self.allMatches[indexPath.row]
+        if allMatches.count > 0 {
+            noMatchesLabel.isHidden = true
+        }
         guard let cell = self.tableView.cellForRow(at: indexPath) as? MatchCell else {
             return
         }
@@ -157,7 +161,9 @@ extension MainViewController: UserObserver {
 extension MainViewController: MatchObserver {
     func matchData(didUpdate matches: [Match]?) {
         if let matches = matches {
-
+            if matches.count > 0 {
+                noMatchesLabel.isHidden = true
+            }
             self.allMatches = matches
             self.tableView.reloadData()
         }
