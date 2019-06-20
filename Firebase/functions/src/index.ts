@@ -101,7 +101,7 @@ const doMatch = (
     return false;
   }
 
-  if (Math.abs(userA.heartrate - userB.heartrate) > 500) {
+  if (Math.abs(userA.heartrate - userB.heartrate) > 5) {
     return false;
   }
 
@@ -112,7 +112,7 @@ const doMatch = (
     userB.location.longitude,
   );
   console.log("Distanze: " + distance + "km");
-  if (distance > 10000000000) {
+  if (distance > 0.3) {
     return false;
   }
 
