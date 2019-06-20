@@ -19,10 +19,11 @@ class MatchCell: UITableViewCell {
     var navController = UINavigationController()
     var matchID: String!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-    }
-
+    /**
+     Sets the picture and the name of the match partner and register to the chat manager observer
+     - Parameters:
+        - match: The full match with all informations
+     */
     func insertContent(match: Match) {
         self.matchID = match.userID
         self.profilePicture.kf.setImage(with: URL(string: match.image))
@@ -43,6 +44,11 @@ class MatchCell: UITableViewCell {
 }
 
 extension MatchCell: ChatObserver {
+    /**
+     When the function messageData is called in the chatmanager, the number of unread messages in the cell is set
+     - Parameters:
+        - messages: An array of all messages as NSManagedObjects
+     */
     func messageData(didUpdate messages: [NSManagedObject]?) {
         let unreadMessages = ChatManager.shared.countUnreadMessages(matchID: matchID)
         if unreadMessages == 0 {

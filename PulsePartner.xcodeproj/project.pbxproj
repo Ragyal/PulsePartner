@@ -226,6 +226,24 @@
 			path = LayoutHelper;
 			sourceTree = "<group>";
 		};
+		3E0F4FE322BB045F0040418C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */,
+				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E0F4FE422BB04B80040418C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E91B922B40FBE00BE0E23 /* Data.swift */,
+				BC4B20CA227B48D400F7B1FF /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3E19378622B6BF2D00A309A9 /* HealthKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +375,7 @@
 		BCFF5FF522737CC7005848CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E0F4FE422BB04B80040418C /* Extensions */,
 				3E19378622B6BF2D00A309A9 /* HealthKit */,
 				BC7E91B622B33A0500BE0E23 /* Notification */,
 				BCE8227522B2493400FF1B01 /* Image */,
@@ -372,6 +391,7 @@
 		BCFF5FF622737CD9005848CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E0F4FE322BB045F0040418C /* Extensions */,
 				BCECF1352256241D00AFA163 /* LoginViewController.swift */,
 				BCFF5FF322736566005848CE /* RegisterFormViewController.swift */,
 				3E243A7422709A07000434B6 /* ChatViewController.swift */,
@@ -395,11 +415,7 @@
 		BCFF5FFA227A2458005848CE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BCFF5FFB227A2474005848CE /* UIViewController.swift */,
-				BC4B20CA227B48D400F7B1FF /* String.swift */,
 				BC4B20CC22844C0600F7B1FF /* UITextField.swift */,
-				3E02EA9422AA8B6000464C93 /* ChatViewControllerExtension.swift */,
-				BC7E91B922B40FBE00BE0E23 /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
