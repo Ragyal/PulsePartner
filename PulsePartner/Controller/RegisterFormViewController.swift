@@ -53,7 +53,8 @@ class RegisterFormViewController: UIViewController {
     }
 
     /**
-     Called when the register button was clicked. If an image was selected, it will be set, otherwise a placeholder image will be set.
+     Called when the register button was clicked.
+     If an image was selected, it will be set, otherwise a placeholder image will be set.
      - Parameters:
         - sender: Specifies TextField that was slected
      */

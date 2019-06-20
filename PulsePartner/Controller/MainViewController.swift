@@ -60,7 +60,9 @@ class MainViewController: UIViewController {
     }
 
     /**
-     Called if the logout button has been clicked. Stops location updates, remove the match listener in MatchManager and call the logout function in UserManager
+     Called if the logout button has been clicked.
+     Stops location updates, removes the match listener in MatchManager and
+     calls the logout function in UserManager.
      - Parameters:
         - sender: Specifies Button that was clicked
      */
@@ -86,7 +88,8 @@ class MainViewController: UIViewController {
     }
 
     /**
-     Creates the matchcells and sets the segue to the ChatViewController. Hide the noMatchesLabel if the count of cells is greater than zero
+     Creates the MatchCells and sets the segue to the ChatViewController.
+     Hide the noMatchesLabel if the count of cells is greater than zero
      - Parameters:
         - segue: The connection between the cell and the ChatViewController
         - sender: Specifies cell that was clicked

@@ -31,6 +31,14 @@ class UserManager {
 
     private var observations = [ObjectIdentifier: Observation]()
 
+    /**
+     Creates a new instance of UserManager.
+     Adds an StateDidChangeListener to the FirebaseAuth object.
+     On state change an userDataListener gets removed if there is no current user.
+     And an userDataListener get created if there is a current user.
+     UserDataListener checks that the document in Firestore always has the current FCM Token
+     and updates the lokal user property.
+     */
     private init() {
         auth = Auth.auth()
         fStore = Firestore.firestore()
@@ -78,6 +86,18 @@ class UserManager {
         })
     }
 
+    /**
+     Registers a new user via FirebaseAuth with email and password.
+     Then uploads the users profile picture and adds the download link to
+     the users document which then gets uploaded to Firestore.
+     - Results: On success the user is technically logged in.
+     
+     - Parameters:
+        - withUserData: The users registration data.
+        - image: The users profile picture as UIImage.
+        - sender: Sending UIViewController which should display AlertControllers
+        - completion: A block which is invoked when createUser finishes, or is canceled.
+     */
     public func createUser(withUserData userData: UserRegisterData,
                            image: UIImage?,
                            sender: UIViewController,
@@ -138,6 +158,15 @@ class UserManager {
         }
     }
 
+    /**
+     Signs an user in via FirebaseAuth with email and password.
+     On success the application gets registered for remote notifications via APNs.
+     - Parameters:
+        - withEmail: The users email.
+        - password: The users password.
+        - sender: Sending UIViewController which should display AlertControllers
+        - completion: A block which is invoked when signIn finishes, or is canceled.
+     */
     public func signIn(withEmail email: String,
                        password: String,
                        sender: UIViewController,
@@ -159,6 +188,12 @@ class UserManager {
         }
     }
 
+    /**
+     Signs an user out via FirebaseAuth.
+     Removes an existing FCM-Token and updates the document in Firestore.
+     The Firestore update triggers an cloud function to delete existing MatchData of that user.
+     Finally the application unregisters from remote notifications and returns to LoginViewController.
+     */
     public func logout() {
         if user?.fcmToken != nil {
             if var user = user {
@@ -187,6 +222,11 @@ class UserManager {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
+    /**
+     Uploads a new profile picture and updates the current users document to contain the new image URL.
+     - Parameters:
+        - image: The users new profile picture as UIImage.
+     */
     func updateProfilePicture(image: UIImage) {
         guard var user: FullUser = self.user else {
             return
@@ -229,6 +269,12 @@ class UserManager {
         }
     }
 
+    /**
+     Retrieves the users latest heartrate available.
+     Creates an instance of MatchData and overwrites possible old match data in Firestore.
+     - Parameters:
+        - coordinates: The users position in CLLocationCoordinate2D.
+     */
     func updateMatchData(coordinates: CLLocationCoordinate2D) {
         guard let user = self.user else {
             return
@@ -255,12 +301,22 @@ private extension UserManager {
 }
 
 extension UserManager {
+    /**
+     Adds an UserOberserver to observations list and send current value of the observable.
+     - Parameters:
+        - observer: The UserObserver protocol implementing observer.
+     */
     func addObserver(_ observer: UserObserver) {
         let oid = ObjectIdentifier(observer)
         observations[oid] = Observation(observer: observer)
         observer.userData(didUpdate: user)
     }
 
+    /**
+     Removes an UserOberserver from observations list.
+     - Parameters:
+        - observer: The UserObserver protocol implementing observer.
+     */
     func removeObserver(_ observer: UserObserver) {
         let oid = ObjectIdentifier(observer)
         observations.removeValue(forKey: oid)
@@ -268,6 +324,10 @@ extension UserManager {
 }
 
 private extension UserManager {
+    /**
+     Gets called when the property user gets set/updated and notifies all observers.
+     Dereferenced/deleted observers are being removed.
+     */
     func stateDidChange() {
         for (oid, observation) in observations {
             // If the observer is no longer in memory, we
@@ -281,6 +341,10 @@ private extension UserManager {
         }
     }
 
+    /**
+    Gets called when the property fcmToken gets set.
+    If the users document does not contain the current fcmToken it gets updated.
+    */
     func updateUserFCMToken() {
         guard var user = self.user else {
             return
