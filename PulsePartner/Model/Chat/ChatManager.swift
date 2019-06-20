@@ -69,7 +69,8 @@ class ChatManager {
     }
 
     /**
-     Stores the message in firebase at the match partner and at the current user. Additionally the message is stored on the internal memory
+     Stores the message in firebase at the match partner and at the current user.
+     Additionally the message is stored on the internal memory.
      - Parameters:
         - receiver: The match user ID
         - message: The message text
@@ -140,7 +141,8 @@ class ChatManager {
     }
 
     /**
-     Activate the observer to listen for updates in the chat collection in firebase. If a new message is received, it is stored in the internal memory
+     Activate the observer to listen for updates in the chat collection in firebase.
+     If a new message is received, it is stored in the internal memory.
      - Parameters:
         - matchID: The matchID to register the listener
      */

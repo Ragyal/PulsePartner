@@ -32,7 +32,8 @@ class HealthKitManager {
     /**
      Creates a query to get the actual heart rate from HealthKit
      - Parameters:
-        - completion: Returns the actual heart rate after completion. If no samples is available, the function returns 95
+        - completion: Returns the actual heart rate after completion.
+                        If no samples is available, the function returns 95
      */
     func readHeartRateData(completion: @escaping ((Double) -> Void)) {
         var myAnchor: HKQueryAnchor?

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PermissionsViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PermissionsViewController" class="dashAnchor"></a>
+    <a title="PermissionsViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (13% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        PermissionsViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatManager.html">ChatManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatManager/Observation.html">– Observation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HealthKitManager.html">HealthKitManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageManager.html">ImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LocationManager.html">LocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MainViewController.html">MainViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MatchCell.html">MatchCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MatchManager.html">MatchManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageEntitie.html">MessageEntitie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NSLayoutHelper.html">NSLayoutHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NotificationManager.html">NotificationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PermissionsViewController.html">PermissionsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PreferencesViewController.html">PreferencesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RegisterFormViewController.html">RegisterFormViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIButtonHelper.html">UIButtonHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UILabelHelper.html">UILabelHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UITextViewHelper.html">UITextViewHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UITextfieldHelper.html">UITextfieldHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UserManager.html">UserManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:12PulsePartner10deviceSizeAA08UIDeviceD0Ovp">deviceSize</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIDeviceSize.html">UIDeviceSize</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DocumentReference.html">DocumentReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Query.html">Query</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ChatObserver.html">ChatObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FirestoreModel.html">FirestoreModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MatchObserver.html">MatchObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/StringRawRepresentable.html">StringRawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserObserver.html">UserObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FirestoreModelData.html">FirestoreModelData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FirestoreModelData/ModelDataError.html">– ModelDataError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FullUser.html">FullUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GenderSettings.html">GenderSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Match.html">Match</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MatchData.html">MatchData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MatchWithImage.html">MatchWithImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MockMessage.html">MockMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UserRegisterData.html">UserRegisterData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PermissionsViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">PermissionsViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">CLLocationManagerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12PulsePartner25PermissionsViewControllerC13healthManagerSo13HKHealthStoreCvp"></a>
+                    <a name="//apple_ref/swift/Property/healthManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12PulsePartner25PermissionsViewControllerC13healthManagerSo13HKHealthStoreCvp">healthManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">healthManager</span><span class="p">:</span> <span class="kt">HKHealthStore</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)gpsCheckbox"></a>
+                    <a name="//apple_ref/swift/Property/gpsCheckbox" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)gpsCheckbox">gpsCheckbox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">gpsCheckbox</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)pushCheckbox"></a>
+                    <a name="//apple_ref/swift/Property/pushCheckbox" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)pushCheckbox">pushCheckbox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">pushCheckbox</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)healthKitCheckbox"></a>
+                    <a name="//apple_ref/swift/Property/healthKitCheckbox" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(py)healthKitCheckbox">healthKitCheckbox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">healthKitCheckbox</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12PulsePartner25PermissionsViewControllerC20permissionCheckboxesSaySo8UIButtonCSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/permissionCheckboxes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12PulsePartner25PermissionsViewControllerC20permissionCheckboxesSaySo8UIButtonCSgGvp">permissionCheckboxes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">permissionCheckboxes</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIButton</span><span class="p">?]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the images of the checkboxes according to selected status</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForGPS:"></a>
+                    <a name="//apple_ref/swift/Method/askForGPS(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForGPS:">askForGPS(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shows alert for gps authorization</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">askForGPS</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specifies Button that was clicked</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForPushNotification:"></a>
+                    <a name="//apple_ref/swift/Method/askForPushNotification(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForPushNotification:">askForPushNotification(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shows alert for push notification authorization</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">askForPushNotification</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specifies Button that was clicked</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForHealthKit:"></a>
+                    <a name="//apple_ref/swift/Method/askForHealthKit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PulsePartner@objc(cs)PermissionsViewController(im)askForHealthKit:">askForHealthKit(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shows menu for health kit authorization. Different HKQuantityTypes for read and write permission</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">askForHealthKit</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specifies Button that was clicked</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
