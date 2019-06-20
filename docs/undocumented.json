@@ -1,0 +1,2721 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 19,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 31,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 48,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 53,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 58,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 63,
+      "symbol": "AppDelegate.persistentContainer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 94,
+      "symbol": "AppDelegate.saveContext()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/AppDelegate.swift",
+      "line": 113,
+      "symbol": "AppDelegate.application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": null,
+      "symbol": "ChatViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": null,
+      "symbol": "ChatViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": null,
+      "symbol": "ChatViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": null,
+      "symbol": "ChatViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 11,
+      "symbol": "MockMessage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 12,
+      "symbol": "MockMessage.sender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 14,
+      "symbol": "MockMessage.messageId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 16,
+      "symbol": "MockMessage.sentDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 18,
+      "symbol": "MockMessage.kind",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 20,
+      "symbol": "MockMessage.init(sender:messageId:kind:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 35,
+      "symbol": "ChatViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 37,
+      "symbol": "ChatViewController.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 38,
+      "symbol": "ChatViewController.picture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 39,
+      "symbol": "ChatViewController.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 40,
+      "symbol": "ChatViewController.messages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 41,
+      "symbol": "ChatViewController.messageCounter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 43,
+      "symbol": "ChatViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/ChatViewController.swift",
+      "line": 58,
+      "symbol": "ChatViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 17,
+      "symbol": "ChatViewController.messageForItem(at:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 20,
+      "symbol": "ChatViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 23,
+      "symbol": "ChatViewController.currentSender()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 26,
+      "symbol": "ChatViewController.cellTopLabelAttributedText(for:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 43,
+      "symbol": "ChatViewController.footerViewSize(for:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 46,
+      "symbol": "ChatViewController.heightForLocation(message:at:with:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 52,
+      "symbol": "ChatViewController.configureAvatarView(_:for:at:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/ChatViewControllerExtension.swift",
+      "line": 71,
+      "symbol": "ChatViewController.messageInputBar(_:didPressSendButtonWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/UIViewController.swift",
+      "line": 12,
+      "symbol": "UIViewController.hideKeyboardWhenTappedAround()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/Extensions/UIViewController.swift",
+      "line": 17,
+      "symbol": "UIViewController.dismissKeyboard()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 12,
+      "symbol": "LoginViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 14,
+      "symbol": "LoginViewController.emailInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 15,
+      "symbol": "LoginViewController.passwordInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 16,
+      "symbol": "LoginViewController.registerHeightContraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 18,
+      "symbol": "LoginViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 26,
+      "symbol": "LoginViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 64,
+      "symbol": "LoginViewController.passwordEditingDidBegin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/LoginViewController.swift",
+      "line": 67,
+      "symbol": "LoginViewController.passwordEditingDidEnd(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": null,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": null,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": null,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": null,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": null,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 16,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 18,
+      "symbol": "MainViewController.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 19,
+      "symbol": "MainViewController.profilePicture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 20,
+      "symbol": "MainViewController.bpmLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 21,
+      "symbol": "MainViewController.noMatchesLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 23,
+      "symbol": "MainViewController.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 24,
+      "symbol": "MainViewController.allMatches",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 128,
+      "symbol": "MainViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 132,
+      "symbol": "MainViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 136,
+      "symbol": "MainViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 146,
+      "symbol": "MainViewController.tableView(_:accessoryButtonTappedForRowWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/MainViewController.swift",
+      "line": 150,
+      "symbol": "MainViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 14,
+      "symbol": "PermissionsViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 16,
+      "symbol": "PermissionsViewController.healthManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 18,
+      "symbol": "PermissionsViewController.gpsCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 19,
+      "symbol": "PermissionsViewController.pushCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 20,
+      "symbol": "PermissionsViewController.healthKitCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PermissionsViewController.swift",
+      "line": 22,
+      "symbol": "PermissionsViewController.permissionCheckboxes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 11,
+      "symbol": "PreferencesViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 13,
+      "symbol": "PreferencesViewController.maleOneCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 14,
+      "symbol": "PreferencesViewController.femaleOneCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 15,
+      "symbol": "PreferencesViewController.maleSecondCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 16,
+      "symbol": "PreferencesViewController.femaleSecondCheckbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 17,
+      "symbol": "PreferencesViewController.checkboxes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 19,
+      "symbol": "PreferencesViewController.genderSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 21,
+      "symbol": "PreferencesViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/PreferencesViewController.swift",
+      "line": 31,
+      "symbol": "PreferencesViewController.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": null,
+      "symbol": "RegisterFormViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": null,
+      "symbol": "RegisterFormViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 12,
+      "symbol": "RegisterFormViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 14,
+      "symbol": "RegisterFormViewController.pictureButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 15,
+      "symbol": "RegisterFormViewController.emailInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 16,
+      "symbol": "RegisterFormViewController.passwordInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 17,
+      "symbol": "RegisterFormViewController.usernameInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 18,
+      "symbol": "RegisterFormViewController.ageInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 19,
+      "symbol": "RegisterFormViewController.weightInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 20,
+      "symbol": "RegisterFormViewController.fitnessLevelLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 22,
+      "symbol": "RegisterFormViewController.imagePicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 23,
+      "symbol": "RegisterFormViewController.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 25,
+      "symbol": "RegisterFormViewController.fitnessLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 26,
+      "symbol": "RegisterFormViewController.genderSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 28,
+      "symbol": "RegisterFormViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 197,
+      "symbol": "RegisterFormViewController.imagePickerController(_:didFinishPickingMediaWithInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 206,
+      "symbol": "RegisterFormViewController.presentCropViewController(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Controller/RegisterFormViewController.swift",
+      "line": 214,
+      "symbol": "RegisterFormViewController.cropViewController(_:didCropToCircularImage:withRect:angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 11,
+      "symbol": "Message",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 12,
+      "symbol": "Message.userID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 13,
+      "symbol": "Message.ownerID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 14,
+      "symbol": "Message.chatID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 15,
+      "symbol": "Message.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 16,
+      "symbol": "Message.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 17,
+      "symbol": "Message.read",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/Chat.swift",
+      "line": 18,
+      "symbol": "Message.matchID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": null,
+      "symbol": "ChatManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": null,
+      "symbol": "ChatManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 14,
+      "symbol": "ChatManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 17,
+      "symbol": "ChatManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 19,
+      "symbol": "ChatManager.fStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 20,
+      "symbol": "ChatManager.fStorage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 21,
+      "symbol": "ChatManager.messageDataListener",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 22,
+      "symbol": "ChatManager.messages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 220,
+      "symbol": "ChatManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatManager.swift",
+      "line": 221,
+      "symbol": "ChatManager.Observation.observer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatObserver.swift",
+      "line": null,
+      "symbol": "ChatObserver",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatObserver.swift",
+      "line": 13,
+      "symbol": "ChatObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatObserver.swift",
+      "line": 14,
+      "symbol": "ChatObserver.messageData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Chat/ChatObserver.swift",
+      "line": 18,
+      "symbol": "ChatObserver.messageData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Extensions/Data.swift",
+      "line": 12,
+      "symbol": "Data.hexString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Extensions/String.swift",
+      "line": 12,
+      "symbol": "String.isValidEmail",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Extensions/String.swift",
+      "line": 18,
+      "symbol": "String.isValidPhone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": null,
+      "symbol": "FirestoreModel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": null,
+      "symbol": "StringRawRepresentable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 18,
+      "symbol": "FirestoreModelData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 20,
+      "symbol": "FirestoreModelData.snapshot",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 22,
+      "symbol": "FirestoreModelData.documentID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 26,
+      "symbol": "FirestoreModelData.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 30,
+      "symbol": "FirestoreModelData.value(forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 35,
+      "symbol": "FirestoreModelData.value(forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 40,
+      "symbol": "FirestoreModelData.optionalValue(forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 44,
+      "symbol": "FirestoreModelData.ModelDataError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 45,
+      "symbol": "FirestoreModelData.ModelDataError.typeCastFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 49,
+      "symbol": "StringRawRepresentable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 50,
+      "symbol": "StringRawRepresentable.stringRawValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 54,
+      "symbol": "StringRawRepresentable.stringRawValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 57,
+      "symbol": "FirestoreModel",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 58,
+      "symbol": "FirestoreModel.init(modelData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 60,
+      "symbol": "FirestoreModel.documentID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 61,
+      "symbol": "FirestoreModel.customID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 62,
+      "symbol": "FirestoreModel.serialized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 67,
+      "symbol": "FirestoreModel.serialized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": 84,
+      "symbol": "FirestoreModel.customID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 12,
+      "symbol": "HealthKitManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 14,
+      "symbol": "HealthKitManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 15,
+      "symbol": "HealthKitManager.healthStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 17,
+      "symbol": "HealthKitManager.readableHKQuantityTypes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 18,
+      "symbol": "HealthKitManager.writeableHKQuantityTypes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/HealthKit/HealthKitManager.swift",
+      "line": 20,
+      "symbol": "HealthKitManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Image/ImageManager.swift",
+      "line": 13,
+      "symbol": "ImageManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Location/LocationManager.swift",
+      "line": 13,
+      "symbol": "LocationManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Location/LocationManager.swift",
+      "line": 16,
+      "symbol": "LocationManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Location/LocationManager.swift",
+      "line": 18,
+      "symbol": "LocationManager.manager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Location/LocationManager.swift",
+      "line": 21,
+      "symbol": "LocationManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": null,
+      "symbol": "Match",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 11,
+      "symbol": "Match",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 12,
+      "symbol": "Match.userID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 13,
+      "symbol": "Match.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 14,
+      "symbol": "Match.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 15,
+      "symbol": "Match.age",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 16,
+      "symbol": "Match.gender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 20,
+      "symbol": "Match.documentID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 24,
+      "symbol": "Match.customID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 28,
+      "symbol": "Match.init(modelData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 38,
+      "symbol": "MatchWithImage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 39,
+      "symbol": "MatchWithImage.matchData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/Match.swift",
+      "line": 40,
+      "symbol": "MatchWithImage.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": null,
+      "symbol": "MatchData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 12,
+      "symbol": "MatchData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 13,
+      "symbol": "MatchData.userID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 14,
+      "symbol": "MatchData.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 15,
+      "symbol": "MatchData.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 16,
+      "symbol": "MatchData.age",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 17,
+      "symbol": "MatchData.weight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 18,
+      "symbol": "MatchData.fitnessLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 19,
+      "symbol": "MatchData.gender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 20,
+      "symbol": "MatchData.preferences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 21,
+      "symbol": "MatchData.fcmToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 22,
+      "symbol": "MatchData.heartrate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 23,
+      "symbol": "MatchData.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 24,
+      "symbol": "MatchData.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 28,
+      "symbol": "MatchData.documentID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 32,
+      "symbol": "MatchData.customID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 36,
+      "symbol": "MatchData.init(modelData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchData.swift",
+      "line": 52,
+      "symbol": "MatchData.init(user:heartrate:coordinates:timestamp:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": null,
+      "symbol": "MatchManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": null,
+      "symbol": "MatchManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 11,
+      "symbol": "MatchManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 14,
+      "symbol": "MatchManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 16,
+      "symbol": "MatchManager.fStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 17,
+      "symbol": "MatchManager.fStorage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 19,
+      "symbol": "MatchManager.matchDataListener",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchManager.swift",
+      "line": 20,
+      "symbol": "MatchManager.matches",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchObserver.swift",
+      "line": null,
+      "symbol": "MatchObserver",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchObserver.swift",
+      "line": 11,
+      "symbol": "MatchObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchObserver.swift",
+      "line": 12,
+      "symbol": "MatchObserver.matchData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Match/MatchObserver.swift",
+      "line": 16,
+      "symbol": "MatchObserver.matchData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Notification/NotificationManager.swift",
+      "line": null,
+      "symbol": "NotificationManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Notification/NotificationManager.swift",
+      "line": 13,
+      "symbol": "NotificationManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Notification/NotificationManager.swift",
+      "line": 16,
+      "symbol": "NotificationManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Notification/NotificationManager.swift",
+      "line": 20,
+      "symbol": "NotificationManager.messaging(_:didReceiveRegistrationToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": null,
+      "symbol": "FullUser",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 11,
+      "symbol": "UserRegisterData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 12,
+      "symbol": "UserRegisterData.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 13,
+      "symbol": "UserRegisterData.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 14,
+      "symbol": "UserRegisterData.password",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 15,
+      "symbol": "UserRegisterData.age",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 16,
+      "symbol": "UserRegisterData.weight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 17,
+      "symbol": "UserRegisterData.fitnessLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 18,
+      "symbol": "UserRegisterData.gender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 19,
+      "symbol": "UserRegisterData.preferences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 22,
+      "symbol": "GenderSettings",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 23,
+      "symbol": "GenderSettings.ownGender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 24,
+      "symbol": "GenderSettings.preferences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 27,
+      "symbol": "FullUser",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 28,
+      "symbol": "FullUser.userID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 29,
+      "symbol": "FullUser.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 30,
+      "symbol": "FullUser.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 31,
+      "symbol": "FullUser.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 32,
+      "symbol": "FullUser.age",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 33,
+      "symbol": "FullUser.weight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 34,
+      "symbol": "FullUser.fitnessLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 35,
+      "symbol": "FullUser.gender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 36,
+      "symbol": "FullUser.preferences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 37,
+      "symbol": "FullUser.fcmToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 41,
+      "symbol": "FullUser.documentID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 45,
+      "symbol": "FullUser.customID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 49,
+      "symbol": "FullUser.init(modelData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/User.swift",
+      "line": 63,
+      "symbol": "FullUser.init(userID:registerData:imageURL:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": null,
+      "symbol": "UserManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 12,
+      "symbol": "UserManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 15,
+      "symbol": "UserManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 17,
+      "symbol": "UserManager.auth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 18,
+      "symbol": "UserManager.fStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 19,
+      "symbol": "UserManager.fStorage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 21,
+      "symbol": "UserManager.userDataListener",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 23,
+      "symbol": "UserManager.authenticated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 24,
+      "symbol": "UserManager.uid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 25,
+      "symbol": "UserManager.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserManager.swift",
+      "line": 28,
+      "symbol": "UserManager.fcmToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserObserver.swift",
+      "line": null,
+      "symbol": "UserObserver",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserObserver.swift",
+      "line": 11,
+      "symbol": "UserObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserObserver.swift",
+      "line": 12,
+      "symbol": "UserObserver.userData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/User/UserObserver.swift",
+      "line": 16,
+      "symbol": "UserObserver.userData(didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/Extensions/UITextField.swift",
+      "line": 13,
+      "symbol": "UITextField.floatValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/Extensions/UITextField.swift",
+      "line": 21,
+      "symbol": "UITextField.intValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 7,
+      "symbol": "UIDeviceSize",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 8,
+      "symbol": "UIDeviceSize.i3_5Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 9,
+      "symbol": "UIDeviceSize.i4Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 10,
+      "symbol": "UIDeviceSize.i4_7Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 11,
+      "symbol": "UIDeviceSize.i5_5Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 12,
+      "symbol": "UIDeviceSize.i5_8Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 13,
+      "symbol": "UIDeviceSize.i6_1Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 14,
+      "symbol": "UIDeviceSize.i6_5Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 15,
+      "symbol": "UIDeviceSize.i7_9Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 16,
+      "symbol": "UIDeviceSize.i9_7Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 17,
+      "symbol": "UIDeviceSize.i10_5Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 18,
+      "symbol": "UIDeviceSize.i12_9Inch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 19,
+      "symbol": "UIDeviceSize.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 22,
+      "symbol": "deviceSize",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 67,
+      "symbol": "Model",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 68,
+      "symbol": "Model.simulator",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 70,
+      "symbol": "Model.iPod1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 71,
+      "symbol": "Model.iPod2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 72,
+      "symbol": "Model.iPod3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 73,
+      "symbol": "Model.iPod4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 74,
+      "symbol": "Model.iPod5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 76,
+      "symbol": "Model.iPad2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 77,
+      "symbol": "Model.iPad3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 78,
+      "symbol": "Model.iPad4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 79,
+      "symbol": "Model.iPadAir",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 80,
+      "symbol": "Model.iPadAir2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 81,
+      "symbol": "Model.iPad5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 82,
+      "symbol": "Model.iPad6",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 84,
+      "symbol": "Model.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 85,
+      "symbol": "Model.iPadMini2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 86,
+      "symbol": "Model.iPadMini3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 87,
+      "symbol": "Model.iPadMini4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 89,
+      "symbol": "Model.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 90,
+      "symbol": "Model.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 91,
+      "symbol": "Model.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 92,
+      "symbol": "Model.iPadPro2_12_9",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 94,
+      "symbol": "Model.iPhone4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 95,
+      "symbol": "Model.iPhone4S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 96,
+      "symbol": "Model.iPhone5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 97,
+      "symbol": "Model.iPhone5S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 98,
+      "symbol": "Model.iPhone5C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 99,
+      "symbol": "Model.iPhone6",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 100,
+      "symbol": "Model.iPhone6plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 101,
+      "symbol": "Model.iPhone6S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 102,
+      "symbol": "Model.iPhone6Splus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 103,
+      "symbol": "Model.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 104,
+      "symbol": "Model.iPhone7",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 105,
+      "symbol": "Model.iPhone7plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 106,
+      "symbol": "Model.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 107,
+      "symbol": "Model.iPhone8plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 108,
+      "symbol": "Model.iPhoneX",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 109,
+      "symbol": "Model.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 110,
+      "symbol": "Model.iPhoneXSMax",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 111,
+      "symbol": "Model.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 113,
+      "symbol": "Model.AppleTV",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 114,
+      "symbol": "Model.AppleTV_4K",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 115,
+      "symbol": "Model.unrecognized",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 118,
+      "symbol": "UIDevice.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 7,
+      "symbol": "NSLayoutHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 8,
+      "symbol": "NSLayoutHelper.iPhone4s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 11,
+      "symbol": "NSLayoutHelper.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 14,
+      "symbol": "NSLayoutHelper.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 17,
+      "symbol": "NSLayoutHelper.iPhone8Plus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 20,
+      "symbol": "NSLayoutHelper.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 23,
+      "symbol": "NSLayoutHelper.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 26,
+      "symbol": "NSLayoutHelper.iPhoneXMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 29,
+      "symbol": "NSLayoutHelper.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 32,
+      "symbol": "NSLayoutHelper.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 35,
+      "symbol": "NSLayoutHelper.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 38,
+      "symbol": "NSLayoutHelper.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/NSLayoutHelper.swift",
+      "line": 42,
+      "symbol": "NSLayoutHelper.deviceConstant(_:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 11,
+      "symbol": "UIButtonHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 12,
+      "symbol": "UIButtonHelper.iPhone4s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 15,
+      "symbol": "UIButtonHelper.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 18,
+      "symbol": "UIButtonHelper.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 21,
+      "symbol": "UIButtonHelper.iPhone8Plus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 24,
+      "symbol": "UIButtonHelper.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 27,
+      "symbol": "UIButtonHelper.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 30,
+      "symbol": "UIButtonHelper.iPhoneXMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 33,
+      "symbol": "UIButtonHelper.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 36,
+      "symbol": "UIButtonHelper.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 39,
+      "symbol": "UIButtonHelper.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 42,
+      "symbol": "UIButtonHelper.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UIButtonHelper.swift",
+      "line": 46,
+      "symbol": "UIButtonHelper.deviceFont(_:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 11,
+      "symbol": "UILabelHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 12,
+      "symbol": "UILabelHelper.iPhone4s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 15,
+      "symbol": "UILabelHelper.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 18,
+      "symbol": "UILabelHelper.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 21,
+      "symbol": "UILabelHelper.iPhone8Plus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 24,
+      "symbol": "UILabelHelper.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 27,
+      "symbol": "UILabelHelper.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 30,
+      "symbol": "UILabelHelper.iPhoneXMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 33,
+      "symbol": "UILabelHelper.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 36,
+      "symbol": "UILabelHelper.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 39,
+      "symbol": "UILabelHelper.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 42,
+      "symbol": "UILabelHelper.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UILabelHelper.swift",
+      "line": 46,
+      "symbol": "UILabelHelper.deviceFont(_:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 10,
+      "symbol": "UITextfieldHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 11,
+      "symbol": "UITextfieldHelper.iPhone4s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 14,
+      "symbol": "UITextfieldHelper.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 17,
+      "symbol": "UITextfieldHelper.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 20,
+      "symbol": "UITextfieldHelper.iPhone8Plus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 23,
+      "symbol": "UITextfieldHelper.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 26,
+      "symbol": "UITextfieldHelper.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 29,
+      "symbol": "UITextfieldHelper.iPhoneXMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 32,
+      "symbol": "UITextfieldHelper.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 35,
+      "symbol": "UITextfieldHelper.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 38,
+      "symbol": "UITextfieldHelper.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 41,
+      "symbol": "UITextfieldHelper.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextFieldHelper.swift",
+      "line": 45,
+      "symbol": "UITextfieldHelper.deviceFont(_:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 8,
+      "symbol": "UITextViewHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 9,
+      "symbol": "UITextViewHelper.iPhone4s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 12,
+      "symbol": "UITextViewHelper.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 15,
+      "symbol": "UITextViewHelper.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 18,
+      "symbol": "UITextViewHelper.iPhone8Plus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 21,
+      "symbol": "UITextViewHelper.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 24,
+      "symbol": "UITextViewHelper.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 27,
+      "symbol": "UITextViewHelper.iPhoneXMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 30,
+      "symbol": "UITextViewHelper.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 33,
+      "symbol": "UITextViewHelper.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 36,
+      "symbol": "UITextViewHelper.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 39,
+      "symbol": "UITextViewHelper.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/UITextViewHelper.swift",
+      "line": 43,
+      "symbol": "UITextViewHelper.deviceFont(_:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": null,
+      "symbol": "MatchCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 12,
+      "symbol": "MatchCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 14,
+      "symbol": "MatchCell.messageCounter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 15,
+      "symbol": "MatchCell.profilePicture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 16,
+      "symbol": "MatchCell.nameLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 17,
+      "symbol": "MatchCell.ageLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 18,
+      "symbol": "MatchCell.matchImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 19,
+      "symbol": "MatchCell.navController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/MatchCell.swift",
+      "line": 20,
+      "symbol": "MatchCell.matchID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataClass.swift",
+      "line": null,
+      "symbol": "MessageEntitie",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "MessageEntitie",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 16,
+      "symbol": "MessageEntitie.fetchRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 20,
+      "symbol": "MessageEntitie.chatID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 21,
+      "symbol": "MessageEntitie.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 22,
+      "symbol": "MessageEntitie.matchID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 23,
+      "symbol": "MessageEntitie.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 24,
+      "symbol": "MessageEntitie.ownerID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 25,
+      "symbol": "MessageEntitie.ownID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 26,
+      "symbol": "MessageEntitie.read",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ove/Documents/Projekte/Swift/PulsePartner"
+}

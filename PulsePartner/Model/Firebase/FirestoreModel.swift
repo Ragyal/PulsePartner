@@ -86,6 +86,12 @@ extension FirestoreModel {
 
 extension DocumentReference {
 
+    /**
+     Serializes a FirestoreModel in preparation to send it to Firestore
+     - parameters:
+        - model: An object implementing the FirestoreModel protocol
+     - completion: A block that gets called when setModel is finished or cancelled.
+     */
     func setModel(_ model: FirestoreModel,
                   completion: @escaping (Error?) -> Void) {
         var documentData = [String: Any]()
@@ -110,6 +116,11 @@ extension DocumentReference {
         }
     }
 
+    /**
+     Converts a DocumentReferences snapshot data into an object implementing the FirestoreModel protocol.
+     - parameters:
+        - completion: A block that gets called when setModel is finished or cancelled.
+     */
     func getModel<Model: FirestoreModel>(_: Model.Type, completion: @escaping (Model?, Error?) -> Void) {
         getDocument { snapshot, error in
             if let error = error {
@@ -129,6 +140,11 @@ extension DocumentReference {
 
 extension Query {
 
+    /**
+     Converts a queries snapshot data into an array of objects implementing the FirestoreModel protocol.
+     - parameters:
+     - completion: A block that gets called when setModel is finished or cancelled.
+     */
     func getModels<Model: FirestoreModel>(_: Model.Type, completion: @escaping ([Model]?, Error?) -> Void) {
         getDocuments { snapshot, error in
             if let error = error {

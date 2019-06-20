@@ -60,11 +60,9 @@ class ChatViewController: MessagesViewController {
         messageCounter.setBackgroundImage(UIImage(), for: .normal)
     }
 
-    func setProfile(image: UIImage, name: String) {
-        picture = image
-        self.name = name
-    }
-
+    /**
+     Insert the messages into the UI and reload the table view
+     */
     func insertMessages() {
         messages = ChatManager.shared.fetchMessages(matchID: user.userID)
         messagesCollectionView.reloadData()
@@ -74,6 +72,11 @@ class ChatViewController: MessagesViewController {
 }
 
 extension ChatViewController: ChatObserver {
+    /**
+     Will be execudet when the message data is called in the chat manager
+     - Parameters:
+        - messages: All messages as NSManagedObject
+     */
     func messageData(didUpdate messages: [NSManagedObject]?) {
         self.insertMessages()
     }

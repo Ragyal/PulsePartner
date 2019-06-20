@@ -1,0 +1,390 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/Model/Firebase/FirestoreModel.swift",
+      "line": null,
+      "symbol": "FirestoreModel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 67,
+      "symbol": "Model",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 68,
+      "symbol": "Model.simulator",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 70,
+      "symbol": "Model.iPod1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 71,
+      "symbol": "Model.iPod2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 72,
+      "symbol": "Model.iPod3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 73,
+      "symbol": "Model.iPod4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 74,
+      "symbol": "Model.iPod5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 76,
+      "symbol": "Model.iPad2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 77,
+      "symbol": "Model.iPad3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 78,
+      "symbol": "Model.iPad4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 79,
+      "symbol": "Model.iPadAir",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 80,
+      "symbol": "Model.iPadAir2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 81,
+      "symbol": "Model.iPad5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 82,
+      "symbol": "Model.iPad6",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 84,
+      "symbol": "Model.iPadMini",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 85,
+      "symbol": "Model.iPadMini2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 86,
+      "symbol": "Model.iPadMini3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 87,
+      "symbol": "Model.iPadMini4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 89,
+      "symbol": "Model.iPadPro9_7",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 90,
+      "symbol": "Model.iPadPro10_5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 91,
+      "symbol": "Model.iPadPro12_9",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 92,
+      "symbol": "Model.iPadPro2_12_9",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 94,
+      "symbol": "Model.iPhone4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 95,
+      "symbol": "Model.iPhone4S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 96,
+      "symbol": "Model.iPhone5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 97,
+      "symbol": "Model.iPhone5S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 98,
+      "symbol": "Model.iPhone5C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 99,
+      "symbol": "Model.iPhone6",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 100,
+      "symbol": "Model.iPhone6plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 101,
+      "symbol": "Model.iPhone6S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 102,
+      "symbol": "Model.iPhone6Splus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 103,
+      "symbol": "Model.iPhoneSE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 104,
+      "symbol": "Model.iPhone7",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 105,
+      "symbol": "Model.iPhone7plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 106,
+      "symbol": "Model.iPhone8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 107,
+      "symbol": "Model.iPhone8plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 108,
+      "symbol": "Model.iPhoneX",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 109,
+      "symbol": "Model.iPhoneXS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 110,
+      "symbol": "Model.iPhoneXSMax",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 111,
+      "symbol": "Model.iPhoneXR",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 113,
+      "symbol": "Model.AppleTV",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 114,
+      "symbol": "Model.AppleTV_4K",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 115,
+      "symbol": "Model.unrecognized",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/PulsePartner/View/LayoutHelper/DeviceHelper.swift",
+      "line": 118,
+      "symbol": "UIDevice.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataClass.swift",
+      "line": null,
+      "symbol": "MessageEntitie",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "MessageEntitie",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 16,
+      "symbol": "MessageEntitie.fetchRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 20,
+      "symbol": "MessageEntitie.chatID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 21,
+      "symbol": "MessageEntitie.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 22,
+      "symbol": "MessageEntitie.matchID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 23,
+      "symbol": "MessageEntitie.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 24,
+      "symbol": "MessageEntitie.ownerID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 25,
+      "symbol": "MessageEntitie.ownID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ove/Documents/Projekte/Swift/PulsePartner/build/PulsePartner.build/Release-iphoneos/PulsePartner.build/DerivedSources/CoreDataGenerated/Chat/MessageEntitie+CoreDataProperties.swift",
+      "line": 26,
+      "symbol": "MessageEntitie.read",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ove/Documents/Projekte/Swift/PulsePartner"
+}

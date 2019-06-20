@@ -29,6 +29,13 @@ class ChatManager {
         fStorage = Storage.storage()
     }
 
+    /**
+     Fetch all messages for the match partner from the internal memory with core data
+     - Parameters:
+        - matchID: The userID of the match partner
+     - Returns:
+        - mockMessages: All messages as MockMessage
+     */
     func fetchMessages(matchID: String) -> [MockMessage] {
         var newMessages: [NSManagedObject] = []
         guard let appDelegate =
@@ -61,6 +68,13 @@ class ChatManager {
         return mockMessages
     }
 
+    /**
+     Stores the message in firebase at the match partner and at the current user.
+     Additionally the message is stored on the internal memory.
+     - Parameters:
+        - receiver: The match user ID
+        - message: The message text
+     */
     func sendMessage(receiver: String, message: String) {
         guard let ownID = UserManager.shared.auth.currentUser?.uid else {
             print("User ID not found")
@@ -93,15 +107,23 @@ class ChatManager {
                 "read": true,
                 "matchID": receiver
                 ])
-        saveMessage(chatID: "\(chatID)",
-                    date: Date(),
-                    matchID: receiver,
-                    message: message,
-                    ownerID: ownID,
-                    read: true,
-                    ownID: ownID)
+        saveMessage(message: Message(userID: ownID,
+                                     ownerID: ownID,
+                                     chatID: "\(chatID)",
+                                     date: Date(),
+                                     message: message,
+                                     read: true,
+                                     matchID: receiver)
+        )
     }
 
+    /**
+     Counts all the messages from the match partner
+     - Parameters:
+        - matchID: The match user ID
+     - Returns:
+        - result.count: The count of unread messages as Int
+     */
     func countUnreadMessages(matchID: String) -> Int {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -118,6 +140,12 @@ class ChatManager {
         }
     }
 
+    /**
+     Activate the observer to listen for updates in the chat collection in firebase.
+     If a new message is received, it is stored in the internal memory.
+     - Parameters:
+        - matchID: The matchID to register the listener
+     */
     func activateObserver(matchID: String) {
         let ownID = UserManager.shared.auth.currentUser!.uid
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
@@ -135,18 +163,17 @@ class ChatManager {
                             return
                         }
                         for message in documents {
-                            let date = (message.get("date") as? Timestamp)!
                             request.predicate = NSPredicate(format: "chatID = %@", "\(message.documentID)")
                             do {
                                 let result = try managedContext.fetch(request)
                                 if result.count == 0 {
-                                    self.saveMessage(chatID: message.documentID,
-                                                     date: date.dateValue(),
-                                                     matchID: (message.get("owner") as? String)!,
-                                                     message: (message.get("message") as? String)!,
-                                                     ownerID: (message.get("owner") as? String)!,
-                                                     read: (message.get("read") as? Bool)!,
-                                                     ownID: ownID)
+                                    self.saveMessage(message: Message(userID: ownID,
+                                                             ownerID: (message.get("owner") as? String)!,
+                                                             chatID: message.documentID,
+                                                             date: Date(),
+                                                             message: (message.get("message") as? String)!,
+                                                             read: (message.get("read") as? Bool)!,
+                                                             matchID: (message.get("owner") as? String)!))
                                 }
 
                             } catch {
@@ -156,13 +183,12 @@ class ChatManager {
                 }
     }
 
-    func saveMessage(chatID: String,
-                     date: Date,
-                     matchID: String,
-                     message: String,
-                     ownerID: String,
-                     read: Bool,
-                     ownID: String) {
+    /**
+     A Function to save a message on the internal memory
+     - Parameters:
+        - message: The full message
+     */
+    func saveMessage(message: Message) {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
         let managedContext = appDelegate.persistentContainer.viewContext
         guard let entity =
@@ -173,13 +199,13 @@ class ChatManager {
         }
         let newMessage = NSManagedObject(entity: entity,
                                          insertInto: managedContext)
-        newMessage.setValue("\(chatID)", forKeyPath: "chatID")
+        newMessage.setValue("\(message.chatID)", forKeyPath: "chatID")
         newMessage.setValue(Date(), forKeyPath: "date")
-        newMessage.setValue(matchID, forKeyPath: "matchID")
-        newMessage.setValue(message, forKeyPath: "message")
-        newMessage.setValue(ownerID, forKeyPath: "ownerID")
-        newMessage.setValue(read, forKeyPath: "read")
-        newMessage.setValue(ownID, forKey: "ownID")
+        newMessage.setValue(message.matchID, forKeyPath: "matchID")
+        newMessage.setValue(message.message, forKeyPath: "message")
+        newMessage.setValue(message.ownerID, forKeyPath: "ownerID")
+        newMessage.setValue(message.read, forKeyPath: "read")
+        newMessage.setValue(message.userID, forKey: "ownID")
 
         do {
             try managedContext.save()
@@ -197,12 +223,21 @@ extension ChatManager {
 }
 
 extension ChatManager {
+    /**
+     Add the ChatObserver to the observer array
+     - Parameters:
+        - observer: The ChatObserver
+     */
     func addObserver(_ observer: ChatObserver) {
         let oid = ObjectIdentifier(observer)
         observations[oid] = Observation(observer: observer)
         observer.messageData(didUpdate: messages)
     }
-
+    /**
+     Removes an observer from the observer array
+     - Parameters:
+        - observer: The ChatObserver
+     */
     func removeObserver(_ observer: ChatObserver) {
         let oid = ObjectIdentifier(observer)
         observations.removeValue(forKey: oid)
@@ -210,6 +245,9 @@ extension ChatManager {
 }
 
 private extension ChatManager {
+    /**
+     Will execute the messageData function
+     */
     func stateDidChange() {
         for (oid, observation) in observations {
             // If the observer is no longer in memory, we

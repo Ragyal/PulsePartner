@@ -11,6 +11,13 @@ import Photos
 import CropViewController
 
 class ImageManager {
+
+    /**
+     Creates an ActionSheet AlertController showing options where to pick an image.
+     - Parameters:
+        - sender: Sending UIViewController and ImagePicker delegate which should
+                    display AlertControllers and the resulting ActionSheet.
+     */
     static func handleImageSelection(_ sender: UIViewController &
         UINavigationControllerDelegate &
         UIImagePickerControllerDelegate) {
@@ -63,6 +70,10 @@ class ImageManager {
         sender.present(alertController, animated: true, completion: nil)
     }
 
+    /**
+     Checks permissions to access the users library and requests them if not already granted
+     - Returns: True if access is granted.
+     */
     static private func requestLibraryAuthentication() -> Bool {
         let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
         switch photoAuthorizationStatus {

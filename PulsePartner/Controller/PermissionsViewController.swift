@@ -21,12 +21,11 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
 
     lazy var permissionCheckboxes = [gpsCheckbox, pushCheckbox, healthKitCheckbox]
 
+    /**
+     Sets the images of the checkboxes according to selected status
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.navigationController?.isNavigationBarHidden = false
-//        self.hideKeyboardWhenTappedAround()
-
         for checkbox in permissionCheckboxes {
             checkbox!.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
             checkbox!.setImage(UIImage(named: "Checkmark"), for: .selected)
@@ -36,6 +35,9 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         setupLocationCheckbox()
     }
 
+    /**
+     Sets the selected status of the gpsCheckbox depending on the authorization status
+     */
     private func setupLocationCheckbox() {
         let locationStatus = CLLocationManager.authorizationStatus()
         switch locationStatus {
@@ -48,6 +50,9 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    /**
+     Sets the selected status of the pushCheckbox depending on the authorization status
+     */
     private func setupNotificationCheckbox() {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             let notificationStatus = settings.authorizationStatus
@@ -66,6 +71,9 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    /**
+     Sets the selected status of the healthKitCheckbox depending on the authorization status
+     */
     private func setupHealthKitCheckbox() {
         let hkStatus = HKHealthStore().authorizationStatus(for: HKQuantityType.quantityType(forIdentifier: .heartRate)!)
         switch hkStatus.rawValue {
@@ -82,6 +90,11 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    /**
+     Shows alert for gps authorization
+     - Parameters:
+        - sender: Specifies Button that was clicked
+     */
     @IBAction func askForGPS(_ sender: UIButton) {
         let status = CLLocationManager.authorizationStatus()
 
@@ -105,6 +118,11 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    /**
+     Shows alert for push notification authorization
+     - Parameters:
+        - sender: Specifies Button that was clicked
+     */
     @IBAction func askForPushNotification(_ sender: UIButton) {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { success, error in
@@ -121,6 +139,11 @@ class PermissionsViewController: UIViewController, CLLocationManagerDelegate {
         UIApplication.shared.registerForRemoteNotifications()
     }
 
+    /**
+     Shows menu for health kit authorization. Different HKQuantityTypes for read and write permission
+     - Parameters:
+        - sender: Specifies Button that was clicked
+     */
     @IBAction func askForHealthKit(_ sender: UIButton) {
         let healthStore = HKHealthStore()
         var readableHKQuantityTypes: Set<HKQuantityType>?
