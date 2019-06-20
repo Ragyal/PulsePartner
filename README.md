@@ -31,13 +31,19 @@
 ## Quickstart
 
 For a quick start we recommend to use our existing Firebase project. Because there are important settings that cannot be changed and uploaded via local code. To give you an insight into the backend, we have released the Firebase project.
+
 The project folder contains the Xcode Workspace (PulsePartner.xcworkspace), which should be used to open the project, as well as all programmable Firebase settings in the subfolder "Firebase".
+
 First the Firestore and Storage rules are defined in a JS similar language. In the subfolder "functions/src" you can find the Cloud Functions, which are written in Typescript.
+
 The Xcode project is roughly divided into three sections based on Apple's MVC.
+
 In Model you can find managers (e.g. UserManager) and classes (e.g. FullUser) divided by areas. Most of them are singletons with a static variable called "shared", which provides the shared instance of the manager.
-The View section is quite small and contains the LayoutHelper, which we used to change the values of the constraints during runtime. This helps us to edit the layout for different display sizes. 
-A scaling of the constraints for different display sizes is unfortunately not possible in the storyboard of Xcode, only the arrangement of the individual components in portrait or landscape format can be adjusted in the storyboard. 
+
+The View section is quite small and contains the LayoutHelper, which we used to change the values of the constraints during runtime. This helps us to edit the layout for different display sizes.
+A scaling of the constraints for different display sizes is unfortunately not possible in the storyboard of Xcode, only the arrangement of the individual components in portrait or landscape format can be adjusted in the storyboard.
 The only way to adjust constraints to different sizes is to change them in the program code.
+
 Finally, under (View)Controller is the logic that distributes the user's input to the managers or DataAccessObjects.
 
 ## Features
